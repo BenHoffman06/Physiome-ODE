@@ -1,0 +1,83 @@
+{
+  "cyclin": {
+    "trajectory_type": 3,
+    "trajectory_type_name": "oscillation",
+    "bounds": [
+      0.9686994210144804,
+      1.6031282564110598
+    ],
+    "period": 203.0
+  },
+  "dimer": {
+    "trajectory_type": 3,
+    "trajectory_type_name": "oscillation",
+    "bounds": [
+      1.399887969086039,
+      6.008332373683738
+    ],
+    "period": 204.0
+  },
+  "dimer_p": {
+    "trajectory_type": 3,
+    "trajectory_type_name": "oscillation",
+    "bounds": [
+      2.477274278488351,
+      30.16881491398052
+    ],
+    "period": 204.0
+  },
+  "p_dimer": {
+    "trajectory_type": 3,
+    "trajectory_type_name": "oscillation",
+    "bounds": [
+      0.3841889918197035,
+      4.221229123461701
+    ],
+    "period": 203.5
+  },
+  "p_dimer_p": {
+    "trajectory_type": 3,
+    "trajectory_type_name": "oscillation",
+    "bounds": [
+      1.607320907827117,
+      21.684920411513392
+    ],
+    "period": 204.0
+  },
+  "cdc25_p": {
+    "trajectory_type": 3,
+    "trajectory_type_name": "oscillation",
+    "bounds": [
+      0.0222171071268902,
+      0.9359638788905368
+    ],
+    "period": 204.0
+  },
+  "wee1_p": {
+    "trajectory_type": 3,
+    "trajectory_type_name": "oscillation",
+    "bounds": [
+      0.1381617996213374,
+      0.928575302642636
+    ],
+    "period": 204.0
+  },
+  "IE_p": {
+    "trajectory_type": 3,
+    "trajectory_type_name": "oscillation",
+    "bounds": [
+      0.0022441509489715,
+      0.9900324852933332
+    ],
+    "period": 203.0
+  },
+  "UbE_star": {
+    "trajectory_type": 3,
+    "trajectory_type_name": "oscillation",
+    "bounds": [
+      2.3442827660048817e-05,
+      0.1477622723523932
+    ],
+    "period": 203.0
+  }
+}

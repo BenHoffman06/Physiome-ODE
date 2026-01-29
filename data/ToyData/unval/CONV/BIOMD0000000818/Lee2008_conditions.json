@@ -1,0 +1,92 @@
+{
+  "Myc": {
+    "trajectory_type": 1,
+    "trajectory_type_name": "inc_stable",
+    "bounds": [
+      0.0,
+      0.3730788393968982
+    ],
+    "period": 0.0
+  },
+  "AKT": {
+    "trajectory_type": 3,
+    "trajectory_type_name": "oscillation",
+    "bounds": [
+      0.0024487747934783,
+      0.6
+    ],
+    "period": 170.0
+  },
+  "AKTp": {
+    "trajectory_type": 3,
+    "trajectory_type_name": "oscillation",
+    "bounds": [
+      0.0,
+      0.5975512252065218
+    ],
+    "period": 170.0
+  },
+  "PI3K": {
+    "trajectory_type": 3,
+    "trajectory_type_name": "oscillation",
+    "bounds": [
+      0.1,
+      1.0
+    ],
+    "period": 213.0
+  },
+  "GSK3B": {
+    "trajectory_type": 3,
+    "trajectory_type_name": "oscillation",
+    "bounds": [
+      0.0049068612290691,
+      0.6
+    ],
+    "period": 170.0
+  },
+  "GSK3Bp": {
+    "trajectory_type": 3,
+    "trajectory_type_name": "oscillation",
+    "bounds": [
+      0.0,
+      0.5950931387709306
+    ],
+    "period": 170.0
+  },
+  "ERK": {
+    "trajectory_type": 2,
+    "trajectory_type_name": "dec_stable",
+    "bounds": [
+      0.1,
+      1.0
+    ],
+    "period": 0.0
+  },
+  "Myc_ser62": {
+    "trajectory_type": 2,
+    "trajectory_type_name": "dec_stable",
+    "bounds": [
+      0.0,
+      0.8221775570440865
+    ],
+    "period": 0.0
+  },
+  "Myc_thr58": {
+    "trajectory_type": 3,
+    "trajectory_type_name": "oscillation",
+    "bounds": [
+      0.0,
+      0.1117113394475344
+    ],
+    "period": 213.0
+  },
+  "GF": {
+    "trajectory_type": 0,
+    "trajectory_type_name": "directly_stable",
+    "bounds": [
+      1.0,
+      1.0
+    ],
+    "period": 0.0
+  }
+}

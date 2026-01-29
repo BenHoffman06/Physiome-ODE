@@ -1,0 +1,16 @@
+{
+    "model_name": "Sriram2007_CellCycle",
+    "nick_model_name": "Sriram2007",
+    "short_description": "The model reproduces the time profile of species depicted in Figure 12a and 12 b. The authors communicated to the curator that there is a typo in the paper,  the values of kd1 and kd2 are reversed. Model successfully reproduced using MathSBML.",
+    "short_description_original": "<div id=\"description\">\n<notes xmlns=\"http://www.sbml.org/sbml/level2/version3\">\n<p xmlns=\"http://www.w3.org/1999/xhtml\">The model reproduces the time profile of species depicted in Figure 12a and 12 b. The authors communicated to the curator that there is a typo in the paper,  the values of kd1 and kd2 are reversed. Model successfully reproduced using MathSBML.</p>\n</notes>\n</div>",
+    "related_publication_name": "A minimal mathematical model combining several regulatory cycles from the budding yeast cell cycle.",
+    "related_publication_original": "<a class=\"publicationLink\" href=\"http://identifiers.org/pubmed/18203579\" target=\"_blank\" title=\"View publication - this will open an external site\">\n<strong>A minimal mathematical model combining several regulatory cycles from the budding yeast cell cycle.</strong></a>",
+    "domain": "Taxonomy-Opisthokonta||",
+    "link": "https://www.ebi.ac.uk/biomodels/BIOMD0000000181#Curation",
+    "image_link": "https://www.ebi.ac.uk/biomodels/services/download/get-files/MODEL8610478473/3/curation_image.jpeg",
+    "matlab_link": "https://www.ebi.ac.uk/biomodels/services/download/get-files/MODEL8610478473/3/BIOMD0000000181-matlab.m",
+    "octave_link": "https://www.ebi.ac.uk/biomodels/services/download/get-files/MODEL8610478473/3/BIOMD0000000181.m",
+    "Sriram2007.ode": "https://www.ebi.ac.uk/biomodels/services/download/get-files/MODEL8610478473/3/BIOMD0000000181.ode",
+    "Sriram2007.xpp": null,
+    "ode_model_ID": "BIOMD0000000181"
+}

@@ -1,0 +1,38 @@
+{
+  "C": {
+    "trajectory_type": 2,
+    "trajectory_type_name": "dec_stable",
+    "bounds": [
+      -3.81997367179755e-13,
+      1.0
+    ],
+    "period": 0.0
+  },
+  "P": {
+    "trajectory_type": 1,
+    "trajectory_type_name": "inc_stable",
+    "bounds": [
+      5.905915274970768,
+      76.32907161101299
+    ],
+    "period": 0.0
+  },
+  "Q": {
+    "trajectory_type": 2,
+    "trajectory_type_name": "dec_stable",
+    "bounds": [
+      19.96644432220964,
+      41.2
+    ],
+    "period": 0.0
+  },
+  "Qp": {
+    "trajectory_type": 2,
+    "trajectory_type_name": "dec_stable",
+    "bounds": [
+      0.0,
+      18.43149987283773
+    ],
+    "period": 0.0
+  }
+}

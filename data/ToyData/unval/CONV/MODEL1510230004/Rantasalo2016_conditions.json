@@ -1,0 +1,164 @@
+{
+  "MmCherryc": {
+    "trajectory_type": 2,
+    "trajectory_type_name": "dec_stable",
+    "bounds": [
+      0.0,
+      273.0965260179102
+    ],
+    "period": 0.0
+  },
+  "mCherryc": {
+    "trajectory_type": 1,
+    "trajectory_type_name": "inc_stable",
+    "bounds": [
+      0.0,
+      376.9403627227016
+    ],
+    "period": 0.0
+  },
+  "TFc": {
+    "trajectory_type": 2,
+    "trajectory_type_name": "dec_stable",
+    "bounds": [
+      0.0,
+      4713.733561086202
+    ],
+    "period": 0.0
+  },
+  "MTFc": {
+    "trajectory_type": 2,
+    "trajectory_type_name": "dec_stable",
+    "bounds": [
+      0.0,
+      23705.726857356654
+    ],
+    "period": 0.0
+  },
+  "Pol": {
+    "trajectory_type": 1,
+    "trajectory_type_name": "inc_stable",
+    "bounds": [
+      3332388.1579958783,
+      3333333.33333333
+    ],
+    "period": 0.0
+  },
+  "TFn_B": {
+    "trajectory_type": 2,
+    "trajectory_type_name": "dec_stable",
+    "bounds": [
+      12.545967559813104,
+      282.29
+    ],
+    "period": 0.0
+  },
+  "CP": {
+    "trajectory_type": 1,
+    "trajectory_type_name": "inc_stable",
+    "bounds": [
+      515.141030330469,
+      666.666666666667
+    ],
+    "period": 0.0
+  },
+  "Pol_TFn_B": {
+    "trajectory_type": 2,
+    "trajectory_type_name": "dec_stable",
+    "bounds": [
+      0.0,
+      460.3206494712439
+    ],
+    "period": 0.0
+  },
+  "TFn": {
+    "trajectory_type": 2,
+    "trajectory_type_name": "dec_stable",
+    "bounds": [
+      0.0,
+      3171.159845423116
+    ],
+    "period": 0.0
+  },
+  "Pol_DTF": {
+    "trajectory_type": 1,
+    "trajectory_type_name": "inc_stable",
+    "bounds": [
+      0.0,
+      333.3332188586647
+    ],
+    "period": 0.0
+  },
+  "MetTF_BTF": {
+    "trajectory_type": 0,
+    "trajectory_type_name": "directly_stable",
+    "bounds": [
+      0.0,
+      2.307477228243749
+    ],
+    "period": 0.0
+  },
+  "MetTF": {
+    "trajectory_type": 2,
+    "trajectory_type_name": "dec_stable",
+    "bounds": [
+      0.0105460260616228,
+      333333.333333333
+    ],
+    "period": 0.0
+  },
+  "Met": {
+    "trajectory_type": 2,
+    "trajectory_type_name": "dec_stable",
+    "bounds": [
+      26677061.14533417,
+      27010394.4556963
+    ],
+    "period": 0.0
+  },
+  "DTF": {
+    "trajectory_type": 2,
+    "trajectory_type_name": "dec_stable",
+    "bounds": [
+      0.0001144746685144,
+      333.333333333333
+    ],
+    "period": 0.0
+  },
+  "BTF": {
+    "trajectory_type": 0,
+    "trajectory_type_name": "directly_stable",
+    "bounds": [
+      331.02585610508885,
+      333.333333333333
+    ],
+    "period": 0.0
+  },
+  "B": {
+    "trajectory_type": 1,
+    "trajectory_type_name": "inc_stable",
+    "bounds": [
+      17.568269450001697,
+      443.1638495198881
+    ],
+    "period": 0.0
+  },
+  "Met_MetTF": {
+    "trajectory_type": 1,
+    "trajectory_type_name": "inc_stable",
+    "bounds": [
+      0.0,
+      333333.31036208966
+    ],
+    "period": 0.0
+  },
+  "Pol_TFn_B_CP2": {
+    "trajectory_type": 2,
+    "trajectory_type_name": "dec_stable",
+    "bounds": [
+      0.0,
+      151.5256363362005
+    ],
+    "period": 0.0
+  }
+}

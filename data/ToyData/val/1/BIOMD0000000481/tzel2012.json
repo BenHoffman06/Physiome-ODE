@@ -1,0 +1,16 @@
+{
+    "model_name": "Stötzel2012 - Bovine estrous cycle, synchronization with prostaglandin F2α",
+    "nick_model_name": "tzel2012",
+    "short_description": "",
+    "short_description_original": "<div id=\"description\">\n                    C. Stötzel, J. Plöntzke, W. Heuwieser &amp; S. Röblitz. Advances in modeling of the bovine estrous cycle: synchronization with PGF2α. Theriogenology 78, 7 (2012).<p></p>\n<p></p>\nOur model of the bovine estrous cycle is a set of ordinary differential equations which generates hormone profiles of successive estrous cycles with several follicular waves per cycle. It describes the growth and decay of the follicles and the corpus luteum, as well as the change of the key reproductive hormones, enzymes and processes over time. In this work we describe recent developments of this model towards the administration of prostaglandin F2α. We validate our model by showing that the simulations agree with observations from synchronization studies and with measured progesterone data after single dose administrations of synthetic prostaglandin F2α.\n                </div>",
+    "related_publication_name": "Advances in modeling of the bovine estrous cycle: synchronization with PGF2α.",
+    "related_publication_original": "<a class=\"publicationLink\" href=\"http://identifiers.org/pubmed/22980082\" target=\"_blank\" title=\"View publication - this will open an external site\">\n<strong>Advances in modeling of the bovine estrous cycle: synchronization with PGF2α.</strong></a>",
+    "domain": "Taxonomy-Bos taurus||",
+    "link": "https://www.ebi.ac.uk/biomodels/BIOMD0000000481#Curation",
+    "image_link": "https://www.ebi.ac.uk/biomodels/services/download/get-files/MODEL1308100000/3/curation_image.png",
+    "matlab_link": "https://www.ebi.ac.uk/biomodels/services/download/get-files/MODEL1308100000/3/BIOMD0000000481-matlab.m",
+    "octave_link": "https://www.ebi.ac.uk/biomodels/services/download/get-files/MODEL1308100000/3/BIOMD0000000481.m",
+    "tzel2012.ode": "https://www.ebi.ac.uk/biomodels/services/download/get-files/MODEL1308100000/3/BIOMD0000000481.ode",
+    "tzel2012.xpp": null,
+    "ode_model_ID": "BIOMD0000000481"
+}

@@ -1,0 +1,29 @@
+{
+  "D": {
+    "trajectory_type": 3,
+    "trajectory_type_name": "oscillation",
+    "bounds": [
+      2.199920450048449,
+      7.963456224066394
+    ],
+    "period": 238.0
+  },
+  "N": {
+    "trajectory_type": 3,
+    "trajectory_type_name": "oscillation",
+    "bounds": [
+      0.07764,
+      1.2358600042697845
+    ],
+    "period": 242.0
+  },
+  "v": {
+    "trajectory_type": 3,
+    "trajectory_type_name": "oscillation",
+    "bounds": [
+      300.0,
+      2926.85745166593
+    ],
+    "period": 242.0
+  }
+}

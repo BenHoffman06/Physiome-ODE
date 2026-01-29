@@ -1,0 +1,209 @@
+{
+  "RuBP": {
+    "trajectory_type": 1,
+    "trajectory_type_name": "inc_stable",
+    "bounds": [
+      0.002,
+      0.0047837014624903
+    ],
+    "period": 0.0
+  },
+  "ER": {
+    "trajectory_type": 0,
+    "trajectory_type_name": "directly_stable",
+    "bounds": [
+      0.0008314735185892,
+      0.001201
+    ],
+    "period": 0.0
+  },
+  "EPP": {
+    "trajectory_type": 0,
+    "trajectory_type_name": "directly_stable",
+    "bounds": [
+      0.0002241436759343,
+      0.0002711
+    ],
+    "period": 0.0
+  },
+  "EPG": {
+    "trajectory_type": 0,
+    "trajectory_type_name": "directly_stable",
+    "bounds": [
+      0.0002388207377536,
+      0.0003206
+    ],
+    "period": 0.0
+  },
+  "EP": {
+    "trajectory_type": 0,
+    "trajectory_type_name": "directly_stable",
+    "bounds": [
+      0.0006261543934152,
+      0.0008125726701111
+    ],
+    "period": 0.0
+  },
+  "EOP": {
+    "trajectory_type": 2,
+    "trajectory_type_name": "dec_stable",
+    "bounds": [
+      0.0002966,
+      0.0007473346774547
+    ],
+    "period": 0.0
+  },
+  "PGA": {
+    "trajectory_type": 1,
+    "trajectory_type_name": "inc_stable",
+    "bounds": [
+      0.0016325083758849,
+      0.0024
+    ],
+    "period": 0.0
+  },
+  "TP": {
+    "trajectory_type": 1,
+    "trajectory_type_name": "inc_stable",
+    "bounds": [
+      0.0005,
+      0.0081648229445651
+    ],
+    "period": 0.0
+  },
+  "FBP": {
+    "trajectory_type": 2,
+    "trajectory_type_name": "dec_stable",
+    "bounds": [
+      1.929260889121024e-06,
+      0.00067
+    ],
+    "period": 0.0
+  },
+  "HeP": {
+    "trajectory_type": 2,
+    "trajectory_type_name": "dec_stable",
+    "bounds": [
+      0.0003692641945026,
+      0.0022
+    ],
+    "period": 0.0
+  },
+  "E4P": {
+    "trajectory_type": 1,
+    "trajectory_type_name": "inc_stable",
+    "bounds": [
+      5e-05,
+      0.0019663416132957
+    ],
+    "period": 0.0
+  },
+  "SBP": {
+    "trajectory_type": 2,
+    "trajectory_type_name": "dec_stable",
+    "bounds": [
+      1.2331361618647837e-06,
+      0.0003
+    ],
+    "period": 0.0
+  },
+  "S7P": {
+    "trajectory_type": 2,
+    "trajectory_type_name": "dec_stable",
+    "bounds": [
+      2.684539857235028e-05,
+      0.002
+    ],
+    "period": 0.0
+  },
+  "PeP": {
+    "trajectory_type": 2,
+    "trajectory_type_name": "dec_stable",
+    "bounds": [
+      0.00025,
+      0.0026807272096634
+    ],
+    "period": 0.0
+  },
+  "ADPG": {
+    "trajectory_type": 1,
+    "trajectory_type_name": "inc_stable",
+    "bounds": [
+      6.295e-06,
+      0.0002572953655348
+    ],
+    "period": 0.0
+  },
+  "ATP": {
+    "trajectory_type": 1,
+    "trajectory_type_name": "inc_stable",
+    "bounds": [
+      0.00068,
+      0.0014095892449786
+    ],
+    "period": 0.0
+  },
+  "PGAc": {
+    "trajectory_type": 1,
+    "trajectory_type_name": "inc_stable",
+    "bounds": [
+      0.0,
+      0.0010752345832989
+    ],
+    "period": 0.0
+  },
+  "TPc": {
+    "trajectory_type": 1,
+    "trajectory_type_name": "inc_stable",
+    "bounds": [
+      0.0023,
+      0.0067688760985585
+    ],
+    "period": 0.0
+  },
+  "FBPc": {
+    "trajectory_type": 2,
+    "trajectory_type_name": "dec_stable",
+    "bounds": [
+      2.7881981716882216e-06,
+      0.002
+    ],
+    "period": 0.0
+  },
+  "F26BPc": {
+    "trajectory_type": 0,
+    "trajectory_type_name": "directly_stable",
+    "bounds": [
+      7.8e-09,
+      3.5691944455531664e-07
+    ],
+    "period": 0.0
+  },
+  "HePc": {
+    "trajectory_type": 2,
+    "trajectory_type_name": "dec_stable",
+    "bounds": [
+      0.0007876594330857,
+      0.0058
+    ],
+    "period": 0.0
+  },
+  "UDPGc": {
+    "trajectory_type": 1,
+    "trajectory_type_name": "inc_stable",
+    "bounds": [
+      0.00057,
+      0.0048491128782841
+    ],
+    "period": 0.0
+  },
+  "SucPc": {
+    "trajectory_type": 0,
+    "trajectory_type_name": "directly_stable",
+    "bounds": [
+      0.0,
+      3.5842021136617787e-06
+    ],
+    "period": 0.0
+  }
+}

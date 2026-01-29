@@ -1,0 +1,16 @@
+{
+    "model_name": "Lee2008 - ERK and PI3K signal integration by Myc",
+    "nick_model_name": "Lee2008",
+    "short_description": "",
+    "short_description_original": "<div id=\"description\">\n<notes xmlns=\"http://www.sbml.org/sbml/level2/version4\">\n<pre>Mechanisitc model of PI3K and ERK signal integration by Myc. ERK and PI3K regulated Myc satbility by phosphorylating the same. (PMID:18463697)</pre>\n</notes>\n</div>",
+    "related_publication_name": "Sensing and integration of Erk and PI3K signals by Myc.",
+    "related_publication_original": "<a class=\"publicationLink\" href=\"http://identifiers.org/pubmed/18463697\" target=\"_blank\" title=\"View publication - this will open an external site\">\n<strong>Sensing and integration of Erk and PI3K signals by Myc.</strong></a>",
+    "domain": "Taxonomy-Mammalia||",
+    "link": "https://www.ebi.ac.uk/biomodels/BIOMD0000000818#Curation",
+    "image_link": "https://www.ebi.ac.uk/biomodels/services/download/get-files/MODEL1909170004/4/curation_image.png",
+    "matlab_link": "https://www.ebi.ac.uk/biomodels/services/download/get-files/MODEL1909170004/4/Lee2008-matlab.m",
+    "octave_link": null,
+    "Lee2008.ode": "https://www.ebi.ac.uk/biomodels/services/download/get-files/MODEL1909170004/4/Lee2008.ode",
+    "Lee2008.xpp": null,
+    "ode_model_ID": "BIOMD0000000818"
+}

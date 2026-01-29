@@ -1,0 +1,13 @@
+checkpoints/
+outputs/
+results/
+test_results/
+evaluation/
+Figures/
+
+__pycache__
+*.safetensors
+
+*.png
+*.txt
+*.log
