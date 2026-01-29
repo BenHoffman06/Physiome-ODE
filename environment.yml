@@ -257,4 +257,3 @@ dependencies:
       - wrapt==1.17.3
       - yarl==1.22.0
       - zencfg==0.6.0
-prefix: /home/users/rh/.conda/envs/mambaseries

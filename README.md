@@ -41,34 +41,44 @@ This codebase is built upon the training and evaluation infrastructure of the **
 
 ## ⚙️ Installation & Requirements
 
-The codebase is tested under the following environment. **Note:** Since this project depends on `mamba-ssm`, ensuring the consistency between PyTorch CUDA version and the system `nvcc` version is critical for successful compilation.
+The codebase has been verified on the following high-performance setup.
+
+**⚠️ Compatibility Note:**
+This project relies on `mamba-ssm` (v2.x), which requires **compilation from source**. It is critical that your local CUDA compiler (`nvcc`) matches (or is compatible with) the CUDA version used by PyTorch. Mismatched versions may cause `undefined symbol` errors or runtime failures.
 
 **Tested Environment:**
-* **OS:** Linux (Ubuntu 20.04/22.04 recommended)
-* **Python:** 3.10
-* **CUDA Toolkit:** 12.4 (as reported by `nvcc`)
-* **GPU:** NVIDIA A6000 (48GB VRAM)
-* **PyTorch:** 2.2+ (compatible with CUDA 12.x)
+* **OS:** Linux (Kernel 6.8 / Ubuntu 22.04+)
+* **Python:** 3.10.19
+* **PyTorch:** 2.9.1 (CUDA 12.8 build)
+* **System CUDA:** Toolkit 12.4 (via `nvcc`)
+* **GPU:** NVIDIA RTX A6000 (Ampere Architecture, Capability 8.6)
+* **Mamba-SSM:** 2.2.6
 
-**Installation Steps:**
+### Installation Workflow
 
-We recommend using `conda` to manage the environment:
+We recommend a **step-by-step** installation workflow to ensure ABI compatibility.
+
+#### 1. Create Base Environment
+First, create a Conda environment to handle PyTorch and system dependencies.
 
 ```bash
-# 1. Create environment
-conda create -n mambaseries python=3.10 -y
+# Create environment from the provided yaml
+conda env create -f environment.yml
 conda activate mambaseries
+```
 
-# 2. Install PyTorch (Ensure CUDA version matches your system nvcc)
-# For CUDA 12.x:
-pip install torch torchvision torchaudio --index-url [https://download.pytorch.org/whl/cu121](https://download.pytorch.org/whl/cu121)
+#### 2. Compile & Install Mamba-SSM
 
-# 3. Install Mamba-SSM and other dependencies
-# Note: 'causal-conv1d' and 'mamba-ssm' often require compilation from source.
-# Ensure 'nvcc' is available in your PATH.
-pip install causal-conv1d>=1.2.0
-pip install mamba-ssm>=1.2.0
-conda env update -f environment.yml
+If you encounter `ImportError` or ABI compatibility issues (e.g., undefined symbols) with `mamba_ssm` after the initial setup, use the following commands to force a clean recompilation.
+
+> **Crucial:** `mamba-ssm` must be compiled against the specific PyTorch version installed in Step 1. Ensure that the CUDA compiler is available in your PATH by running `nvcc --version`.
+
+```bash
+# 1. Install causal-conv1d (Force re-compile from source)
+pip install causal-conv1d>=1.4.0 --no-binary causal-conv1d --force-reinstall --no-cache-dir
+
+# 2. Install mamba-ssm (Force re-compile from source)
+pip install mamba-ssm>=2.2.6 --no-binary mamba-ssm --force-reinstall --no-cache-dir
 ```
 
 ---
