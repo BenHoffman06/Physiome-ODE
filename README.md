@@ -91,7 +91,9 @@ A lightweight dataset is provided in `data/ToyData/`. This allows reviewers to v
 
 ### 2. Full Dataset
 
-Due to size constraints, the full biological dataset is not distributed within this repository. To reproduce full experiments:
+Due to size constraints, the full biological dataset is not distributed within this repository. 
+**We will public the full dataset upon paper acceptance, thanks for your understanding.**
+To reproduce full experiments:
 
 1. Place your dataset directory on your local disk.
 2. Modify `exp/configs/config.yaml`:
