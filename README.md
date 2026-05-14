@@ -31,7 +31,7 @@ Models**, accepted to **ICML 2026**.
 |---|---|
 | RegimeFlow | Regime-aware probabilistic trajectory forecasting model |
 | Probabilistic baselines | TSFlow and diffusion-based forecasting baselines |
-| Point baselines | iTransformer, PatchTST, DLinear, S-Mamba, BiMamba4TS, TimeMixer, TimeXer, Chronos |
+| Point baselines | iTransformer, PatchTST, DLinear, S-Mamba, BiMamba4TS, TimeMixer, TimeXer, NSformer, Chronos |
 | Dataset support | Loader for the released SysBio-Traj benchmark |
 | Reproduction scripts | Bash launchers for common full-dataset experiments |
 
@@ -336,8 +336,16 @@ HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 WANDB_MODE=offline python exp/train_bioT
   data.batch_size=64 \
   hardware.devices=[0] \
   model.model.args.pretrained_model_path=/path/to/local/chronos-checkpoint \
-  model.model.args.local_files_only=true
+  model.model.args.local_files_only=true \
+  model.model.args.device_map=cuda:0
 ```
+
+> [!IMPORTANT]
+> For Chronos on a non-zero GPU, keep `hardware.devices` and
+> `model.model.args.device_map` aligned, for example
+> `hardware.devices=[2] model.model.args.device_map=cuda:2`. The
+> `scripts/exp_train_Point_chronos.bash` launcher sets this automatically from
+> its `<gpu_id>` argument.
 
 ---
 
@@ -346,7 +354,7 @@ HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 WANDB_MODE=offline python exp/train_bioT
 | Family | Config names |
 |---|---|
 | Probabilistic forecasting | `RegimeFlow`, `TSFlow_PE`, `TSFlow_PE_regime`, `TSDiff_regime`, `CSDI_regime` |
-| Point forecasting | `iTransformer`, `PatchTST`, `DLinear`, `S_Mamba`, `BiMamba4TS`, `TimeMixer`, `TimeXer`, `Chronos` |
+| Point forecasting | `iTransformer`, `PatchTST`, `DLinear`, `S_Mamba`, `BiMamba4TS`, `TimeMixer`, `TimeXer`, `NSformer`, `Chronos` |
 
 Use the full config path when launching:
 

@@ -3,6 +3,7 @@ model_path=PointForecasting/$2
 experiment_name=$2
 load_name="SysBio-Traj_index.csv"
 devices="[$3]"
+device_map="cuda:$3"
 
 batch_size=$4
 check_epoch=$5
@@ -21,7 +22,7 @@ if [[ ! -f "${local_model_dir}/config.json" || ! -f "${local_model_dir}/model.sa
     exit 1
 fi
 
-extra_overrides="model.model.args.pretrained_model_path=${local_model_dir} model.model.args.local_files_only=true"
+extra_overrides="model.model.args.pretrained_model_path=${local_model_dir} model.model.args.local_files_only=true model.model.args.device_map=${device_map}"
 
 echo "Starting PointForecasting Chronos runs for seeds: ${seeds[*]}"
 
