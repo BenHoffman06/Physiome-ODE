@@ -97,7 +97,7 @@ Expected local layout:
 
 ```text
 /path/to/SysBio-Traj/
-├── system_info.csv
+├── SysBio-Traj_index.csv
 └── Data/
     └── <model_id>/
         ├── <model_name>.csv
@@ -129,7 +129,7 @@ save_path_dir: /path/to/outputs
 
 data:
   data_dir: /path/to/SysBio-Traj
-  load_name: system_info.csv
+  load_name: SysBio-Traj_index.csv
 
 hardware:
   devices: [0]
@@ -148,7 +148,7 @@ If your metadata file is named differently, also update the `load_name` variable
 - `scripts/exp_train_Point.bash`
 - `scripts/exp_train_Point_chronos.bash`
 
-The current scripts assume `load_name="system_info.csv"` and read `data.data_dir` from `exp/configs/config.yaml`.
+The current scripts assume `load_name="SysBio-Traj_index.csv"` and read `data.data_dir` from `exp/configs/config.yaml`.
 
 ---
 
@@ -206,7 +206,7 @@ WANDB_MODE=offline python exp/train_bioTFM.py \
   -cn config \
   model=ProbabilityForecasting/RegimeFlow \
   data.data_dir=/path/to/SysBio-Traj \
-  data.load_name=system_info.csv \
+  data.load_name=SysBio-Traj_index.csv \
   data.data_type=BioTFM \
   save_path_dir=/path/to/outputs \
   experiment_name=full_RegimeFlow_seed53 \
@@ -230,6 +230,15 @@ model=ProbabilityForecasting/CSDI_regime
 model=PointForecasting/iTransformer
 ```
 
+For any `PointForecasting/*` model, also switch the data module and disable EMA:
+
+```bash
+data.data_type=PointTrajectory
+training.use_ema=false
+```
+
+The launch scripts already set these values for point-forecasting methods. If you run Hydra commands manually, include `training.use_ema=false`; otherwise point-forecasting evaluation can fail because the default full config enables EMA for probabilistic models.
+
 ---
 
 ## Evaluation
@@ -242,7 +251,7 @@ WANDB_MODE=offline python exp/train_bioTFM.py \
   -cn config \
   model=ProbabilityForecasting/RegimeFlow \
   data.data_dir=/path/to/SysBio-Traj \
-  data.load_name=system_info.csv \
+  data.load_name=SysBio-Traj_index.csv \
   data.data_type=BioTFM \
   save_path_dir=/path/to/outputs \
   experiment_name=full_RegimeFlow_eval \
@@ -252,6 +261,24 @@ WANDB_MODE=offline python exp/train_bioTFM.py \
 ```
 
 If the checkpoint contains `ema_state_dict`, the evaluation script automatically uses EMA weights.
+
+For point-forecasting checkpoints, evaluate with `data.data_type=PointTrajectory` and `training.use_ema=false`:
+
+```bash
+WANDB_MODE=offline python exp/train_bioTFM.py \
+  -cp ./configs \
+  -cn config \
+  model=PointForecasting/iTransformer \
+  data.data_dir=/path/to/SysBio-Traj \
+  data.load_name=SysBio-Traj_index.csv \
+  data.data_type=PointTrajectory \
+  training.use_ema=false \
+  save_path_dir=/path/to/outputs \
+  experiment_name=full_iTransformer_eval \
+  test_only=true \
+  ckpt_path=/path/to/checkpoint.ckpt \
+  hardware.devices=[0]
+```
 
 ---
 
@@ -287,6 +314,19 @@ Model configs are located under:
 
 Chronos is integrated through the point-forecasting pipeline and is currently used for zero-shot evaluation.
 
+The default Chronos config uses **Chronos-Bolt Base**:
+
+```text
+https://huggingface.co/amazon/chronos-bolt-base
+```
+
+Download it locally with:
+
+```bash
+huggingface-cli download amazon/chronos-bolt-base \
+  --local-dir /path/to/local/chronos-checkpoint
+```
+
 When using a local Chronos checkpoint, the directory should contain:
 
 - `config.json`
@@ -300,8 +340,9 @@ HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 WANDB_MODE=offline python exp/train_bioT
   -cn config \
   model=PointForecasting/Chronos \
   data.data_dir=/path/to/SysBio-Traj \
-  data.load_name=system_info.csv \
+  data.load_name=SysBio-Traj_index.csv \
   data.data_type=PointTrajectory \
+  training.use_ema=false \
   save_path_dir=/path/to/outputs \
   experiment_name=full_Chronos \
   seed=53 \
@@ -326,10 +367,11 @@ Common overrides:
 
 ```bash
 data.data_dir=/path/to/SysBio-Traj
-data.load_name=system_info.csv
+data.load_name=SysBio-Traj_index.csv
 save_path_dir=/path/to/outputs
 training.max_epochs=500
 training.check_val_every_n_epoch=10
+training.use_ema=false  # required for PointForecasting/* models
 data.batch_size=1024
 hardware.devices=[0]
 ```
