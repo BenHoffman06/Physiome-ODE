@@ -94,7 +94,7 @@ def create_datamodule(cfg: DictConfig):
     val_ratio = data_cfg.get('val_ratio', 0.1)
     test_ratio = data_cfg.get('test_ratio', 0.2)
     seed = cfg.get('seed', 42)
-    load_name = data_cfg.get('load_name', 'system_info.csv')
+    load_name = data_cfg.get('load_name', 'SysBio-Traj_index.csv')
     input_window = data_cfg.get('input_window', 96)
     output_window = data_cfg.get('output_window', 256)
     stride = data_cfg.get('stride', 1)

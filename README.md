@@ -448,7 +448,7 @@ If you find this repository useful, please cite the ICML 2026 paper:
 @inproceedings{rao2026regime,
   title     = {A Regime-Aware Trajectory Prediction Framework for 1000+ Systems Biology Models},
   author    = {Rao, Heng and Zhang, Jason Zipeng and Gu, Yu and Liu, Zhenghao and Yu, Ge and Su, Jeffrey and Cao, Yang and Yang, Fan and Chen, Minghan},
-  booktitle = {Forty-third International Conference on Machine Learning},
+  booktitle = {Proceedings of the 43rd International Conference on Machine Learning},
   year      = {2026},
   url       = {https://openreview.net/forum?id=sI3UUkXJxs}
 }

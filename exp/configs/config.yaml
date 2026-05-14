@@ -3,8 +3,7 @@ defaults:
   - _self_
   - model: ProbabilityForecasting/RegimeFlow
 
-save_path_dir: /root/to/your/save/path/with/hydra
-# save_path_dir: /data/rh/code/RegimeFlow/results
+save_path_dir: ./results
 hydra:
   run:
     # Output directory pattern
@@ -36,10 +35,8 @@ data:
   # Dataset type
   train_AR_dataset: false
   # Paths
-  data_dir: /root/to/Sysbio-Traj/Dataset/path
+  data_dir: ./SysBio-Traj
   load_name: SysBio-Traj_index.csv
-  # data_dir: /data/rh/Dataset/SysBio-Traj
-  # load_name: SysBio-Traj_index.csv
   
   # Splits
   val_ratio: 0.1
@@ -107,5 +104,5 @@ logging:
 # ==================== Hardware ====================
 hardware:
   accelerator: gpu
-  devices: [2]
+  devices: [0]
   precision: 32

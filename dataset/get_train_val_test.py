@@ -10,7 +10,7 @@ from dataset.BioFMSeries import create_bioflowmatching_datamodule_from_bio
 from dataset.BioSeries import MultiBioSeriesDataset, MultiBioSeriesDataset_Subset
 
 def get_train_val_test_splits_ood(data_dir, val_ratio: float = 0.1, test_ratio: float = 0.2, seed: int = 42, 
-                              load_name: str='system_info.csv', armd_train: bool=False, **kwargs):
+                              load_name: str='SysBio-Traj_index.csv', armd_train: bool=False, **kwargs):
     """
     Splits the dataset files in data_dir into training, validation, and test sets.
 
@@ -25,7 +25,6 @@ def get_train_val_test_splits_ood(data_dir, val_ratio: float = 0.1, test_ratio: 
     """
     # List all dataset files in the directory
     system_info_path = os.path.join(data_dir, load_name)
-    # system_info_path = os.path.join(data_dir, "positive_system_info.csv") # only load positive samples
     system_info = pd.read_csv(system_info_path)
     all_files = [
         os.path.join(data_dir, 'Data', row['model_id'], row['model_name'] + '.csv')
@@ -65,7 +64,7 @@ def get_train_val_test_splits_ood(data_dir, val_ratio: float = 0.1, test_ratio: 
 
 def get_train_val_test_splits(data_dir, 
                               val_ratio: float = 0.1, test_ratio: float = 0.2, seed: int = 42, 
-                              load_name: str='system_info.csv', **kwargs):
+                              load_name: str='SysBio-Traj_index.csv', **kwargs):
     """
     Splits the dataset files in data_dir into training, validation, and test sets.
 
@@ -76,7 +75,6 @@ def get_train_val_test_splits(data_dir,
     """
     # List all dataset files in the directory
     system_info_path = os.path.join(data_dir, load_name)
-    # system_info_path = os.path.join(data_dir, "positive_system_info.csv") # only load positive samples
     system_info = pd.read_csv(system_info_path)
     all_files = [
         os.path.join(data_dir, 'Data', row['model_id'], row['model_name'] + '.csv')
