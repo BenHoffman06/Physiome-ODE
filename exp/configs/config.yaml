@@ -3,7 +3,8 @@ defaults:
   - _self_
   - model: TSFlow
 
-save_path_dir: /{to_your_data_save_path}/results/mambaseries/hydra
+save_path_dir: /root/to/your/save/path/with/hydra
+# save_path_dir: /data/rh/code/RegimeFlow/results
 hydra:
   run:
     # Output directory pattern
@@ -23,6 +24,7 @@ seed: 42
 # Test mode flags
 test_only: false
 ckpt_path: null
+test_without_ckpt: false
 
 # ==================== Model ====================
 # ==================== Data ====================
@@ -34,8 +36,10 @@ data:
   # Dataset type
   train_AR_dataset: false
   # Paths
-  data_dir: /{to_your_data_save_path}/BioTimeSeries/2025_12_16/BioDataset/
-  load_name: system_info.csv
+  data_dir: /root/to/Sysbio-Traj/Dataset/path
+  load_name: SysBio-Traj_index.csv
+  # data_dir: /data/rh/BioTimeSeries/SysBio-Traj
+  # load_name: SysBio-Traj_index.csv
   
   # Splits
   val_ratio: 0.1

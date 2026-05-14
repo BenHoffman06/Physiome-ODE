@@ -4,7 +4,7 @@ import sys
 import torch.nn as nn
 sys.path.extend(['./', '../', '../../'])
 from models import Nonstationary_Transformer, DLinear, \
-    PatchTST, iTransformer, TimeMixer, TimeXer, S_Mamba, BiMamba4TS
+    PatchTST, iTransformer, TimeMixer, TimeXer, S_Mamba, BiMamba4TS, Chronos
 
 
 class _PointBaseModel(nn.Module):
@@ -20,3 +20,4 @@ class _PointBaseModel(nn.Module):
         }
         self.model_dict['S_Mamba'] = S_Mamba
         self.model_dict['BiMamba4TS'] = BiMamba4TS
+        self.model_dict['Chronos'] = Chronos

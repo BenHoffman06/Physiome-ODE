@@ -28,7 +28,7 @@ def get_train_val_test_splits_ood(data_dir, val_ratio: float = 0.1, test_ratio: 
     # system_info_path = os.path.join(data_dir, "positive_system_info.csv") # only load positive samples
     system_info = pd.read_csv(system_info_path)
     all_files = [
-        os.path.join(data_dir, row['val_or_not'], str(row['model_type']), row['model_id'], row['model_name'] + '.csv')
+        os.path.join(data_dir, 'Data', row['model_id'], row['model_name'] + '.csv')
         for _, row in system_info.iterrows()
     ]
 
@@ -79,7 +79,7 @@ def get_train_val_test_splits(data_dir,
     # system_info_path = os.path.join(data_dir, "positive_system_info.csv") # only load positive samples
     system_info = pd.read_csv(system_info_path)
     all_files = [
-        os.path.join(data_dir, row['val_or_not'], str(row['model_type']), row['model_id'], row['model_name'] + '.csv')
+        os.path.join(data_dir, 'Data', row['model_id'], row['model_name'] + '.csv')
         for _, row in system_info.iterrows()
     ]
     all_dataset = MultiBioSeriesDataset(dataset_dirs=all_files, **kwargs)

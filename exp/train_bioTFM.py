@@ -283,6 +283,19 @@ def train(cfg: DictConfig) -> None:
     
     # Test only mode
     if cfg.get('test_only', False):
+        if cfg.get('test_without_ckpt', False):
+            print("\nTesting without checkpoint (zero-shot mode).")
+            test_metrics = trainer.test(model, datamodule=datamodule)
+            save_path = os.path.join(cfg.checkpoint.save_dir, "final_test_results_only_test.csv")
+            df = pd.DataFrame(test_metrics)
+            df.to_csv(save_path, index=False)
+            print(f"\nFinal results saved to: {save_path}")
+
+            print("\n" + "=" * 60)
+            print("Done!")
+            print("=" * 60)
+            return
+
         ckpt_path = cfg.get('ckpt_path')
         if ckpt_path is None:
             ckpt_dir = cfg.checkpoint.get('save_dir', './checkpoints/')
