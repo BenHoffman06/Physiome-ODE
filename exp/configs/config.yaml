@@ -38,7 +38,7 @@ data:
   # Paths
   data_dir: /root/to/Sysbio-Traj/Dataset/path
   load_name: SysBio-Traj_index.csv
-  # data_dir: /data/rh/BioTimeSeries/SysBio-Traj
+  # data_dir: /data/rh/Dataset/SysBio-Traj
   # load_name: SysBio-Traj_index.csv
   
   # Splits

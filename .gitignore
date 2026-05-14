@@ -4,6 +4,7 @@ results/
 test_results/
 evaluation/
 Figures/
+SysBio-Traj/
 
 __pycache__
 *.safetensors

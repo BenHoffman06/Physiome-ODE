@@ -1,7 +1,7 @@
 max_epochs=$1
 model_path=PointForecasting/$2
 experiment_name=$2
-load_name="system_info.csv"
+load_name="SysBio-Traj_index.csv"
 # load_name="example_info.csv"
 devices="[$3]"
 
