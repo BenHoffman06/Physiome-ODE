@@ -13,7 +13,7 @@ This repository provides the training and evaluation code used for the full biol
 - Probabilistic forecasting models, including RegimeFlow, TSFlow, and diffusion-based baselines.
 - Point forecasting baselines for deterministic comparison.
 - Script-based experiment launchers for common reproduction runs.
-- A full dataset release path reserved for Hugging Face.
+- Full dataset access through Hugging Face.
 
 > **Anonymity note**  
 > Author names and affiliations are intentionally omitted to preserve double-blind review.
@@ -77,16 +77,16 @@ Before doing so, make sure `nvcc --version` is available and compatible with you
 
 ## Dataset
 
-The full biological trajectory dataset will be released on Hugging Face:
+The full biological trajectory dataset is available on Hugging Face:
 
 ```text
-https://huggingface.co/datasets/<ORG_OR_USER>/<DATASET_REPO>
+https://huggingface.co/datasets/HengRao/SysBio-Traj
 ```
 
-After release, download it with:
+Download it with:
 
 ```bash
-huggingface-cli download <ORG_OR_USER>/<DATASET_REPO> \
+huggingface-cli download HengRao/SysBio-Traj \
   --repo-type dataset \
   --local-dir /path/to/SysBio-Traj
 ```
@@ -366,4 +366,15 @@ We thank the authors of the following repository for their open-source contribut
 
 ## Citation
 
-A citation entry will be added after publication.
+If you find this repository useful, please cite:
+
+```bibtex
+@inproceedings{
+anonymous2026a,
+title={A Regime-Aware Trajectory Prediction Framework for 1000+ Systems Biology Models},
+author={Anonymous},
+booktitle={Forty-third International Conference on Machine Learning},
+year={2026},
+url={https://openreview.net/forum?id=sI3UUkXJxs}
+}
+```
