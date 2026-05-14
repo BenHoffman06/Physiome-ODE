@@ -1,22 +1,24 @@
-# RegimeFlow (ICML Submission)
+# RegimeFlow
 
 [![Python 3.10](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/downloads/release/python-3100/)
 [![Framework](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?&logo=PyTorch&logoColor=white)](https://pytorch.org/)
-[![Conference](https://img.shields.io/badge/ICML-Under%20Review-green)](https://icml.cc/)
+[![Conference](https://img.shields.io/badge/ICML-2026%20Accepted-green)](https://icml.cc/)
+[![Paper](https://img.shields.io/badge/Paper-OpenReview-blue)](https://openreview.net/forum?id=sI3UUkXJxs)
+[![Dataset](https://img.shields.io/badge/Dataset-Hugging%20Face-yellow)](https://huggingface.co/datasets/HengRao/SysBio-Traj)
 
 **RegimeFlow** is a regime-aware flow matching framework for probabilistic forecasting of biological trajectories across dynamical systems.
 
-This repository provides the training and evaluation code used for the full biological trajectory benchmark. It builds on the training/evaluation infrastructure of **[Time-Series-Library](https://github.com/thuml/Time-Series-Library)** and uses **[Hydra](https://hydra.cc/)** for reproducible configuration management.
+This repository contains the official implementation for **A Regime-Aware Trajectory Prediction Framework for 1000+ Systems Biology Models**, accepted to **ICML 2026**.
+
+Use this codebase to train RegimeFlow, run probabilistic and point-forecasting baselines, evaluate checkpoints, and reproduce experiments on the released SysBio-Traj dataset. The project builds on the training/evaluation infrastructure of **[Time-Series-Library](https://github.com/thuml/Time-Series-Library)** and uses **[Hydra](https://hydra.cc/)** for reproducible configuration management.
 
 **Highlights**
-- End-to-end full-dataset training and evaluation pipeline.
+- Official ICML 2026 implementation.
+- End-to-end training and evaluation pipeline for SysBio-Traj.
 - Probabilistic forecasting models, including RegimeFlow, TSFlow, and diffusion-based baselines.
 - Point forecasting baselines for deterministic comparison.
 - Script-based experiment launchers for common reproduction runs.
 - Full dataset access through Hugging Face.
-
-> **Anonymity note**  
-> Author names and affiliations are intentionally omitted to preserve double-blind review.
 
 ---
 
@@ -366,15 +368,14 @@ We thank the authors of the following repository for their open-source contribut
 
 ## Citation
 
-If you find this repository useful, please cite:
+If you find this repository useful, please cite the ICML 2026 paper:
 
 ```bibtex
-@inproceedings{
-anonymous2026a,
-title={A Regime-Aware Trajectory Prediction Framework for 1000+ Systems Biology Models},
-author={Anonymous},
-booktitle={Forty-third International Conference on Machine Learning},
-year={2026},
-url={https://openreview.net/forum?id=sI3UUkXJxs}
+@inproceedings{rao2026regime,
+  title     = {A Regime-Aware Trajectory Prediction Framework for 1000+ Systems Biology Models},
+  author    = {Rao, Heng and Zhang, Jason Zipeng and Gu, Yu and Liu, Zhenghao and Yu, Ge and Su, Jeffrey and Cao, Yang and Yang, Fan and Chen, Minghan},
+  booktitle = {Forty-third International Conference on Machine Learning},
+  year      = {2026},
+  url       = {https://openreview.net/forum?id=sI3UUkXJxs}
 }
 ```
