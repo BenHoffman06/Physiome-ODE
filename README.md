@@ -70,8 +70,8 @@ conda activate mambaseries
 If `mamba-ssm` fails to import, rebuild the low-level dependencies from source:
 
 ```bash
-pip install causal-conv1d>=1.4.0 --no-binary causal-conv1d --force-reinstall --no-cache-dir
-pip install mamba-ssm>=2.2.6 --no-binary mamba-ssm --force-reinstall --no-cache-dir
+pip install "causal-conv1d>=1.4.0" --no-binary causal-conv1d --force-reinstall --no-cache-dir
+pip install "mamba-ssm>=2.2.6" --no-binary mamba-ssm --force-reinstall --no-cache-dir
 ```
 
 Before rebuilding, check that `nvcc --version` is available and compatible with

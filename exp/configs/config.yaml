@@ -1,7 +1,7 @@
 # ==================== Hydra Settings ====================
 defaults:
   - _self_
-  - model: TSFlow
+  - model: ProbabilityForecasting/RegimeFlow
 
 save_path_dir: /root/to/your/save/path/with/hydra
 # save_path_dir: /data/rh/code/RegimeFlow/results

@@ -13,15 +13,15 @@ class Model(nn.Module):
         stride: int, stride for patch_embedding
         """
         super().__init__()
-        model_path = getattr(
-            configs,
-            'pretrained_model_path',
-            None
-        )
-        device_map = "cuda:2" if torch.cuda.is_available() else "cpu"
+        model_path = getattr(configs, 'pretrained_model_path', 'amazon/chronos-bolt-base')
+        local_files_only = getattr(configs, 'local_files_only', False)
+        device_map = getattr(configs, 'device_map', None)
+        if device_map is None or (str(device_map).startswith("cuda") and not torch.cuda.is_available()):
+            device_map = "cuda" if torch.cuda.is_available() else "cpu"
         self.model = BaseChronosPipeline.from_pretrained(
             model_path,
             device_map=device_map,
+            local_files_only=local_files_only,
             torch_dtype=torch.bfloat16,
         )
         self.task_name = configs.task_name
