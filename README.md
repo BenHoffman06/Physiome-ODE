@@ -6,78 +6,80 @@
 [![Paper](https://img.shields.io/badge/Paper-OpenReview-blue)](https://openreview.net/forum?id=sI3UUkXJxs)
 [![Dataset](https://img.shields.io/badge/Dataset-Hugging%20Face-yellow)](https://huggingface.co/datasets/HengRao/SysBio-Traj)
 
-**RegimeFlow** is a regime-aware flow matching framework for probabilistic forecasting of biological trajectories across dynamical systems.
+**RegimeFlow** is a regime-aware flow matching framework for probabilistic
+forecasting of biological trajectories across dynamical systems.
 
-This repository contains the official implementation for **A Regime-Aware Trajectory Prediction Framework for 1000+ Systems Biology Models**, accepted to **ICML 2026**.
+This repository is the official implementation of
+**A Regime-Aware Trajectory Prediction Framework for 1000+ Systems Biology
+Models**, accepted to **ICML 2026**.
 
-Use this codebase to train RegimeFlow, run probabilistic and point-forecasting baselines, evaluate checkpoints, and reproduce experiments on the released SysBio-Traj dataset. The project builds on the training/evaluation infrastructure of **[Time-Series-Library](https://github.com/thuml/Time-Series-Library)** and uses **[Hydra](https://hydra.cc/)** for reproducible configuration management.
+## Quick Links
 
-**Highlights**
-- Official ICML 2026 implementation.
-- End-to-end training and evaluation pipeline for SysBio-Traj.
-- Probabilistic forecasting models, including RegimeFlow, TSFlow, and diffusion-based baselines.
-- Point forecasting baselines for deterministic comparison.
-- Script-based experiment launchers for common reproduction runs.
-- Full dataset access through Hugging Face.
+| I want to... | Go to |
+|---|---|
+| Install the environment | [Installation](#installation) |
+| Download and place the dataset | [Dataset and Paths](#dataset-and-paths) |
+| Run RegimeFlow quickly | [Run with Scripts](#run-with-scripts) |
+| Evaluate a checkpoint | [Evaluation](#evaluation) |
+| Run point-forecasting baselines | [Point Forecasting Note](#point-forecasting-note) |
+| Use Chronos | [Chronos Baseline](#chronos-baseline) |
+| See all model names | [Supported Models](#supported-models) |
 
----
+## What This Repo Provides
 
-## Repository Structure
+| Component | Description |
+|---|---|
+| RegimeFlow | Regime-aware probabilistic trajectory forecasting model |
+| Probabilistic baselines | TSFlow and diffusion-based forecasting baselines |
+| Point baselines | iTransformer, PatchTST, DLinear, S-Mamba, BiMamba4TS, TimeMixer, TimeXer, Chronos |
+| Dataset support | Loader for the released SysBio-Traj benchmark |
+| Reproduction scripts | Bash launchers for common full-dataset experiments |
 
-```text
-.
-├── dataset/                      # Dataset loading, filtering, and train/val/test splits
-├── exp/
-│   ├── train_bioTFM.py           # Main training / evaluation entry point
-│   └── configs/                  # Hydra configs
-│       ├── config.yaml           # Main full-dataset experiment config
-│       └── model/
-│           ├── PointForecasting/
-│           └── ProbabilityForecasting/
-├── models/
-│   ├── FlowMatching/             # RegimeFlow and TSFlow variants
-│   ├── Diffusion/                # Diffusion baselines
-│   └── PointForecasting/         # Deterministic / zero-shot baselines
-├── scripts/                      # Full-dataset launch scripts
-└── Materials/                    # Optional pretrained model assets and references
-```
+> [!TIP]
+> If you are using this repository for the first time, follow this order:
+> install the environment, download SysBio-Traj, edit `exp/configs/config.yaml`,
+> then run the bash scripts in `scripts/`.
 
 ---
 
 ## Installation
 
-The project has been tested on the following environment:
+The project has been tested with the following setup.
 
-- **OS:** Ubuntu 22.04+
-- **Python:** 3.10.19
-- **PyTorch:** 2.9.1
-- **CUDA toolkit (`nvcc`):** 12.4
-- **GPU:** NVIDIA RTX A6000
-- **mamba-ssm:** 2.2.6
+| Dependency | Tested version |
+|---|---|
+| OS | Ubuntu 22.04+ |
+| Python | 3.10.19 |
+| PyTorch | 2.9.1 |
+| CUDA toolkit (`nvcc`) | 12.4 |
+| GPU | NVIDIA RTX A6000 |
+| `mamba-ssm` | 2.2.6 |
 
-### 1. Create the environment
+Create the conda environment:
 
 ```bash
 conda env create -f environment.yml
 conda activate mambaseries
 ```
 
-### 2. Rebuild `mamba-ssm` if needed
+> [!WARNING]
+> This repository depends on `mamba-ssm` v2.x. If your local CUDA compiler is
+> incompatible with the CUDA version used by PyTorch, you may see ABI or
+> `undefined symbol` errors.
 
-This repository depends on `mamba-ssm` v2.x. If your local CUDA compiler is incompatible with the CUDA version used by PyTorch, you may see ABI or `undefined symbol` errors.
-
-If that happens, reinstall the low-level dependencies from source:
+If `mamba-ssm` fails to import, rebuild the low-level dependencies from source:
 
 ```bash
 pip install causal-conv1d>=1.4.0 --no-binary causal-conv1d --force-reinstall --no-cache-dir
 pip install mamba-ssm>=2.2.6 --no-binary mamba-ssm --force-reinstall --no-cache-dir
 ```
 
-Before doing so, make sure `nvcc --version` is available and compatible with your PyTorch build.
+Before rebuilding, check that `nvcc --version` is available and compatible with
+your PyTorch build.
 
 ---
 
-## Dataset
+## Dataset and Paths
 
 The full biological trajectory dataset is available on Hugging Face:
 
@@ -85,7 +87,7 @@ The full biological trajectory dataset is available on Hugging Face:
 https://huggingface.co/datasets/HengRao/SysBio-Traj
 ```
 
-Download it with:
+Download it locally:
 
 ```bash
 huggingface-cli download HengRao/SysBio-Traj \
@@ -93,7 +95,7 @@ huggingface-cli download HengRao/SysBio-Traj \
   --local-dir /path/to/SysBio-Traj
 ```
 
-Expected local layout:
+Expected dataset layout:
 
 ```text
 /path/to/SysBio-Traj/
@@ -104,24 +106,12 @@ Expected local layout:
         └── <model_name>_conditions.json
 ```
 
-The metadata CSV must contain at least:
+> [!IMPORTANT]
+> `SysBio-Traj_index.csv` must contain at least `model_id` and `model_name`.
+> The loader builds each trajectory path as
+> `<data.data_dir>/Data/<model_id>/<model_name>.csv`.
 
-- `model_id`
-- `model_name`
-
-The loader constructs each trajectory path as:
-
-```text
-<data.data_dir>/Data/<model_id>/<model_name>.csv
-```
-
-For each trajectory CSV, the corresponding condition file should be placed next to it with the suffix `_conditions.json`.
-
----
-
-## Configure Paths
-
-Before launching experiments, update the full-dataset config:
+Edit the main config before running experiments:
 
 ```yaml
 # exp/configs/config.yaml
@@ -135,38 +125,34 @@ hardware:
   devices: [0]
 ```
 
-These fields control:
+| Field | Meaning |
+|---|---|
+| `data.data_dir` | Root directory of the downloaded SysBio-Traj dataset |
+| `data.load_name` | Metadata CSV filename under `data.data_dir` |
+| `save_path_dir` | Output root for checkpoints, logs, predictions, and Hydra outputs |
+| `hardware.devices` | GPU index list used by PyTorch Lightning |
 
-- `data.data_dir`: root directory of the downloaded dataset.
-- `data.load_name`: metadata CSV filename under `data.data_dir`.
-- `save_path_dir`: output root for checkpoints, logs, predictions, and Hydra outputs.
-- `hardware.devices`: GPU index list used by PyTorch Lightning.
-
-If your metadata file is named differently, also update the `load_name` variable near the top of the relevant launch script:
-
-- `scripts/exp_train_FM.bash`
-- `scripts/exp_train_Point.bash`
-- `scripts/exp_train_Point_chronos.bash`
-
-The current scripts assume `load_name="SysBio-Traj_index.csv"` and read `data.data_dir` from `exp/configs/config.yaml`.
+> [!IMPORTANT]
+> The bash launchers read `data.data_dir` from `exp/configs/config.yaml`.
+> They currently assume `load_name="SysBio-Traj_index.csv"` near the top of
+> each script. If you rename the metadata file, update the script as well.
 
 ---
 
-## Quick Start
+## Run with Scripts
 
-All commands should be run from the repository root.
+The scripts are the fastest path for reproducing common full-dataset runs.
 
-### Option A: launch with scripts
+> [!NOTE]
+> All commands in this README assume you are running from the repository root.
 
-The fastest way to reproduce common experiments is to use the provided full-dataset scripts.
-
-RegimeFlow:
+### RegimeFlow
 
 ```bash
 bash scripts/exp_train_FM.bash 500 RegimeFlow 0 1024 50 "53"
 ```
 
-Other probabilistic baselines:
+### Probabilistic Baselines
 
 ```bash
 bash scripts/exp_train_FM.bash 500 TSFlow_PE 0 1024 50 "53"
@@ -174,19 +160,19 @@ bash scripts/exp_train_FM.bash 500 TSDiff_regime 0 1024 50 "53"
 bash scripts/exp_train_FM.bash 500 CSDI_regime 0 1024 50 "53"
 ```
 
-Point forecasting baseline:
+### Point Forecasting Baselines
 
 ```bash
 bash scripts/exp_train_Point.bash 100 iTransformer 0 64 10 "53"
 ```
 
-Chronos zero-shot evaluation:
+### Chronos Zero-Shot Evaluation
 
 ```bash
 bash scripts/exp_train_Point_chronos.bash 1 Chronos 0 64 1 "53" /path/to/local/chronos-checkpoint
 ```
 
-Script arguments:
+Script signatures:
 
 ```text
 exp_train_FM.bash <max_epochs> <model_name> <gpu_id> <batch_size> <eval_freq> "<seeds>"
@@ -194,11 +180,16 @@ exp_train_Point.bash <max_epochs> <model_name> <gpu_id> <batch_size> <eval_freq>
 exp_train_Point_chronos.bash <max_epochs> <model_name> <gpu_id> <batch_size> <eval_freq> "<seeds>" <local_model_dir> [offline_mode]
 ```
 
-For multiple seeds, pass a quoted space-separated list, for example `"53 25 81"`.
+> [!TIP]
+> For multiple seeds, pass a quoted space-separated list, for example
+> `"53 25 81"`.
 
-### Option B: launch with Hydra directly
+---
 
-Use direct Hydra commands when you want all paths and overrides visible in the command line.
+## Run with Hydra
+
+Use direct Hydra commands when you want all paths and overrides visible in the
+command line.
 
 ```bash
 WANDB_MODE=offline python exp/train_bioTFM.py \
@@ -220,30 +211,45 @@ WANDB_MODE=offline python exp/train_bioTFM.py \
   hardware.devices=[0]
 ```
 
-To switch models, change only the `model=` override:
+Switch models by changing only the `model=` override when staying within the
+same model family:
 
 ```bash
 model=ProbabilityForecasting/RegimeFlow
 model=ProbabilityForecasting/TSFlow_PE
 model=ProbabilityForecasting/TSDiff_regime
 model=ProbabilityForecasting/CSDI_regime
-model=PointForecasting/iTransformer
 ```
 
-For any `PointForecasting/*` model, also switch the data module and disable EMA:
+### Point Forecasting Note
+
+> [!IMPORTANT]
+> Every `PointForecasting/*` model must use `data.data_type=PointTrajectory`
+> and `training.use_ema=false`. The bash scripts already set these values.
+> Add them manually when using Hydra directly.
 
 ```bash
-data.data_type=PointTrajectory
-training.use_ema=false
+WANDB_MODE=offline python exp/train_bioTFM.py \
+  -cp ./configs \
+  -cn config \
+  model=PointForecasting/iTransformer \
+  data.data_dir=/path/to/SysBio-Traj \
+  data.load_name=SysBio-Traj_index.csv \
+  data.data_type=PointTrajectory \
+  training.use_ema=false \
+  save_path_dir=/path/to/outputs \
+  experiment_name=full_iTransformer_seed53 \
+  seed=53 \
+  training.max_epochs=100 \
+  data.batch_size=64 \
+  hardware.devices=[0]
 ```
-
-The launch scripts already set these values for point-forecasting methods. If you run Hydra commands manually, include `training.use_ema=false`; otherwise point-forecasting evaluation can fail because the default full config enables EMA for probabilistic models.
 
 ---
 
 ## Evaluation
 
-To evaluate a trained checkpoint on the full dataset:
+Evaluate a probabilistic checkpoint:
 
 ```bash
 WANDB_MODE=offline python exp/train_bioTFM.py \
@@ -260,9 +266,11 @@ WANDB_MODE=offline python exp/train_bioTFM.py \
   hardware.devices=[0]
 ```
 
-If the checkpoint contains `ema_state_dict`, the evaluation script automatically uses EMA weights.
+> [!NOTE]
+> If a checkpoint contains `ema_state_dict`, the evaluation script
+> automatically uses EMA weights.
 
-For point-forecasting checkpoints, evaluate with `data.data_type=PointTrajectory` and `training.use_ema=false`:
+Evaluate a point-forecasting checkpoint:
 
 ```bash
 WANDB_MODE=offline python exp/train_bioTFM.py \
@@ -280,39 +288,16 @@ WANDB_MODE=offline python exp/train_bioTFM.py \
   hardware.devices=[0]
 ```
 
----
-
-## Supported Models
-
-Probabilistic forecasting configs:
-
-- `ProbabilityForecasting/RegimeFlow`
-- `ProbabilityForecasting/TSFlow_PE`
-- `ProbabilityForecasting/TSFlow_PE_regime`
-- `ProbabilityForecasting/TSDiff_regime`
-- `ProbabilityForecasting/CSDI_regime`
-
-Point forecasting configs:
-
-- `PointForecasting/iTransformer`
-- `PointForecasting/PatchTST`
-- `PointForecasting/DLinear`
-- `PointForecasting/S_Mamba`
-- `PointForecasting/BiMamba4TS`
-- `PointForecasting/TimeMixer`
-- `PointForecasting/TimeXer`
-- `PointForecasting/Chronos`
-
-Model configs are located under:
-
-- `exp/configs/model/ProbabilityForecasting/`
-- `exp/configs/model/PointForecasting/`
+> [!WARNING]
+> For `PointForecasting/*` evaluation, always set `training.use_ema=false`.
+> Leaving the default EMA setting enabled can cause evaluation errors.
 
 ---
 
 ## Chronos Baseline
 
-Chronos is integrated through the point-forecasting pipeline and is currently used for zero-shot evaluation.
+Chronos is integrated through the point-forecasting pipeline and is currently
+used for zero-shot evaluation.
 
 The default Chronos config uses **Chronos-Bolt Base**:
 
@@ -320,19 +305,19 @@ The default Chronos config uses **Chronos-Bolt Base**:
 https://huggingface.co/amazon/chronos-bolt-base
 ```
 
-Download it locally with:
+Download it locally:
 
 ```bash
 huggingface-cli download amazon/chronos-bolt-base \
   --local-dir /path/to/local/chronos-checkpoint
 ```
 
-When using a local Chronos checkpoint, the directory should contain:
+The local checkpoint directory should contain:
 
 - `config.json`
 - `model.safetensors`
 
-Example:
+Run Chronos:
 
 ```bash
 HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 WANDB_MODE=offline python exp/train_bioTFM.py \
@@ -356,12 +341,37 @@ HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 WANDB_MODE=offline python exp/train_bioT
 
 ---
 
-## Hydra Configuration
+## Supported Models
 
-Useful Hydra flags:
+| Family | Config names |
+|---|---|
+| Probabilistic forecasting | `RegimeFlow`, `TSFlow_PE`, `TSFlow_PE_regime`, `TSDiff_regime`, `CSDI_regime` |
+| Point forecasting | `iTransformer`, `PatchTST`, `DLinear`, `S_Mamba`, `BiMamba4TS`, `TimeMixer`, `TimeXer`, `Chronos` |
 
-- `-cp`: config directory, resolved relative to `exp/train_bioTFM.py` for this entry point.
-- `-cn`: config name.
+Use the full config path when launching:
+
+```bash
+model=ProbabilityForecasting/RegimeFlow
+model=PointForecasting/iTransformer
+```
+
+Model configs are located under:
+
+- `exp/configs/model/ProbabilityForecasting/`
+- `exp/configs/model/PointForecasting/`
+
+---
+
+## Hydra Notes
+
+| Flag / override | Meaning |
+|---|---|
+| `-cp ./configs` | Config directory, resolved relative to `exp/train_bioTFM.py` |
+| `-cn config` | Main full-dataset config |
+| `data.data_dir=...` | Dataset root |
+| `data.load_name=...` | Metadata CSV filename |
+| `save_path_dir=...` | Output root |
+| `hardware.devices=[0]` | GPU list |
 
 Common overrides:
 
@@ -371,16 +381,14 @@ data.load_name=SysBio-Traj_index.csv
 save_path_dir=/path/to/outputs
 training.max_epochs=500
 training.check_val_every_n_epoch=10
-training.use_ema=false  # required for PointForecasting/* models
 data.batch_size=1024
 hardware.devices=[0]
 ```
 
-The main config file for full-dataset experiments is:
-
-```text
-exp/configs/config.yaml
-```
+> [!IMPORTANT]
+> `training.use_ema=false` is required for `PointForecasting/*` models, but
+> should generally remain enabled for RegimeFlow and other probabilistic runs
+> unless you intentionally disable EMA.
 
 ---
 
@@ -398,13 +406,37 @@ Outputs are organized under `save_path_dir`:
 
 Final test metrics are saved as CSV files in the checkpoint directory.
 
+<details>
+<summary>Repository map</summary>
+
+```text
+.
+├── dataset/                      # Dataset loading, filtering, and splits
+├── exp/
+│   ├── train_bioTFM.py           # Main training / evaluation entry point
+│   └── configs/                  # Hydra configs
+│       ├── config.yaml           # Main full-dataset experiment config
+│       └── model/
+│           ├── PointForecasting/
+│           └── ProbabilityForecasting/
+├── models/
+│   ├── FlowMatching/             # RegimeFlow and TSFlow variants
+│   ├── Diffusion/                # Diffusion baselines
+│   └── PointForecasting/         # Deterministic / zero-shot baselines
+├── scripts/                      # Full-dataset launch scripts
+└── Materials/                    # Optional pretrained assets and references
+```
+
+</details>
+
 ---
 
 ## Acknowledgements
 
-We thank the authors of the following repository for their open-source contribution, which serves as the basis of our training/evaluation infrastructure:
-
-- **Time-Series-Library:** https://github.com/thuml/Time-Series-Library
+We thank the authors of
+**[Time-Series-Library](https://github.com/thuml/Time-Series-Library)** for
+their open-source contribution, which serves as the basis of our
+training/evaluation infrastructure.
 
 ---
 
