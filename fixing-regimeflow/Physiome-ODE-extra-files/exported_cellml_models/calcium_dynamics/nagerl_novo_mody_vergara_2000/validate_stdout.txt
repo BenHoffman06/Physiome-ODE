@@ -1,0 +1,10 @@
+[Error] [18:5] Per section 2.4.4 of the CellML specification, any characters that occur immediately within elements in the CellML namespace must be either space (#x20) characters, carriage returns (#xA), line feeds (#xD), or tabs (#x9).
+[Warning] [162:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [185:12] Expected all arguments to operator "plus" to have the same units.
+[Warning] [202:10] MathML equals element has inconsistent units between the sides.
+[Warning] [205:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [232:12] Expected all arguments to operator "plus" to have the same units.
+[Warning] [316:16] Expected all arguments to operator "eq" to have the same units.
+[Warning] [487:18] Expected arguments to operator "exp" to be dimensionless.
+[Error] [580:8] Connection of two variables which have dimensionally inconsistent units.
+[Error] [590:8] Connection of two variables which have dimensionally inconsistent units.

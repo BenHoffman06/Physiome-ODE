@@ -1,0 +1,29 @@
+Model is unsuitably constrained (i.e. there were still some variables left to be computed, and some unusable equations left over).
+At the time of the error, the following variables were found:
+ * Defined: time in component environment
+ * Defined: Ca in component Calcium_dynamics
+ * Defined: J_channel in component Channel_kinetics
+ * Defined: J_pump in component SERCA_pump_kinetics
+ * Defined: J_leak in component Leak
+ * Undefined: beta in component Calcium_buffering
+ * Defined: Ca_ER in component ER
+ * Defined: J_max in component Channel_kinetics
+ * Defined: h in component Channel_kinetics
+ * Defined: K_act in component Channel_kinetics
+ * Defined: K_I in component Channel_kinetics
+ * Defined: K_inh in component Channel_kinetics
+ * Defined: k_on in component Channel_kinetics
+ * Defined: I in component Channel_kinetics
+ * Defined: V_max in component SERCA_pump_kinetics
+ * Defined: K_p in component SERCA_pump_kinetics
+ * Defined: B_end in component Calcium_buffering
+ * Defined: B_ex in component Calcium_buffering
+ * Defined: K_end in component Calcium_buffering
+ * Defined: K_ex in component Calcium_buffering
+ * Undefined: Ca_ex in component Calcium_buffering
+ * Defined: L in component Leak
+ * Undefined: d/dt Ca in component Calcium_dynamics
+ * Defined: d/dt h in component Channel_kinetics
+The following equations couldn't be used:
+ * Equation in apply element with id Ca_diff_eq.
+ * Equation in apply element with id beta_calculation.

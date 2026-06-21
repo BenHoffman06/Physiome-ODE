@@ -1,0 +1,15 @@
+Model is underconstrained.
+The following variables couldn't be defined:
+ * Rs in component Rs
+ * N in component parameters
+ * d/dt Rs in component Rs
+ * d/dt Cs in component Cs
+ * d/dt Li in component Li
+ * d/dt Ri in component Ri
+ * d/dt Ci in component Ci
+ * d/dt L in component L
+ * d/dt Ld in component Ld
+ * d/dt n in component N
+ * d/dt L4 in component PKPD
+ * d/dt n1 in component PKPD
+ * d/dt n2 in component PKPD

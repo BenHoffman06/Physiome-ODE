@@ -1,0 +1,250 @@
+﻿--- Cell 2 Output ---
+Γ£ô Environment linked and paths aligned!
+Active Python: /deac/opt/rocky9-noarch/python/3.11.8/bin/python
+
+
+--- Cell 4 Output ---
+=== 1. Checking/Applying Chronos import fix in _point_base.py ===
+  Γ£ô Verified/Fixed imports in models/PointForecasting/_point_base.py
+  Γ£ô Verified/Fixed imports in RegimeFlow/models/PointForecasting/_point_base.py
+
+=== 2. Checking Chronos pretrained model ===
+  Γ£ô Pretrained model already exists at Materials/PretrainedModel/Chronos_bolt/20M
+
+=== 3. Checkpoint NaN Diagnostics ===
+  ΓÜá∩╕Å Error loading results/checkpoints/BiMamba4TS_seed53/53/last.ckpt: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL omegaconf.dictconfig.DictConfig was not an allowed global by default. Please use `torch.serialization.add_safe_globals([DictConfig])` or the `torch.serialization.safe_globals([DictConfig])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+  ΓÜá∩╕Å Error loading results/checkpoints/CSDI_regime_seed53/53/last.ckpt: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL omegaconf.dictconfig.DictConfig was not an allowed global by default. Please use `torch.serialization.add_safe_globals([DictConfig])` or the `torch.serialization.safe_globals([DictConfig])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+  ΓÜá∩╕Å Error loading results/checkpoints/CSDI_seed53/53/last.ckpt: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL omegaconf.dictconfig.DictConfig was not an allowed global by default. Please use `torch.serialization.add_safe_globals([DictConfig])` or the `torch.serialization.safe_globals([DictConfig])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+  ΓÜá∩╕Å Error loading results/checkpoints/DLinear_seed53/53/last.ckpt: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL omegaconf.dictconfig.DictConfig was not an allowed global by default. Please use `torch.serialization.add_safe_globals([DictConfig])` or the `torch.serialization.safe_globals([DictConfig])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+  ΓÜá∩╕Å Error loading results/checkpoints/NSformer_seed53/53/last.ckpt: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL omegaconf.dictconfig.DictConfig was not an allowed global by default. Please use `torch.serialization.add_safe_globals([DictConfig])` or the `torch.serialization.safe_globals([DictConfig])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+  ΓÜá∩╕Å Error loading results/checkpoints/PatchTST_seed53/53/last.ckpt: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL omegaconf.dictconfig.DictConfig was not an allowed global by default. Please use `torch.serialization.add_safe_globals([DictConfig])` or the `torch.serialization.safe_globals([DictConfig])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+  ΓÜá∩╕Å Error loading results/checkpoints/RegimeFlow_seed53/53/last.ckpt: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL omegaconf.dictconfig.DictConfig was not an allowed global by default. Please use `torch.serialization.add_safe_globals([DictConfig])` or the `torch.serialization.safe_globals([DictConfig])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+  ΓÜá∩╕Å Error loading results/checkpoints/S_Mamba_seed53/53/last.ckpt: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL omegaconf.dictconfig.DictConfig was not an allowed global by default. Please use `torch.serialization.add_safe_globals([DictConfig])` or the `torch.serialization.safe_globals([DictConfig])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+  ΓÜá∩╕Å Error loading results/checkpoints/TSDiff_regime_seed53/53/last.ckpt: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL omegaconf.dictconfig.DictConfig was not an allowed global by default. Please use `torch.serialization.add_safe_globals([DictConfig])` or the `torch.serialization.safe_globals([DictConfig])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+  ΓÜá∩╕Å Error loading results/checkpoints/TSDiff_seed53/53/last.ckpt: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL omegaconf.dictconfig.DictConfig was not an allowed global by default. Please use `torch.serialization.add_safe_globals([DictConfig])` or the `torch.serialization.safe_globals([DictConfig])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+  ΓÜá∩╕Å Error loading results/checkpoints/TSFlow_PE_regime_seed53/53/last.ckpt: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL omegaconf.dictconfig.DictConfig was not an allowed global by default. Please use `torch.serialization.add_safe_globals([DictConfig])` or the `torch.serialization.safe_globals([DictConfig])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+  ΓÜá∩╕Å Error loading results/checkpoints/TSFlow_PE_seed53/53/last.ckpt: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL omegaconf.dictconfig.DictConfig was not an allowed global by default. Please use `torch.serialization.add_safe_globals([DictConfig])` or the `torch.serialization.safe_globals([DictConfig])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+  ΓÜá∩╕Å Error loading results/checkpoints/TimeMixer_seed53/53/last.ckpt: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL omegaconf.dictconfig.DictConfig was not an allowed global by default. Please use `torch.serialization.add_safe_globals([DictConfig])` or the `torch.serialization.safe_globals([DictConfig])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+  ΓÜá∩╕Å Error loading results/checkpoints/TimeXer_seed53/53/last.ckpt: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL omegaconf.dictconfig.DictConfig was not an allowed global by default. Please use `torch.serialization.add_safe_globals([DictConfig])` or the `torch.serialization.safe_globals([DictConfig])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+  ΓÜá∩╕Å Error loading results/checkpoints/iTransformer_seed53/53/last.ckpt: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL omegaconf.dictconfig.DictConfig was not an allowed global by default. Please use `torch.serialization.add_safe_globals([DictConfig])` or the `torch.serialization.safe_globals([DictConfig])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+
+
+--- Cell 6 Output ---
+Γ£ô SLURM cluster environment detected. Using sbatch for scheduling.
+
+=== Checking Model Training Status ===
+  Γ£ô RegimeFlow          : Already finished (seed 53 predictions exist). Skipping.
+  ΓÅ│ TSFlow_PE           : Currently running. Skipping launch.
+  ΓÅ│ TSFlow_PE_regime    : Currently running. Skipping launch.
+  ΓÅ│ TSDiff_regime       : Currently running. Skipping launch.
+  ΓÅ│ CSDI_regime         : Currently running. Skipping launch.
+  ΓÅ│ iTransformer        : Currently running. Skipping launch.
+  ≡ƒöä PatchTST            : Found checkpoint. Resuming from checkpoint.
+  ≡ƒöä DLinear             : Found checkpoint. Resuming from checkpoint.
+  ΓÅ│ S_Mamba             : Currently running. Skipping launch.
+  ΓÅ│ BiMamba4TS          : Currently running. Skipping launch.
+  ΓÅ│ TimeMixer           : Currently running. Skipping launch.
+  ΓÅ│ TimeXer             : Currently running. Skipping launch.
+  ≡ƒöä NSformer            : Found checkpoint. Resuming from checkpoint.
+
+Launching 3 training jobs...
+  Submitted PatchTST -> Submitted batch job 7228317
+  Submitted DLinear -> Submitted batch job 7228318
+  Submitted NSformer -> Submitted batch job 7228319
+
+
+--- Cell 8 Output ---
+======== ACTIVE JOBS (00:47) ========
+  No active training jobs found.
+
+======== TRAINING PROGRESS ========
+MODEL                | STATUS       | EPOCH        | TRAIN LOSS | VAL LOSS   | ACTIVE NODE    
+----------------------------------------------------------------------------------------
+BiMamba4TS           | STOPPED      | ?/500        | -          | -          | -              
+CSDI                 | STOPPED      | ?/500        | -          | -          | -              
+CSDI_regime          | STOPPED      | ?/500        | -          | -          | -              
+Chronos              | NOT STARTED  | 0/500        | -          | -          | -              
+DLinear              | STOPPED      | ?/500        | -          | -          | -              
+iTransformer         | STOPPED      | ?/500        | -          | -          | -              
+NSformer             | STOPPED      | ?/500        | -          | -          | -              
+PatchTST             | STOPPED      | ?/500        | -          | -          | -              
+RegimeFlow           | STOPPED      | ?/500        | -          | -          | -              
+S_Mamba              | STOPPED      | ?/500        | -          | -          | -              
+TimeMixer            | STOPPED      | ?/500        | -          | -          | -              
+TimeXer              | STOPPED      | ?/500        | -          | -          | -              
+TSDiff               | STOPPED      | ?/500        | -          | -          | -              
+TSDiff_regime        | STOPPED      | ?/500        | -          | -          | -              
+TSFlow_PE            | STOPPED      | ?/500        | -          | -          | -              
+TSFlow_PE_regime     | STOPPED      | ?/500        | -          | -          | -              
+
+
+--- Cell 10 Output ---
+=== 1. Checking optional packages ===
+  Γ£ô chronos package IS installed.
+
+=== 2. Launching Missing Evaluations ===
+  ≡ƒÜÇ Launching evaluation for BiMamba4TS on seed 53 in background...
+  ≡ƒÜÇ Launching evaluation for CSDI on seed 53 in background...
+  ≡ƒÜÇ Launching evaluation for CSDI_regime on seed 53 in background...
+  ≡ƒÜÇ Launching evaluation for Chronos on seed 53 in background...
+  ≡ƒÜÇ Launching evaluation for DLinear on seed 53 in background...
+  ≡ƒÜÇ Launching evaluation for iTransformer on seed 53 in background...
+  ≡ƒÜÇ Launching evaluation for NSformer on seed 53 in background...
+  ≡ƒÜÇ Launching evaluation for PatchTST on seed 53 in background...
+  Γ£ô Predictions already exist for RegimeFlow.
+  ≡ƒÜÇ Launching evaluation for S_Mamba on seed 53 in background...
+  ≡ƒÜÇ Launching evaluation for TimeMixer on seed 53 in background...
+  ≡ƒÜÇ Launching evaluation for TimeXer on seed 53 in background...
+  ≡ƒÜÇ Launching evaluation for TSDiff on seed 53 in background...
+  ≡ƒÜÇ Launching evaluation for TSDiff_regime on seed 53 in background...
+  ≡ƒÜÇ Launching evaluation for TSFlow_PE on seed 53 in background...
+  ≡ƒÜÇ Launching evaluation for TSFlow_PE_regime on seed 53 in background...
+
+Launched 15 background evaluations. Please wait a few minutes for them to complete.
+Monitor them using: tail -f eval_model.log or watch the dashboard cell above.
+
+=== 3. Aligning Prediction Folders for Auto-Discovery ===
+  Γ¥î Predictions missing for BiMamba4TS.
+  Γ¥î Predictions missing for CSDI.
+  Γ¥î Predictions missing for CSDI_regime.
+  Γ¥î Predictions missing for Chronos.
+  Γ¥î Predictions missing for DLinear.
+  Γ¥î Predictions missing for iTransformer.
+  Γ¥î Predictions missing for NSformer.
+  Γ¥î Predictions missing for PatchTST.
+  Γ£ô Already aligned: RegimeFlow
+  Γ¥î Predictions missing for S_Mamba.
+  Γ¥î Predictions missing for TimeMixer.
+  Γ¥î Predictions missing for TimeXer.
+  Γ¥î Predictions missing for TSDiff.
+  Γ¥î Predictions missing for TSDiff_regime.
+  Γ¥î Predictions missing for TSFlow_PE.
+  Γ¥î Predictions missing for TSFlow_PE_regime.
+
+
+--- Cell 11 Output ---
+0
+
+
+--- Cell 12 Output ---
+=========================================================================
+Starting Evaluation for iTransformer
+Family:      PointForecasting
+Data Type:   PointTrajectory
+EMA:         false
+Checkpoint:  results/checkpoints/iTransformer_seed53/53/last.ckpt
+GPU:         0
+=========================================================================
+[rank: 0] Seed set to 42
+============================================================
+Configuration:
+============================================================
+save_path_dir: ./results
+experiment_name: full_iTransformer_eval
+seed: 42
+test_only: true
+ckpt_path: results/checkpoints/iTransformer_seed53/53/last.ckpt
+test_without_ckpt: false
+data:
+  data_type: PointTrajectory
+  OOD: true
+  train_AR_dataset: false
+  data_dir: ./SysBio-Traj
+  load_name: SysBio-Traj_index.csv
+  val_ratio: 0.1
+  test_ratio: 0.2
+  input_window: 96
+  output_window: 256
+  stride: 16
+  transform_type: minmax
+  condition_names:
+  - bound_min
+  - bound_max
+  - traj_pattern
+  - period
+
+
+--- Cell 14 Output ---
+======================================================================
+Beginning Cross-Seed Stratified Evaluation
+Data Dir: ./SysBio-Traj
+Results Dir: ./results
+======================================================================
+[-] No prediction files found for evaluation.
+
+

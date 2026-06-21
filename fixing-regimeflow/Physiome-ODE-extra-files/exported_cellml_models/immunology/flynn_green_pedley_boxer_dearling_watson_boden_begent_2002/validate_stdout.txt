@@ -1,0 +1,11 @@
+[Warning] [190:10] MathML equals element has inconsistent units between the sides.
+[Warning] [232:10] MathML equals element has inconsistent units between the sides.
+[Warning] [278:10] MathML equals element has inconsistent units between the sides.
+[Warning] [331:10] MathML equals element has inconsistent units between the sides.
+[Warning] [364:10] MathML equals element has inconsistent units between the sides.
+[Warning] [414:10] MathML equals element has inconsistent units between the sides.
+[Warning] [417:12] Expected arguments to operator "exp" to be dimensionless.
+[Warning] [450:10] MathML equals element has inconsistent units between the sides.
+[Warning] [491:10] MathML equals element has inconsistent units between the sides.
+[Error] [501:12] MathML int apply has more than one child.
+[Warning] [546:10] MathML equals element has inconsistent units between the sides.

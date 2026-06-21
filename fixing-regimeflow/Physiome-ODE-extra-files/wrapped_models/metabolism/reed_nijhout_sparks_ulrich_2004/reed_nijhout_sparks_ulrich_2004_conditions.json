@@ -1,0 +1,23 @@
+{
+  "Kd_MS": 1,
+  "Ki_GNMT": 20,
+  "Ki_MATI": 50,
+  "Km2_MATIII": 21.1,
+  "Km2_METH_A": 10,
+  "Km_BHMT": 12,
+  "Km_GNMT": 4500,
+  "Km_Hcy_MS": 0.1,
+  "Km_MATI": 41,
+  "Km_five_mTHF_MS": 25,
+  "V_BHMTmax": 2500,
+  "V_GNMTmax": 10600,
+  "V_MATIIImax": 22870,
+  "V_MATImax": 561,
+  "V_METHmax": 4521,
+  "V_MSmax": 500,
+  "alpha1": 100,
+  "alpha2": 10,
+  "beta1": 1.7,
+  "beta2": 30,
+  "five_mTHF": 5.2
+}

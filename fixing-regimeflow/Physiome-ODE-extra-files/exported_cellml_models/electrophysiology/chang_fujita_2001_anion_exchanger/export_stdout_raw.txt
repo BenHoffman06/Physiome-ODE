@@ -1,0 +1,10 @@
+Model is underconstrained.
+The following variables couldn't be defined:
+ * E in component E
+ * J_Cl_influx in component J_Cl_influx
+ * d/dt E in component E
+ * d/dt ECl in component ECl
+ * d/dt EHCO3 in component EHCO3
+ * d/dt E_ in component E_
+ * d/dt ECl_ in component ECl_
+ * d/dt EHCO3_ in component EHCO3_

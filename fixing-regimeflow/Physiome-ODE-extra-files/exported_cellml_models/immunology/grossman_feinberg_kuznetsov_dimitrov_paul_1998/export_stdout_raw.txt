@@ -1,0 +1,21 @@
+Model is underconstrained.
+The following variables couldn't be defined:
+ * c in component kinetic_parameters
+ * p in component kinetic_parameters
+ * a in component kinetic_parameters
+ * S in component S
+ * Se in component Se
+ * Ve in component Ve
+ * R0 in component Ve
+ * I1e in component I1e
+ * I2e in component I2e
+ * I3e in component I3e
+ * I4e in component I4e
+ * I5e in component I5e
+ * d/dt S in component S
+ * d/dt I1 in component I1
+ * d/dt I2 in component I2
+ * d/dt I3 in component I3
+ * d/dt I4 in component I4
+ * d/dt I5 in component I5
+ * d/dt V in component V

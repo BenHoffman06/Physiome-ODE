@@ -1,0 +1,19 @@
+Model is underconstrained.
+The following variables couldn't be defined:
+ * Ca_i in component cytoplasmic_calcium
+ * J_i in component cytoplasmic_calcium
+ * J_ER in component ER_Ca_release
+ * J_pm in component Ca_extrusion_across_the_plasma_membrane
+ * v_ER in component intraluminal_calcium
+ * k_ER in component intraluminal_calcium
+ * Ca_ER_init in component intraluminal_calcium
+ * v_i in component total_cytoplasmic_Ca_flux
+ * k_i in component total_cytoplasmic_Ca_flux
+ * P_ER in component ER_Ca_release
+ * J_SERCA in component Ca_uptake_by_SR_Ca_ATPase
+ * J_ICa in component total_cytoplasmic_Ca_flux
+ * I_Ca in component total_cytoplasmic_Ca_flux
+ * J_extru in component Ca_extrusion_across_the_plasma_membrane
+ * J_release in component ER_Ca_release
+ * d/dt Ca_i in component cytoplasmic_calcium
+ * d/dt Ca_ER in component intraluminal_calcium

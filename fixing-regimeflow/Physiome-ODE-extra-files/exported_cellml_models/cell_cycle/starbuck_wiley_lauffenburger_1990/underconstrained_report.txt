@@ -1,0 +1,48 @@
+Model is underconstrained.
+The following variables couldn't be defined:
+ * Rs in component Rs
+ * kfc in component kinetic_constants
+ * kr in component kinetic_constants
+ * ks in component kinetic_constants
+ * kt in component kinetic_constants
+ * krec_c in component kinetic_constants
+ * krec_i in component kinetic_constants
+ * numcell in component kinetic_constants
+ * fr in component kinetic_constants
+ * kc in component kinetic_constants
+ * ku in component kinetic_constants
+ * lamda in component kinetic_constants
+ * krec_p in component kinetic_constants
+ * kfe in component kinetic_constants
+ * kr_ in component kinetic_constants
+ * kdeg in component kinetic_constants
+ * ku_ in component kinetic_constants
+ * kfv in component kinetic_constants
+ * kuc in component kinetic_constants
+ * kf in component kinetic_constants
+ * K_DC in component kinetic_constants
+ * K_DT in component kinetic_constants
+ * Kcp in component kinetic_constants
+ * RT in component kinetic_constants
+ * PT in component kinetic_constants
+ * PT_RT in component kinetic_constants
+ * cell in component kinetic_constants
+ * plate in component kinetic_constants
+ * Vplate in component kinetic_constants
+ * L in component kinetic_constants
+ * Vendosome in component kinetic_constants
+ * Vvesicle in component kinetic_constants
+ * Nav in component kinetic_constants
+ * d/dt Rs in component Rs
+ * d/dt Cs in component Cs
+ * d/dt Ts in component Ts
+ * d/dt Ps in component Ps
+ * d/dt Lo in component Lo
+ * d/dt Rii in component Rii
+ * d/dt Cii in component Cii
+ * d/dt Ti in component Ti
+ * d/dt Pi in component Pi
+ * d/dt Lii in component Lii
+ * d/dt Ric in component Ric
+ * d/dt Cic in component Cic
+ * d/dt Lic in component Lic

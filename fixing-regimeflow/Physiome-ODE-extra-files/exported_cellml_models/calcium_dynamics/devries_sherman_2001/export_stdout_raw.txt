@@ -1,0 +1,12 @@
+Model is underconstrained.
+The following variables couldn't be defined:
+ * V in component membrane
+ * i_K in component potassium_current
+ * i_Ca in component calcium_current
+ * i_s in component slow_current
+ * m_infinity in component calcium_current_m_gate
+ * n_infinity in component potassium_current_n_gate
+ * s_infinity in component slow_current_s_gate
+ * d/dt V in component membrane
+ * d/dt n in component potassium_current_n_gate
+ * d/dt s in component slow_current_s_gate

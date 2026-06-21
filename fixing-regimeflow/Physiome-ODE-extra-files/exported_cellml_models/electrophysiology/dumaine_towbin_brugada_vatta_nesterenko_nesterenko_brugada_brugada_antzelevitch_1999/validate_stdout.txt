@@ -1,0 +1,33 @@
+[Error] [21:5] Per section 2.4.4 of the CellML specification, any characters that occur immediately within elements in the CellML namespace must be either space (#x20) characters, carriage returns (#xA), line feeds (#xD), or tabs (#x9).
+[Warning] [213:10] MathML equals element has inconsistent units between the sides.
+[Warning] [267:10] MathML equals element has inconsistent units between the sides.
+[Warning] [553:10] MathML equals element has inconsistent units between the sides.
+[Warning] [748:20] Expected arguments to operator "exp" to be dimensionless.
+[Warning] [1096:10] MathML equals element has inconsistent units between the sides.
+[Warning] [1126:16] Expected all arguments to operator "minus" to have the same units.
+[Warning] [1181:10] MathML equals element has inconsistent units between the sides.
+[Warning] [1266:10] MathML equals element has inconsistent units between the sides.
+[Warning] [1702:10] MathML equals element has inconsistent units between the sides.
+[Warning] [1760:10] MathML equals element has inconsistent units between the sides.
+[Warning] [1809:16] Expected arguments to operator "exp" to be dimensionless.
+[Warning] [1842:16] Expected arguments to operator "exp" to be dimensionless.
+[Warning] [1939:10] MathML equals element has inconsistent units between the sides.
+[Warning] [1981:10] MathML equals element has inconsistent units between the sides.
+[Warning] [2042:14] Expected all arguments to operator "plus" to have the same units.
+[Warning] [2047:18] Expected arguments to operator "exp" to be dimensionless.
+[Warning] [2064:16] Expected arguments to operator "exp" to be dimensionless.
+[Warning] [2163:10] MathML equals element has inconsistent units between the sides.
+[Warning] [2227:10] MathML equals element has inconsistent units between the sides.
+[Warning] [2276:14] Expected arguments to operator "ln" to be dimensionless.
+[Warning] [2287:10] MathML equals element has inconsistent units between the sides.
+[Warning] [2398:16] Expected arguments to operator "exp" to be dimensionless.
+[Warning] [2538:10] MathML equals element has inconsistent units between the sides.
+[Warning] [2623:10] MathML equals element has inconsistent units between the sides.
+[Warning] [2795:14] Expected all arguments to operator "minus" to have the same units.
+[Warning] [2947:14] Expected all arguments to operator "minus" to have the same units.
+[Warning] [3199:10] MathML equals element has inconsistent units between the sides.
+[Warning] [3242:10] MathML equals element has inconsistent units between the sides.
+[Warning] [3251:12] Expected all arguments to operator "plus" to have the same units.
+[Warning] [3301:10] MathML equals element has inconsistent units between the sides.
+[Warning] [3343:10] MathML equals element has inconsistent units between the sides.
+[Warning] [3432:10] MathML equals element has inconsistent units between the sides.

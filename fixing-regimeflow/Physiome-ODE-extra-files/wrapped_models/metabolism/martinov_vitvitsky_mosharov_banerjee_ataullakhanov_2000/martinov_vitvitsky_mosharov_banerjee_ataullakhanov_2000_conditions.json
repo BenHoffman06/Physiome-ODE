@@ -1,0 +1,15 @@
+{
+  "Ado": 1,
+  "K_AHC": 0.1,
+  "Ki_GNMT": 20,
+  "Ki_MATI": 50,
+  "Km2_MATIII": 21.1,
+  "Km2_MET_A": 10,
+  "Km_GNMT": 4500,
+  "Km_MATI": 41,
+  "V_GNMTmax": 10600,
+  "V_MATIIImax": 22870,
+  "V_MATImax": 561,
+  "V_METmax": 4544,
+  "alpha_d": 1333
+}

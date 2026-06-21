@@ -1,0 +1,23 @@
+Model is underconstrained.
+The following variables couldn't be defined:
+ * R in component R
+ * V1 in component V1
+ * V4 in component V4
+ * V2 in component V2
+ * V5 in component V5
+ * V6 in component V6
+ * V7 in component V7
+ * V3 in component V3
+ * V8 in component V8
+ * V9 in component V9
+ * V10 in component V10
+ * d/dt R in component R
+ * d/dt R__ in component R__
+ * d/dt I in component I
+ * d/dt O1 in component O1
+ * d/dt O2 in component O2
+ * d/dt R_ in component R_
+ * d/dt C1 in component C1
+ * d/dt Ca_ER in component Ca_ER
+ * d/dt Ca_cyt in component Ca_cyt
+ * d/dt Ca_L in component Ca_L

@@ -1,0 +1,19 @@
+[Warning] [280:10] MathML equals element has inconsistent units between the sides.
+[Warning] [289:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [335:10] MathML equals element has inconsistent units between the sides.
+[Warning] [344:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [418:14] Expected arguments to operator "exp" to be dimensionless.
+[Warning] [435:14] Expected arguments to operator "exp" to be dimensionless.
+[Warning] [452:14] Expected arguments to operator "exp" to be dimensionless.
+[Warning] [469:14] Expected arguments to operator "exp" to be dimensionless.
+[Warning] [486:14] Expected arguments to operator "exp" to be dimensionless.
+[Warning] [503:14] Expected arguments to operator "exp" to be dimensionless.
+[Error] [518:12] MathML cn element contains an invalid constant representation.
+[Warning] [520:14] Expected arguments to operator "exp" to be dimensionless.
+[Error] [523:16] MathML cn element contains an invalid constant representation.
+[Error] [578:6] Connection of two variables which have dimensionally inconsistent units.
+[Error] [584:6] Connection of two variables which have dimensionally inconsistent units.
+[Error] [589:6] Connection of two variables which have dimensionally inconsistent units.
+[Error] [590:6] Connection of two variables which have dimensionally inconsistent units.
+[Error] [611:6] Mapping variable_2 which has public interface of none.
+[Error] [621:6] Mapping variable_2 which has public interface of none.

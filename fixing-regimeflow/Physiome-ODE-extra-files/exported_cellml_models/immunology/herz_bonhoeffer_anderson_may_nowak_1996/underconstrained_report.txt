@@ -1,0 +1,11 @@
+Model is underconstrained.
+The following variables couldn't be defined:
+ * x in component x
+ * lamda in component x
+ * beta in component kinetic_parameters
+ * a_ in component y
+ * k in component v
+ * d/dt x in component x
+ * d/dt y in component y
+ * d/dt v in component v
+ * d/dt vI in component vI

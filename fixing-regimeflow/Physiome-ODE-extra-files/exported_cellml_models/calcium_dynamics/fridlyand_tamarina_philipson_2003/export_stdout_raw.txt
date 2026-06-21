@@ -1,0 +1,123 @@
+Model is unsuitably constrained (i.e. there were still some variables left to be computed, and some unusable equations left over).
+At the time of the error, the following variables were found:
+ * Defined: time in component environment
+ * Defined: V in component membrane
+ * Defined: Cm in component membrane
+ * Defined: i_VCa in component whole_cell_calcium_current
+ * Defined: i_Ca_pump in component PM_calcium_pumps
+ * Defined: i_NaCa in component sodium_calcium_exchanger
+ * Defined: i_CRAN in component nonselective_cation_current
+ * Defined: i_Na in component sodium_current
+ * Undefined: i_NaK in component sodium_potassium_active_transport
+ * Defined: i_KDr in component voltage_dependent_potassium_current
+ * Defined: i_KCa in component calcium_dependent_potassium_current
+ * Defined: i_KATP in component ATP_dependent_potassium_current
+ * Defined: V_Ca in component whole_cell_calcium_current
+ * Defined: gm_VCa in component whole_cell_calcium_current
+ * Defined: R in component cell_and_external_parameters
+ * Defined: F in component cell_and_external_parameters
+ * Defined: T in component cell_and_external_parameters
+ * Defined: Cai in component calcium_and_sodium_dynamics
+ * Defined: Cao in component cell_and_external_parameters
+ * Defined: p_VCa in component whole_cell_calcium_current_p_VCa_gate
+ * Defined: V_Cah in component whole_cell_calcium_current_p_VCa_gate
+ * Defined: K_Cah in component whole_cell_calcium_current_p_VCa_gate
+ * Defined: Pm_Cap in component PM_calcium_pumps
+ * Defined: K_Cap in component PM_calcium_pumps
+ * Defined: V_NaCa in component sodium_calcium_exchanger
+ * Defined: g_NaCa in component sodium_calcium_exchanger
+ * Defined: K_NaCa in component sodium_calcium_exchanger
+ * Defined: Nai in component calcium_and_sodium_dynamics
+ * Defined: Nao in component cell_and_external_parameters
+ * Defined: V_CRAN in component nonselective_cation_current
+ * Defined: gm_CRAN in component nonselective_cation_current
+ * Defined: K_Car in component nonselective_cation_current
+ * Defined: f_CRAN in component nonselective_cation_current
+ * Defined: P_CRAN in component nonselective_cation_current
+ * Defined: V_Na in component sodium_current
+ * Defined: CaER in component calcium_and_sodium_dynamics
+ * Defined: gm_Na in component sodium_current
+ * Defined: p_Na in component sodium_current_p_Na_gate
+ * Defined: P_NaK in component sodium_potassium_active_transport
+ * Defined: P in component sodium_potassium_active_transport
+ * Undefined: K_supi in component sodium_potassium_active_transport
+ * Defined: F1 in component sodium_potassium_active_transport
+ * Defined: F4 in component sodium_potassium_active_transport
+ * Defined: F5 in component sodium_potassium_active_transport
+ * Defined: f1 in component sodium_potassium_active_transport
+ * Defined: f2 in component sodium_potassium_active_transport
+ * Defined: f3 in component sodium_potassium_active_transport
+ * Defined: f4 in component sodium_potassium_active_transport
+ * Defined: f5_ in component sodium_potassium_active_transport
+ * Defined: f5 in component sodium_potassium_active_transport
+ * Defined: f6 in component sodium_potassium_active_transport
+ * Defined: b1 in component sodium_potassium_active_transport
+ * Defined: b2 in component sodium_potassium_active_transport
+ * Defined: b3 in component sodium_potassium_active_transport
+ * Defined: b4 in component sodium_potassium_active_transport
+ * Defined: b5_ in component sodium_potassium_active_transport
+ * Defined: b5 in component sodium_potassium_active_transport
+ * Defined: b6 in component sodium_potassium_active_transport
+ * Defined: B2 in component sodium_potassium_active_transport
+ * Defined: B3 in component sodium_potassium_active_transport
+ * Defined: B4 in component sodium_potassium_active_transport
+ * Undefined: B6 in component sodium_potassium_active_transport
+ * Defined: D in component sodium_potassium_active_transport
+ * Defined: ATPi in component ATP_homeostasis
+ * Defined: ADPi in component ATP_homeostasis
+ * Defined: Ko in component cell_and_external_parameters
+ * Defined: V_K in component voltage_dependent_potassium_current
+ * Defined: gm_KDr in component voltage_dependent_potassium_current
+ * Defined: Ki in component cell_and_external_parameters
+ * Defined: n in component voltage_dependent_potassium_current_n_gate
+ * Defined: tau_n in component voltage_dependent_potassium_current_n_gate
+ * Defined: n_infinity in component voltage_dependent_potassium_current_n_gate
+ * Defined: Vn in component voltage_dependent_potassium_current_n_gate
+ * Defined: Vtau in component voltage_dependent_potassium_current_n_gate
+ * Defined: Sn in component voltage_dependent_potassium_current_n_gate
+ * Defined: a in component voltage_dependent_potassium_current_n_gate
+ * Defined: b in component voltage_dependent_potassium_current_n_gate
+ * Defined: c in component voltage_dependent_potassium_current_n_gate
+ * Defined: gm_KCa in component calcium_dependent_potassium_current
+ * Defined: fCa in component calcium_dependent_potassium_current_fCa_gate
+ * Defined: K_KCa in component calcium_dependent_potassium_current_fCa_gate
+ * Defined: gm_KATP in component ATP_dependent_potassium_current
+ * Defined: O_KATP in component ATP_dependent_potassium_current
+ * Defined: Kdd in component ATP_dependent_potassium_current
+ * Defined: Ktd in component ATP_dependent_potassium_current
+ * Defined: Ktt in component ATP_dependent_potassium_current
+ * Defined: Jer_p in component SERCA_pump
+ * Defined: P_CaER in component SERCA_pump
+ * Defined: K_Carp in component SERCA_pump
+ * Defined: IP3i in component IP3_metabolism
+ * Defined: kIP in component IP3_metabolism
+ * Defined: kdIP in component IP3_metabolism
+ * Defined: K_IPCa in component IP3_metabolism
+ * Defined: J_out in component CaER_mobilisation
+ * Defined: P_leak in component CaER_mobilisation
+ * Defined: P_IP3 in component CaER_mobilisation
+ * Defined: O_infinity in component CaER_mobilisation
+ * Defined: K_RCa in component CaER_mobilisation
+ * Defined: K_IP3 in component CaER_mobilisation
+ * Defined: fi in component calcium_and_sodium_dynamics
+ * Defined: fer in component calcium_and_sodium_dynamics
+ * Defined: ksg in component calcium_and_sodium_dynamics
+ * Defined: Ver in component calcium_and_sodium_dynamics
+ * Defined: Vi in component cell_and_external_parameters
+ * Undefined: k_ADP in component ATP_homeostasis
+ * Defined: k_ATP in component ATP_homeostasis
+ * Defined: k_ATP_Ca in component ATP_homeostasis
+ * Defined: Ao in component ATP_homeostasis
+ * Undefined: d/dt V in component membrane
+ * Defined: d/dt n in component voltage_dependent_potassium_current_n_gate
+ * Defined: d/dt IP3i in component IP3_metabolism
+ * Defined: d/dt Cai in component calcium_and_sodium_dynamics
+ * Defined: d/dt CaER in component calcium_and_sodium_dynamics
+ * Undefined: d/dt Nai in component calcium_and_sodium_dynamics
+ * Undefined: d/dt ATPi in component ATP_homeostasis
+The following equations couldn't be used:
+ * Equation in apply element with id membrane_voltage_diff_eq.
+ * Equation in apply element with id i_NaK_calculation.
+ * Equation in apply element with id B6_calculation.
+ * Equation in apply element with id Nai_diff_eq.
+ * Equation in apply element with id ATPi_diff_eq.

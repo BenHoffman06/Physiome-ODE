@@ -1,0 +1,18 @@
+Model is underconstrained.
+The following variables couldn't be defined:
+ * PKACII_RyR in component PKACII_RyR
+ * RyR in component RyR
+ * PP1_RyR in component PP1_RyR
+ * RyRp in component RyRp
+ * PP2A_RyR in component PP2A_RyR
+ * RyRtot in component RyRtot
+ * RyRptot in component RyRptot
+ * KMrel in component KMrel
+ * KMrel0 in component KMrel
+ * TnI in component TnI
+ * PKAC in component TnIp
+ * PP2A in component TnIp
+ * KMTnC in component KMTnC
+ * KMTnC0 in component KMTnC
+ * d/dt RyRptot in component RyRptot
+ * d/dt TnIp in component TnIp

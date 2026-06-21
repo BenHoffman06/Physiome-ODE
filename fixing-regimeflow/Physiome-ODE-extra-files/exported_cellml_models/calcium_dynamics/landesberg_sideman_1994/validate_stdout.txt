@@ -1,0 +1,24 @@
+[Warning] [140:14] MathML equals element has inconsistent units between the sides.
+[Warning] [176:14] MathML equals element has inconsistent units between the sides.
+[Warning] [186:20] Expected all arguments to operator "plus" to have the same units.
+[Warning] [203:14] MathML equals element has inconsistent units between the sides.
+[Warning] [213:20] Expected all arguments to operator "plus" to have the same units.
+[Warning] [263:14] MathML equals element has inconsistent units between the sides.
+[Warning] [382:14] MathML equals element has inconsistent units between the sides.
+[Warning] [456:23] Expected all arguments to operator "gt" to have the same units.
+[Warning] [489:23] Expected all arguments to operator "lt" to have the same units.
+[Warning] [505:14] MathML equals element has inconsistent units between the sides.
+[Warning] [579:23] Expected all arguments to operator "gt" to have the same units.
+[Warning] [612:23] Expected all arguments to operator "lt" to have the same units.
+[Warning] [628:14] MathML equals element has inconsistent units between the sides.
+[Warning] [697:23] Expected all arguments to operator "gt" to have the same units.
+[Warning] [730:23] Expected all arguments to operator "lt" to have the same units.
+[Warning] [771:14] MathML equals element has inconsistent units between the sides.
+[Warning] [820:14] MathML equals element has inconsistent units between the sides.
+[Warning] [873:14] MathML equals element has inconsistent units between the sides.
+[Warning] [926:14] MathML equals element has inconsistent units between the sides.
+[Warning] [1011:20] Expected all arguments to operator "plus" to have the same units.
+[Warning] [1053:20] Expected all arguments to operator "plus" to have the same units.
+[Warning] [1212:17] Expected all arguments to operator "minus" to have the same units.
+[Warning] [1240:23] Expected all arguments to operator "plus" to have the same units.
+[Warning] [1279:23] Expected all arguments to operator "plus" to have the same units.

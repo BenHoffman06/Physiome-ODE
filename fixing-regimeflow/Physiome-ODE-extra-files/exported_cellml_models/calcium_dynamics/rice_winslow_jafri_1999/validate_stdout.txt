@@ -1,0 +1,71 @@
+[Warning] [190:10] MathML equals element has inconsistent units between the sides.
+[Warning] [209:10] MathML equals element has inconsistent units between the sides.
+[Warning] [229:10] MathML equals element has inconsistent units between the sides.
+[Warning] [255:16] Expected all arguments to operator "minus" to have the same units.
+[Warning] [260:20] Expected arguments to operator "exp" to be dimensionless.
+[Warning] [286:18] Expected arguments to operator "exp" to be dimensionless.
+[Warning] [318:18] Expected all arguments to operator "eq" to have the same units.
+[Warning] [323:18] Expected all arguments to operator "eq" to have the same units.
+[Error] [340:12] This version of CellML can only be used with real numbers.
+[Warning] [373:18] Expected all arguments to operator "eq" to have the same units.
+[Warning] [378:18] Expected all arguments to operator "eq" to have the same units.
+[Warning] [392:10] MathML equals element has inconsistent units between the sides.
+[Warning] [422:10] MathML equals element has inconsistent units between the sides.
+[Warning] [487:10] MathML equals element has inconsistent units between the sides.
+[Warning] [516:10] MathML equals element has inconsistent units between the sides.
+[Warning] [533:20] Expected all arguments to operator "plus" to have the same units.
+[Warning] [547:10] MathML equals element has inconsistent units between the sides.
+[Warning] [579:10] MathML equals element has inconsistent units between the sides.
+[Warning] [630:10] MathML equals element has inconsistent units between the sides.
+[Warning] [635:14] Expected all arguments to operator "plus" to have the same units.
+[Warning] [659:14] Expected all arguments to operator "plus" to have the same units.
+[Warning] [698:10] MathML equals element has inconsistent units between the sides.
+[Warning] [703:14] Expected all arguments to operator "plus" to have the same units.
+[Warning] [731:14] Expected all arguments to operator "plus" to have the same units.
+[Warning] [775:10] MathML equals element has inconsistent units between the sides.
+[Warning] [780:14] Expected all arguments to operator "plus" to have the same units.
+[Warning] [808:14] Expected all arguments to operator "plus" to have the same units.
+[Warning] [853:10] MathML equals element has inconsistent units between the sides.
+[Warning] [858:14] Expected all arguments to operator "plus" to have the same units.
+[Warning] [884:14] Expected all arguments to operator "plus" to have the same units.
+[Warning] [921:10] MathML equals element has inconsistent units between the sides.
+[Warning] [952:10] MathML equals element has inconsistent units between the sides.
+[Warning] [1003:10] MathML equals element has inconsistent units between the sides.
+[Warning] [1008:14] Expected all arguments to operator "plus" to have the same units.
+[Warning] [1029:14] Expected all arguments to operator "plus" to have the same units.
+[Warning] [1071:10] MathML equals element has inconsistent units between the sides.
+[Warning] [1076:14] Expected all arguments to operator "plus" to have the same units.
+[Warning] [1101:14] Expected all arguments to operator "plus" to have the same units.
+[Warning] [1148:10] MathML equals element has inconsistent units between the sides.
+[Warning] [1153:14] Expected all arguments to operator "plus" to have the same units.
+[Warning] [1178:14] Expected all arguments to operator "plus" to have the same units.
+[Warning] [1226:10] MathML equals element has inconsistent units between the sides.
+[Warning] [1231:14] Expected all arguments to operator "plus" to have the same units.
+[Warning] [1254:14] Expected all arguments to operator "plus" to have the same units.
+[Warning] [1294:10] MathML equals element has inconsistent units between the sides.
+[Warning] [1322:10] MathML equals element has inconsistent units between the sides.
+[Warning] [1356:10] MathML equals element has inconsistent units between the sides.
+[Warning] [1413:10] MathML equals element has inconsistent units between the sides.
+[Warning] [1460:10] MathML equals element has inconsistent units between the sides.
+[Warning] [1510:10] MathML equals element has inconsistent units between the sides.
+[Warning] [1564:10] MathML equals element has inconsistent units between the sides.
+[Warning] [1660:10] MathML equals element has inconsistent units between the sides.
+[Warning] [1671:10] MathML equals element has inconsistent units between the sides.
+[Warning] [1700:10] MathML equals element has inconsistent units between the sides.
+[Error] [1706:16] MathML cn element contains an invalid constant representation.
+[Warning] [1731:10] MathML equals element has inconsistent units between the sides.
+[Error] [1737:16] MathML cn element contains an invalid constant representation.
+[Warning] [1762:10] MathML equals element has inconsistent units between the sides.
+[Error] [1768:16] MathML cn element contains an invalid constant representation.
+[Warning] [1793:10] MathML equals element has inconsistent units between the sides.
+[Warning] [1824:10] MathML equals element has inconsistent units between the sides.
+[Error] [1830:16] MathML cn element contains an invalid constant representation.
+[Warning] [1855:10] MathML equals element has inconsistent units between the sides.
+[Error] [1861:16] MathML cn element contains an invalid constant representation.
+[Error] [1889:8] Connection of two variables which have dimensionally inconsistent units.
+[Error] [1894:8] Connection of two variables which have dimensionally inconsistent units.
+[Error] [2037:8] Connection of two variables which have dimensionally inconsistent units.
+[Error] [2042:8] Connection of two variables which have dimensionally inconsistent units.
+[Error] [2047:8] Connection of two variables which have dimensionally inconsistent units.
+[Error] [2052:8] Connection of two variables which have dimensionally inconsistent units.
+[Error] [2076:8] Connection of two variables which have dimensionally inconsistent units.

@@ -1,0 +1,31 @@
+Model is underconstrained.
+The following variables couldn't be defined:
+ * V in component membrane
+ * proton_motive_force in component membrane
+ * pH_i in component membrane
+ * pH_m in component membrane
+ * JH_res in component proton_pump
+ * JH_leak in component proton_leak
+ * JH_F1 in component F0_F1_ATPase
+ * J_ant in component ATP_ADP_exchange
+ * J_uni in component Ca_uniporter
+ * Jo in component proton_pump
+ * A_res in component proton_pump
+ * NAD_m in component proton_pump
+ * NADH_m in component proton_pump
+ * Jp_F1 in component F0_F1_ATPase
+ * A_F1 in component F0_F1_ATPase
+ * ATP_m in component F0_F1_ATPase
+ * ADP_m_free in component F0_F1_ATPase
+ * ATP_i in component ATP_ADP_exchange
+ * ATP_m in component ATP_ADP_exchange
+ * ADP_i in component ATP_ADP_exchange
+ * ATP4_i in component ATP_ADP_exchange
+ * ATP4_m in component ATP_ADP_exchange
+ * ADP3_i in component ATP_ADP_exchange
+ * ADP3_m in component ATP_ADP_exchange
+ * Ca_i in component Ca_uniporter
+ * J_Na_Ca in component Na_Ca_exchanger
+ * d/dt V in component membrane
+ * d/dt ADP_m in component ATP_ADP_exchange
+ * d/dt Ca_m in component Na_Ca_exchanger

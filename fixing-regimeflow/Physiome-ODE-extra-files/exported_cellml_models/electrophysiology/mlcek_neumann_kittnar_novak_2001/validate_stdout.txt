@@ -1,0 +1,18 @@
+[Warning] [204:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [227:14] Expected all arguments to operator "plus" to have the same units.
+[Error] [252:6] More than one connection to in interface of variable.
+[Warning] [277:14] Expected all arguments to operator "plus" to have the same units.
+[Warning] [372:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [527:10] MathML equals element has inconsistent units between the sides.
+[Warning] [536:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [538:14] Expected all arguments to operator "plus" to have the same units.
+[Error] [703:6] There is more than one variable in the same component called kTA_.
+[Error] [838:8] Cannot connect a component to itself.
+[Error] [838:8] It is not valid to map a component to itself.
+[Error] [839:8] Mapping variable_1 has public interface of out but variable_2 also has public interface of out.
+[Error] [840:8] Connection of the same two variables more than once.
+[Error] [840:8] Mapping variable_1 has public interface of out but variable_2 also has public interface of out.
+[Error] [906:6] Connection of two variables which have dimensionally inconsistent units.
+[Error] [907:6] Connection of two variables which have dimensionally inconsistent units.
+[Error] [956:6] Connection of two variables which have dimensionally inconsistent units.
+[Error] [957:6] Connection of two variables which have dimensionally inconsistent units.

@@ -1,0 +1,16 @@
+[Warning] [116:10] MathML equals element has inconsistent units between the sides.
+[Warning] [125:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [149:10] MathML equals element has inconsistent units between the sides.
+[Warning] [155:14] Expected all arguments to operator "plus" to have the same units.
+[Warning] [177:10] MathML equals element has inconsistent units between the sides.
+[Warning] [186:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [217:10] MathML equals element has inconsistent units between the sides.
+[Warning] [226:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [278:10] MathML equals element has inconsistent units between the sides.
+[Warning] [341:10] MathML equals element has inconsistent units between the sides.
+[Warning] [371:10] MathML equals element has inconsistent units between the sides.
+[Error] [413:6] Connection of two variables which have dimensionally inconsistent units.
+[Error] [414:6] Connection of two variables which have dimensionally inconsistent units.
+[Error] [419:6] Connection of two variables which have dimensionally inconsistent units.
+[Error] [439:6] Connection of two variables which have dimensionally inconsistent units.
+[Error] [450:6] Connection of two variables which have dimensionally inconsistent units.

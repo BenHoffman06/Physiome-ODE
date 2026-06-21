@@ -1,0 +1,7 @@
+[Warning] [157:10] MathML equals element has inconsistent units between the sides.
+[Warning] [166:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [171:16] Expected all arguments to operator "minus" to have the same units.
+[Warning] [252:10] MathML equals element has inconsistent units between the sides.
+[Warning] [264:14] Expected all arguments to operator "minus" to have the same units.
+[Error] [295:12] This version of CellML can only be used with real numbers.
+[Warning] [312:10] MathML equals element has inconsistent units between the sides.

@@ -1,0 +1,13 @@
+{
+  "Ifr_sigma_fr_phi_fr": 0.1,
+  "Ir_sigma_r_phi_r": 0.0,
+  "alpha1": 30.0,
+  "alpha2": 50.0,
+  "glucose": 1.0,
+  "kG": 0.1,
+  "kai": 0.8,
+  "kd": 0.1,
+  "kia": 0.1,
+  "kx": 0.2,
+  "ky": 1.0
+}

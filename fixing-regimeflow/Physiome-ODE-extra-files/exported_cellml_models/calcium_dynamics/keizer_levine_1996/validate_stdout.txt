@@ -1,0 +1,19 @@
+[Warning] [164:18] Units validation results may be incorrect because the exponent is not a constant.
+[Warning] [215:16] Units validation results may be incorrect because the exponent is not a constant.
+[Warning] [294:18] Units validation results may be incorrect because the exponent is not a constant.
+[Warning] [377:16] Expected all arguments to operator "plus" to have the same units.
+[Warning] [391:14] Expected all arguments to operator "plus" to have the same units.
+[Warning] [416:10] MathML equals element has inconsistent units between the sides.
+[Warning] [419:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [431:14] Expected all arguments to operator "plus" to have the same units.
+[Warning] [453:14] Expected all arguments to operator "plus" to have the same units.
+[Warning] [483:10] MathML equals element has inconsistent units between the sides.
+[Warning] [523:10] MathML equals element has inconsistent units between the sides.
+[Warning] [573:10] MathML equals element has inconsistent units between the sides.
+[Warning] [585:14] Expected all arguments to operator "minus" to have the same units.
+[Warning] [589:18] Expected all arguments to operator "plus" to have the same units.
+[Error] [693:6] Connection of two variables which have dimensionally inconsistent units.
+[Error] [715:6] Connection of two variables which have dimensionally inconsistent units.
+[Error] [716:6] Connection of two variables which have dimensionally inconsistent units.
+[Error] [734:6] Connection of two variables which have dimensionally inconsistent units.
+[Error] [772:6] Connection of two variables which have dimensionally inconsistent units.

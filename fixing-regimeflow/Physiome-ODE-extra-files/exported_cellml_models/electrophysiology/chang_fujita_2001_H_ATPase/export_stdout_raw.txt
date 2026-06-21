@@ -1,0 +1,9 @@
+Model is underconstrained.
+The following variables couldn't be defined:
+ * EH in component EH
+ * d/dt EH in component EH
+ * d/dt E in component E
+ * d/dt EH2 in component EH2
+ * d/dt EH_ in component EH_
+ * d/dt E_ in component E_
+ * d/dt EH2_ in component EH2_

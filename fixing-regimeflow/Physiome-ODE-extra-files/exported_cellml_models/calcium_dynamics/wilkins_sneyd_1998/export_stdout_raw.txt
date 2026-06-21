@@ -1,0 +1,11 @@
+Model is underconstrained.
+The following variables couldn't be defined:
+ * c in component calcium_concentration
+ * dc_dx2 in component calcium_concentration
+ * dc_dy2 in component calcium_concentration
+ * j_flux in component calcium_flux
+ * j_pump in component calcium_pump
+ * h in component calcium_flux
+ * p in component calcium_flux
+ * d/dt h in component calcium_flux
+ * d/dt mu_p in component calcium_flux

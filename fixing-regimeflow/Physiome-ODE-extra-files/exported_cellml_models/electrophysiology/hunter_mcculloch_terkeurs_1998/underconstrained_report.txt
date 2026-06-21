@@ -1,0 +1,35 @@
+Model is underconstrained.
+The following variables couldn't be defined:
+ * Ca_max in component calcium_transient
+ * tau_Ca in component calcium_transient
+ * Ca_o in component calcium_transient
+ * Ca_b in component TnC_Ca_binding_kinetics
+ * lambda in component TnC_Ca_binding_kinetics
+ * Ca_b_max in component TnC_Ca_binding_kinetics
+ * rho_0 in component TnC_Ca_binding_kinetics
+ * rho_1 in component TnC_Ca_binding_kinetics
+ * To in component thin_filament_kinetics
+ * T in component crossbridge_kinetics
+ * C_50 in component thin_filament_kinetics
+ * pC_50 in component thin_filament_kinetics
+ * pC_50_ref in component thin_filament_kinetics
+ * n in component thin_filament_kinetics
+ * n_ref in component thin_filament_kinetics
+ * alpha_0 in component thin_filament_kinetics
+ * T_ref in component thin_filament_kinetics
+ * beta_0 in component thin_filament_kinetics
+ * beta_1 in component thin_filament_kinetics
+ * beta_2 in component thin_filament_kinetics
+ * a in component crossbridge_kinetics
+ * Q in component crossbridge_kinetics
+ * A1 in component crossbridge_kinetics
+ * A2 in component crossbridge_kinetics
+ * A3 in component crossbridge_kinetics
+ * alpha_1 in component crossbridge_kinetics
+ * alpha_2 in component crossbridge_kinetics
+ * alpha_3 in component crossbridge_kinetics
+ * tau in component crossbridge_kinetics
+ * dlambda_dt in component crossbridge_kinetics
+ * d/dt Ca_i in component calcium_transient
+ * d/dt Ca_b in component TnC_Ca_binding_kinetics
+ * d/dt z in component thin_filament_kinetics

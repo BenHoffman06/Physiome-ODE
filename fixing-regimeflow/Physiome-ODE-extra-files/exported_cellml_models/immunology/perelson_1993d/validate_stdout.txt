@@ -1,0 +1,8 @@
+[Warning] [94:6] MathML equals element has inconsistent units between the sides.
+[Warning] [103:7] Expected all arguments to operator "minus" to have the same units.
+[Warning] [105:8] Expected all arguments to operator "minus" to have the same units.
+[Warning] [128:9] Expected all arguments to operator "plus" to have the same units.
+[Warning] [199:6] MathML equals element has inconsistent units between the sides.
+[Warning] [216:7] Inconsistent units between pieces and otherwise of the piecewise equation.
+[Warning] [273:9] Expected arguments to operator "exp" to be dimensionless.
+[Warning] [284:9] Expected arguments to operator "exp" to be dimensionless.

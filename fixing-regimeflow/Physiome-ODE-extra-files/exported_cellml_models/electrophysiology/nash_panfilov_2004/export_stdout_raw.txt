@@ -1,0 +1,29 @@
+Model is unsuitably constrained (i.e. there were still some variables left to be computed, and some unusable equations left over).
+At the time of the error, the following variables were found:
+ * Defined: t in component interface
+ * Defined: Cm in component interface
+ * Defined: Vr in component interface
+ * Defined: Vth in component interface
+ * Defined: Vp in component interface
+ * Defined: k in component interface
+ * Defined: epsilon in component interface
+ * Defined: mu1 in component interface
+ * Defined: mu2 in component interface
+ * Defined: e0 in component interface
+ * Defined: kTa in component interface
+ * Undefined: Istim in component interface
+ * Defined: Vm in component membrane_potential
+ * Defined: Iion in component ionic_current
+ * Defined: r in component recovery_variable
+ * Defined: Ta in component active_tension
+ * Undefined: IStimC in component interface
+ * Defined: u in component membrane_potential
+ * Defined: a in component membrane_potential
+ * Defined: eps in component recovery_variable
+ * Defined: e in component active_tension
+ * Undefined: d/dt Vm in component membrane_potential
+ * Defined: d/dt r in component recovery_variable
+ * Defined: d/dt Ta in component active_tension
+The following equations couldn't be used:
+ * Equation in apply element with id IStim_for_cmiss.
+ * Equation in apply element with id Vm_deriv.

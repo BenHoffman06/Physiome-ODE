@@ -1,0 +1,24 @@
+Model is underconstrained.
+The following variables couldn't be defined:
+ * V in component membrane
+ * i_Ca_L in component L_type_calcium_current
+ * i_Ca_T in component T_type_calcium_current
+ * i_K_DR in component voltage_sensitive_K_current
+ * i_K_Ca in component Ca_activated_K_current
+ * i_K_IR in component inward_rectifier_current
+ * V_Ca in component L_type_calcium_current
+ * m_L_infinity in component L_type_calcium_current_m_gate
+ * tau_m_L in component L_type_calcium_current_m_gate
+ * m_T_infinity in component T_type_calcium_current_m_gate
+ * tau_m_T in component T_type_calcium_current_m_gate
+ * h_T_infinity in component T_type_calcium_current_h_gate
+ * V_K in component voltage_sensitive_K_current
+ * n_infinity in component voltage_sensitive_K_current_n_gate
+ * J_in in component cytosolic_calcium
+ * J_eff in component cytosolic_calcium
+ * d/dt V in component membrane
+ * d/dt m_L in component L_type_calcium_current_m_gate
+ * d/dt m_T in component T_type_calcium_current_m_gate
+ * d/dt h_T in component T_type_calcium_current_h_gate
+ * d/dt n in component voltage_sensitive_K_current_n_gate
+ * d/dt Ca_i in component cytosolic_calcium

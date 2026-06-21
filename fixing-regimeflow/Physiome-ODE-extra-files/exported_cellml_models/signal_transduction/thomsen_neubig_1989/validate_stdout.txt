@@ -1,0 +1,30 @@
+[Warning] [99:10] MathML equals element has inconsistent units between the sides.
+[Warning] [108:12] Expected all arguments to operator "plus" to have the same units.
+[Warning] [126:10] MathML equals element has inconsistent units between the sides.
+[Warning] [135:12] Expected all arguments to operator "plus" to have the same units.
+[Error] [160:20] Expected a real number, but didn't get one in a valid format.
+[Error] [161:20] Expected a real number, but didn't get one in a valid format.
+[Warning] [169:10] MathML equals element has inconsistent units between the sides.
+[Warning] [178:12] Expected all arguments to operator "plus" to have the same units.
+[Warning] [182:16] Expected all arguments to operator "minus" to have the same units.
+[Warning] [229:10] MathML equals element has inconsistent units between the sides.
+[Warning] [238:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [240:14] Expected all arguments to operator "plus" to have the same units.
+[Warning] [257:16] Expected all arguments to operator "plus" to have the same units.
+[Warning] [280:10] MathML equals element has inconsistent units between the sides.
+[Warning] [289:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [291:14] Expected all arguments to operator "plus" to have the same units.
+[Warning] [304:14] Expected all arguments to operator "plus" to have the same units.
+[Warning] [331:10] MathML equals element has inconsistent units between the sides.
+[Warning] [340:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [350:16] Expected all arguments to operator "plus" to have the same units.
+[Warning] [368:10] MathML equals element has inconsistent units between the sides.
+[Warning] [400:10] MathML equals element has inconsistent units between the sides.
+[Error] [487:6] The can only be a single connection element for each pair of components in the model.
+[Error] [487:6] There is more than one connection element for the same pair of components.
+[Error] [526:6] The can only be a single connection element for each pair of components in the model.
+[Error] [526:6] There is more than one connection element for the same pair of components.
+[Error] [530:6] The can only be a single connection element for each pair of components in the model.
+[Error] [530:6] There is more than one connection element for the same pair of components.
+[Error] [544:6] The can only be a single connection element for each pair of components in the model.
+[Error] [544:6] There is more than one connection element for the same pair of components.

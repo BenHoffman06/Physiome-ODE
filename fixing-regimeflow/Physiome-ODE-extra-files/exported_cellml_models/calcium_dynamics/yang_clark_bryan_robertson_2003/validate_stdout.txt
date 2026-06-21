@@ -1,0 +1,47 @@
+[Warning] [667:23] Expected arguments to operator "log" to be dimensionless.
+[Warning] [790:23] Expected arguments to operator "exp" to be dimensionless.
+[Warning] [962:14] MathML equals element has inconsistent units between the sides.
+[Warning] [1036:14] MathML equals element has inconsistent units between the sides.
+[Warning] [1110:14] MathML equals element has inconsistent units between the sides.
+[Warning] [1142:23] Expected all arguments to operator "minus" to have the same units.
+[Warning] [1198:23] Expected arguments to operator "exp" to be dimensionless.
+[Warning] [1204:32] Expected all arguments to operator "minus" to have the same units.
+[Warning] [1248:23] Expected arguments to operator "exp" to be dimensionless.
+[Warning] [1266:14] MathML equals element has inconsistent units between the sides.
+[Warning] [1276:14] MathML equals element has inconsistent units between the sides.
+[Warning] [1279:17] Expected all arguments to operator "plus" to have the same units.
+[Warning] [1284:23] Expected arguments to operator "log" to be dimensionless.
+[Warning] [1310:20] Expected all arguments to operator "plus" to have the same units.
+[Warning] [1403:14] MathML equals element has inconsistent units between the sides.
+[Warning] [1434:20] Expected all arguments to operator "plus" to have the same units.
+[Warning] [1745:14] MathML equals element has inconsistent units between the sides.
+[Warning] [1806:17] Expected all arguments to operator "minus" to have the same units.
+[Warning] [1849:17] Expected all arguments to operator "minus" to have the same units.
+[Warning] [2014:14] MathML equals element has inconsistent units between the sides.
+[Warning] [2017:17] Expected all arguments to operator "minus" to have the same units.
+[Warning] [2034:23] Expected all arguments to operator "plus" to have the same units.
+[Warning] [2055:14] MathML equals element has inconsistent units between the sides.
+[Warning] [2058:17] Expected all arguments to operator "minus" to have the same units.
+[Warning] [2060:20] Expected all arguments to operator "plus" to have the same units.
+[Warning] [2080:23] Expected all arguments to operator "plus" to have the same units.
+[Warning] [2093:14] MathML equals element has inconsistent units between the sides.
+[Warning] [2096:17] Expected all arguments to operator "minus" to have the same units.
+[Warning] [2098:20] Expected all arguments to operator "plus" to have the same units.
+[Warning] [2128:14] MathML equals element has inconsistent units between the sides.
+[Warning] [2131:17] Expected all arguments to operator "minus" to have the same units.
+[Warning] [2133:20] Expected all arguments to operator "plus" to have the same units.
+[Warning] [2149:23] Expected all arguments to operator "plus" to have the same units.
+[Warning] [2183:14] MathML equals element has inconsistent units between the sides.
+[Warning] [2208:14] MathML equals element has inconsistent units between the sides.
+[Warning] [2237:14] MathML equals element has inconsistent units between the sides.
+[Warning] [2266:14] MathML equals element has inconsistent units between the sides.
+[Warning] [2292:14] MathML equals element has inconsistent units between the sides.
+[Warning] [2302:20] Expected all arguments to operator "plus" to have the same units.
+[Warning] [2430:20] Expected all arguments to operator "plus" to have the same units.
+[Error] [2674:8] Connection of two variables which have dimensionally inconsistent units.
+[Error] [2684:8] Connection of two variables which have dimensionally inconsistent units.
+[Error] [2698:8] Connection of two variables which have dimensionally inconsistent units.
+[Error] [2735:8] Connection of two variables which have dimensionally inconsistent units.
+[Error] [2746:8] Connection of two variables which have dimensionally inconsistent units.
+[Error] [2761:8] Connection of two variables which have dimensionally inconsistent units.
+[Error] [2765:8] Connection of two variables which have dimensionally inconsistent units.

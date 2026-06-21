@@ -1,0 +1,27 @@
+[Warning] [159:10] MathML equals element has inconsistent units between the sides.
+[Warning] [231:10] MathML equals element has inconsistent units between the sides.
+[Warning] [240:12] Expected all arguments to operator "minus" to have the same units.
+[Error] [652:20] Expected a real number, but didn't get one in a valid format.
+[Error] [653:20] Expected a real number, but didn't get one in a valid format.
+[Warning] [657:10] MathML equals element has inconsistent units between the sides.
+[Warning] [683:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [692:16] Expected all arguments to operator "plus" to have the same units.
+[Warning] [707:10] MathML equals element has inconsistent units between the sides.
+[Warning] [722:10] MathML equals element has inconsistent units between the sides.
+[Warning] [761:18] Expected all arguments to operator "plus" to have the same units.
+[Warning] [784:18] Expected all arguments to operator "plus" to have the same units.
+[Warning] [894:10] MathML equals element has inconsistent units between the sides.
+[Warning] [897:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [935:14] Expected all arguments to operator "minus" to have the same units.
+[Warning] [957:14] Expected all arguments to operator "minus" to have the same units.
+[Warning] [979:14] Expected all arguments to operator "minus" to have the same units.
+[Warning] [1001:14] Expected all arguments to operator "minus" to have the same units.
+[Error] [1020:20] Expected a real number, but didn't get one in a valid format.
+[Error] [1022:20] Expected a real number, but didn't get one in a valid format.
+[Error] [1024:20] Expected a real number, but didn't get one in a valid format.
+[Error] [1026:20] Expected a real number, but didn't get one in a valid format.
+[Error] [1028:20] Expected a real number, but didn't get one in a valid format.
+[Warning] [1047:10] MathML equals element has inconsistent units between the sides.
+[Warning] [1057:10] MathML equals element has inconsistent units between the sides.
+[Error] [1160:6] The can only be a single connection element for each pair of components in the model.
+[Error] [1160:6] There is more than one connection element for the same pair of components.

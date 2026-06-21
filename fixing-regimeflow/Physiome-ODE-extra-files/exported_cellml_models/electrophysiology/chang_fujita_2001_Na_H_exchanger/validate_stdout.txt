@@ -1,0 +1,7 @@
+[Warning] [627:14] Expected all arguments to operator "plus" to have the same units.
+[Error] [639:12] MathML cn element contains an invalid constant representation.
+[Error] [649:12] MathML cn element contains an invalid constant representation.
+[Error] [659:12] MathML cn element contains an invalid constant representation.
+[Error] [669:12] MathML cn element contains an invalid constant representation.
+[Error] [679:12] MathML cn element contains an invalid constant representation.
+[Error] [689:12] MathML cn element contains an invalid constant representation.

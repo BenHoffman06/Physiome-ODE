@@ -1,0 +1,1009 @@
+# Size of variable arrays:
+sizeAlgebraic = 65
+sizeStates = 36
+sizeConstants = 100
+from math import *
+from numpy import *
+
+def createLegends():
+    legend_states = [""] * sizeStates
+    legend_rates = [""] * sizeStates
+    legend_algebraic = [""] * sizeAlgebraic
+    legend_voi = ""
+    legend_constants = [""] * sizeConstants
+    legend_voi = "time in component environment (ms)"
+    legend_constants[0] = "lambda in component environment (dimensionless)"
+    legend_constants[1] = "dlambdadt in component environment (per_ms)"
+    legend_states[0] = "V in component membrane (mV)"
+    legend_constants[2] = "R in component membrane (gas_constant_units)"
+    legend_constants[3] = "T in component membrane (kelvin)"
+    legend_constants[4] = "F in component membrane (faradays_constant_units)"
+    legend_algebraic[17] = "i_Na in component fast_sodium_current (uA_per_mm2)"
+    legend_algebraic[22] = "i_Ca_L_Ca in component L_type_Ca_channel (uA_per_mm2)"
+    legend_algebraic[24] = "i_Ca_L_K in component L_type_Ca_channel (uA_per_mm2)"
+    legend_algebraic[28] = "i_K in component time_dependent_potassium_current (uA_per_mm2)"
+    legend_algebraic[34] = "i_K1 in component time_independent_potassium_current (uA_per_mm2)"
+    legend_algebraic[38] = "i_NaCa in component Na_Ca_exchanger (uA_per_mm2)"
+    legend_algebraic[37] = "i_Kp in component plateau_potassium_current (uA_per_mm2)"
+    legend_algebraic[39] = "i_p_Ca in component sarcolemmal_calcium_pump (uA_per_mm2)"
+    legend_algebraic[41] = "i_Na_b in component sodium_background_current (uA_per_mm2)"
+    legend_algebraic[43] = "i_Ca_b in component calcium_background_current (uA_per_mm2)"
+    legend_algebraic[46] = "i_NaK in component sodium_potassium_pump (uA_per_mm2)"
+    legend_algebraic[63] = "i_ns_Ca in component non_specific_calcium_activated_current (uA_per_mm2)"
+    legend_constants[5] = "Cm in component membrane (uF_per_mm2)"
+    legend_algebraic[6] = "I_stim in component membrane (uA_per_mm2)"
+    legend_constants[6] = "stim_start in component membrane (ms)"
+    legend_constants[7] = "stim_end in component membrane (ms)"
+    legend_constants[8] = "stim_period in component membrane (ms)"
+    legend_constants[9] = "stim_duration in component membrane (ms)"
+    legend_constants[10] = "stim_amplitude in component membrane (uA_per_mm2)"
+    legend_algebraic[14] = "E_Na in component fast_sodium_current (mV)"
+    legend_constants[11] = "g_Na in component fast_sodium_current (mS_per_mm2)"
+    legend_states[1] = "Nai in component ionic_concentrations (mM)"
+    legend_constants[12] = "Nao in component ionic_concentrations (mM)"
+    legend_states[2] = "m in component fast_sodium_current_m_gate (dimensionless)"
+    legend_states[3] = "h in component fast_sodium_current_h_gate (dimensionless)"
+    legend_states[4] = "j in component fast_sodium_current_j_gate (dimensionless)"
+    legend_algebraic[0] = "alpha_m in component fast_sodium_current_m_gate (per_ms)"
+    legend_algebraic[8] = "beta_m in component fast_sodium_current_m_gate (per_ms)"
+    legend_algebraic[1] = "alpha_h in component fast_sodium_current_h_gate (per_ms)"
+    legend_algebraic[9] = "beta_h in component fast_sodium_current_h_gate (per_ms)"
+    legend_algebraic[2] = "alpha_j in component fast_sodium_current_j_gate (per_ms)"
+    legend_algebraic[10] = "beta_j in component fast_sodium_current_j_gate (per_ms)"
+    legend_constants[13] = "P_Ca in component L_type_Ca_channel (mm_per_ms)"
+    legend_constants[14] = "P_K in component L_type_Ca_channel (mm_per_ms)"
+    legend_algebraic[23] = "p_k in component L_type_Ca_channel (mm_per_ms)"
+    legend_constants[15] = "i_Ca_L_Ca_half in component L_type_Ca_channel (uA_per_mm2)"
+    legend_algebraic[20] = "i_Ca_L_Ca_max in component L_type_Ca_channel (uA_per_mm2)"
+    legend_states[5] = "O in component L_type_Ca_channel (dimensionless)"
+    legend_states[6] = "O_Ca in component L_type_Ca_channel (dimensionless)"
+    legend_algebraic[3] = "alpha in component L_type_Ca_channel (per_ms)"
+    legend_algebraic[11] = "beta in component L_type_Ca_channel (per_ms)"
+    legend_algebraic[21] = "gamma in component L_type_Ca_channel (per_ms)"
+    legend_algebraic[16] = "alpha_a in component L_type_Ca_channel (per_ms)"
+    legend_algebraic[19] = "beta_b in component L_type_Ca_channel (per_ms)"
+    legend_constants[16] = "a in component L_type_Ca_channel (dimensionless)"
+    legend_constants[17] = "b in component L_type_Ca_channel (dimensionless)"
+    legend_constants[18] = "g in component L_type_Ca_channel (per_ms)"
+    legend_constants[19] = "f in component L_type_Ca_channel (per_ms)"
+    legend_constants[20] = "g_ in component L_type_Ca_channel (per_ms)"
+    legend_constants[21] = "f_ in component L_type_Ca_channel (per_ms)"
+    legend_constants[22] = "omega in component L_type_Ca_channel (per_ms)"
+    legend_states[7] = "C0 in component L_type_Ca_channel (dimensionless)"
+    legend_states[8] = "C1 in component L_type_Ca_channel (dimensionless)"
+    legend_states[9] = "C2 in component L_type_Ca_channel (dimensionless)"
+    legend_states[10] = "C3 in component L_type_Ca_channel (dimensionless)"
+    legend_states[11] = "C4 in component L_type_Ca_channel (dimensionless)"
+    legend_states[12] = "C_Ca0 in component L_type_Ca_channel (dimensionless)"
+    legend_states[13] = "C_Ca1 in component L_type_Ca_channel (dimensionless)"
+    legend_states[14] = "C_Ca2 in component L_type_Ca_channel (dimensionless)"
+    legend_states[15] = "C_Ca3 in component L_type_Ca_channel (dimensionless)"
+    legend_states[16] = "C_Ca4 in component L_type_Ca_channel (dimensionless)"
+    legend_states[17] = "Ca_SS in component calcium_subsystem (mM)"
+    legend_constants[23] = "Cao in component ionic_concentrations (mM)"
+    legend_states[18] = "Ko in component ionic_concentrations (mM)"
+    legend_states[19] = "Ki in component ionic_concentrations (mM)"
+    legend_states[20] = "y in component L_type_Ca_channel_y_gate (dimensionless)"
+    legend_algebraic[4] = "y_infinity in component L_type_Ca_channel_y_gate (dimensionless)"
+    legend_algebraic[12] = "tau_y in component L_type_Ca_channel_y_gate (ms)"
+    legend_algebraic[25] = "g_K in component time_dependent_potassium_current (mS_per_mm2)"
+    legend_constants[24] = "g_K_max in component time_dependent_potassium_current (mS_per_mm2)"
+    legend_algebraic[26] = "E_K in component time_dependent_potassium_current (mV)"
+    legend_constants[25] = "P_NaK in component time_dependent_potassium_current (dimensionless)"
+    legend_states[21] = "X in component time_dependent_potassium_current_X_gate (dimensionless)"
+    legend_algebraic[27] = "Xi in component time_dependent_potassium_current_Xi_gate (dimensionless)"
+    legend_algebraic[5] = "alpha_X in component time_dependent_potassium_current_X_gate (per_ms)"
+    legend_algebraic[13] = "beta_X in component time_dependent_potassium_current_X_gate (per_ms)"
+    legend_algebraic[30] = "E_K1 in component time_independent_potassium_current (mV)"
+    legend_algebraic[29] = "g_K1 in component time_independent_potassium_current (mS_per_mm2)"
+    legend_constants[26] = "g_K1_max in component time_independent_potassium_current (mS_per_mm2)"
+    legend_algebraic[33] = "K1_infinity in component time_independent_potassium_current_K1_gate (dimensionless)"
+    legend_algebraic[31] = "alpha_K1 in component time_independent_potassium_current_K1_gate (per_ms)"
+    legend_algebraic[32] = "beta_K1 in component time_independent_potassium_current_K1_gate (per_ms)"
+    legend_algebraic[35] = "E_Kp in component plateau_potassium_current (mV)"
+    legend_constants[27] = "g_Kp in component plateau_potassium_current (mS_per_mm2)"
+    legend_algebraic[36] = "Kp in component plateau_potassium_current (dimensionless)"
+    legend_constants[28] = "k_NaCa in component Na_Ca_exchanger (uA_per_mm2)"
+    legend_constants[29] = "K_mNa in component Na_Ca_exchanger (mM)"
+    legend_constants[30] = "K_mCa in component Na_Ca_exchanger (mM)"
+    legend_constants[31] = "k_sat in component Na_Ca_exchanger (dimensionless)"
+    legend_constants[32] = "eta in component Na_Ca_exchanger (dimensionless)"
+    legend_states[22] = "Cai in component calcium_subsystem (mM)"
+    legend_constants[33] = "K_mpCa in component sarcolemmal_calcium_pump (mM)"
+    legend_constants[34] = "I_pCa in component sarcolemmal_calcium_pump (uA_per_mm2)"
+    legend_constants[35] = "g_Nab in component sodium_background_current (mS_per_mm2)"
+    legend_algebraic[40] = "E_NaN in component sodium_background_current (mV)"
+    legend_constants[36] = "g_Cab in component calcium_background_current (mS_per_mm2)"
+    legend_algebraic[42] = "E_CaN in component calcium_background_current (mV)"
+    legend_constants[37] = "I_NaK in component sodium_potassium_pump (uA_per_mm2)"
+    legend_algebraic[44] = "f_NaK in component sodium_potassium_pump (dimensionless)"
+    legend_constants[38] = "K_mNai in component sodium_potassium_pump (mM)"
+    legend_constants[39] = "K_mKo in component sodium_potassium_pump (mM)"
+    legend_constants[90] = "sigma in component sodium_potassium_pump (dimensionless)"
+    legend_algebraic[55] = "i_ns_Na in component non_specific_calcium_activated_current (uA_per_mm2)"
+    legend_algebraic[61] = "i_ns_K in component non_specific_calcium_activated_current (uA_per_mm2)"
+    legend_algebraic[52] = "I_ns_Na in component non_specific_calcium_activated_current (uA_per_mm2)"
+    legend_algebraic[59] = "I_ns_K in component non_specific_calcium_activated_current (uA_per_mm2)"
+    legend_constants[40] = "K_m_ns_Ca in component non_specific_calcium_activated_current (mM)"
+    legend_constants[41] = "P_ns_Ca in component non_specific_calcium_activated_current (mm_per_ms)"
+    legend_algebraic[48] = "EnsCa in component non_specific_calcium_activated_current (mV)"
+    legend_algebraic[50] = "VnsCa in component non_specific_calcium_activated_current (mV)"
+    legend_constants[42] = "Am in component calcium_subsystem (per_mm)"
+    legend_constants[43] = "V_myo in component calcium_subsystem (dimensionless)"
+    legend_algebraic[45] = "RyR_open in component calcium_subsystem (dimensionless)"
+    legend_states[23] = "P_O1 in component calcium_subsystem (dimensionless)"
+    legend_states[24] = "P_O2 in component calcium_subsystem (dimensionless)"
+    legend_states[25] = "P_C1 in component calcium_subsystem (dimensionless)"
+    legend_states[26] = "P_C2 in component calcium_subsystem (dimensionless)"
+    legend_constants[44] = "v1 in component calcium_subsystem (per_ms)"
+    legend_constants[45] = "v2 in component calcium_subsystem (per_ms)"
+    legend_constants[46] = "v3 in component calcium_subsystem (mM_per_ms)"
+    legend_constants[47] = "nCa in component calcium_subsystem (dimensionless)"
+    legend_constants[48] = "mCa in component calcium_subsystem (dimensionless)"
+    legend_constants[49] = "k_a_plus in component calcium_subsystem (per_mM4_per_ms)"
+    legend_constants[50] = "k_a_minus in component calcium_subsystem (per_ms)"
+    legend_constants[51] = "k_b_plus in component calcium_subsystem (per_mM3_per_ms)"
+    legend_constants[52] = "k_b_minus in component calcium_subsystem (per_ms)"
+    legend_constants[53] = "k_c_plus in component calcium_subsystem (per_ms)"
+    legend_constants[54] = "k_c_minus in component calcium_subsystem (per_ms)"
+    legend_constants[55] = "k_htrpn_plus in component calcium_subsystem (per_mM_per_ms)"
+    legend_constants[56] = "k_htrpn_minus in component calcium_subsystem (per_ms)"
+    legend_constants[57] = "k_ltrpn_plus in component calcium_subsystem (per_mM_per_ms)"
+    legend_constants[58] = "k_ltrpn_minus in component calcium_subsystem (per_ms)"
+    legend_constants[59] = "tau_tr in component calcium_subsystem (ms)"
+    legend_states[27] = "Ca_JSR in component calcium_subsystem (mM)"
+    legend_states[28] = "Ca_NSR in component calcium_subsystem (mM)"
+    legend_constants[96] = "V_JSR in component calcium_subsystem (dimensionless)"
+    legend_constants[94] = "V_NSR in component calcium_subsystem (dimensionless)"
+    legend_constants[91] = "V_SS in component calcium_subsystem (dimensionless)"
+    legend_constants[60] = "K_mup in component calcium_subsystem (mM)"
+    legend_constants[61] = "K_mCMDN in component calcium_subsystem (mM)"
+    legend_constants[62] = "K_mCSQN in component calcium_subsystem (mM)"
+    legend_constants[63] = "tau_xfer in component calcium_subsystem (ms)"
+    legend_constants[64] = "HTRPN_tot in component calcium_subsystem (mM)"
+    legend_constants[65] = "LTRPN_tot in component calcium_subsystem (mM)"
+    legend_states[29] = "HTRPNCa in component calcium_subsystem (mM)"
+    legend_states[30] = "LTRPNCa in component calcium_subsystem (mM)"
+    legend_constants[66] = "CSQN_tot in component calcium_subsystem (mM)"
+    legend_constants[67] = "CMDN_tot in component calcium_subsystem (mM)"
+    legend_algebraic[64] = "Bi in component calcium_subsystem (dimensionless)"
+    legend_algebraic[56] = "B_SS in component calcium_subsystem (dimensionless)"
+    legend_algebraic[57] = "B_JSR in component calcium_subsystem (dimensionless)"
+    legend_algebraic[47] = "J_rel in component calcium_subsystem (mM_per_ms)"
+    legend_algebraic[49] = "J_leak in component calcium_subsystem (mM_per_ms)"
+    legend_algebraic[51] = "J_up in component calcium_subsystem (mM_per_ms)"
+    legend_algebraic[53] = "J_tr in component calcium_subsystem (mM_per_ms)"
+    legend_algebraic[54] = "J_xfer in component calcium_subsystem (mM_per_ms)"
+    legend_algebraic[62] = "J_trpn in component calcium_subsystem (mM_per_ms)"
+    legend_algebraic[58] = "J_htrpn in component calcium_subsystem (mM_per_ms)"
+    legend_algebraic[60] = "J_ltrpn in component calcium_subsystem (mM_per_ms)"
+    legend_constants[68] = "Tref in component Myofilaments (N_per_mm2)"
+    legend_constants[69] = "beta0 in component Myofilaments (dimensionless)"
+    legend_constants[70] = "a in component Myofilaments (dimensionless)"
+    legend_states[31] = "Q1 in component Myofilaments (dimensionless)"
+    legend_states[32] = "Q2 in component Myofilaments (dimensionless)"
+    legend_states[33] = "Q3 in component Myofilaments (dimensionless)"
+    legend_constants[71] = "A1 in component Myofilaments (dimensionless)"
+    legend_constants[72] = "A2 in component Myofilaments (dimensionless)"
+    legend_constants[73] = "A3 in component Myofilaments (dimensionless)"
+    legend_constants[74] = "alpha1 in component Myofilaments (dimensionless)"
+    legend_constants[75] = "alpha2 in component Myofilaments (dimensionless)"
+    legend_constants[76] = "alpha3 in component Myofilaments (dimensionless)"
+    legend_constants[77] = "Ca50ref in component Myofilaments (mM)"
+    legend_constants[78] = "zp in component Myofilaments (dimensionless)"
+    legend_constants[79] = "beta1 in component Myofilaments (dimensionless)"
+    legend_constants[80] = "alpha0 in component Myofilaments (per_ms)"
+    legend_constants[81] = "alphar1 in component Myofilaments (per_ms)"
+    legend_constants[82] = "alphar2 in component Myofilaments (per_ms)"
+    legend_constants[83] = "nRel in component Myofilaments (dimensionless)"
+    legend_constants[84] = "Kz in component Myofilaments (dimensionless)"
+    legend_constants[85] = "nHill in component Myofilaments (dimensionless)"
+    legend_constants[86] = "kon in component Myofilaments (per_mM_per_ms)"
+    legend_constants[87] = "koff in component Myofilaments (per_ms)"
+    legend_constants[88] = "gamma_trpn in component Myofilaments (dimensionless)"
+    legend_constants[89] = "TRPN_tot in component Myofilaments (mM)"
+    legend_algebraic[7] = "T0 in component Myofilaments (N_per_mm2)"
+    legend_constants[92] = "T0max in component Myofilaments (N_per_mm2)"
+    legend_states[34] = "z in component Myofilaments (dimensionless)"
+    legend_constants[99] = "z_max in component Myofilaments (dimensionless)"
+    legend_algebraic[15] = "Q in component Myofilaments (dimensionless)"
+    legend_states[35] = "Cab in component Myofilaments (mM)"
+    legend_constants[97] = "Ca50 in component Myofilaments (mM)"
+    legend_constants[98] = "CaTRPN50 in component Myofilaments (mM)"
+    legend_constants[93] = "K_2 in component Myofilaments (dimensionless)"
+    legend_constants[95] = "K_1 in component Myofilaments (dimensionless)"
+    legend_algebraic[18] = "Tension in component Myofilaments (N_per_mm2)"
+    legend_rates[0] = "d/dt V in component membrane (mV)"
+    legend_rates[2] = "d/dt m in component fast_sodium_current_m_gate (dimensionless)"
+    legend_rates[3] = "d/dt h in component fast_sodium_current_h_gate (dimensionless)"
+    legend_rates[4] = "d/dt j in component fast_sodium_current_j_gate (dimensionless)"
+    legend_rates[7] = "d/dt C0 in component L_type_Ca_channel (dimensionless)"
+    legend_rates[8] = "d/dt C1 in component L_type_Ca_channel (dimensionless)"
+    legend_rates[9] = "d/dt C2 in component L_type_Ca_channel (dimensionless)"
+    legend_rates[10] = "d/dt C3 in component L_type_Ca_channel (dimensionless)"
+    legend_rates[11] = "d/dt C4 in component L_type_Ca_channel (dimensionless)"
+    legend_rates[5] = "d/dt O in component L_type_Ca_channel (dimensionless)"
+    legend_rates[12] = "d/dt C_Ca0 in component L_type_Ca_channel (dimensionless)"
+    legend_rates[13] = "d/dt C_Ca1 in component L_type_Ca_channel (dimensionless)"
+    legend_rates[14] = "d/dt C_Ca2 in component L_type_Ca_channel (dimensionless)"
+    legend_rates[15] = "d/dt C_Ca3 in component L_type_Ca_channel (dimensionless)"
+    legend_rates[16] = "d/dt C_Ca4 in component L_type_Ca_channel (dimensionless)"
+    legend_rates[6] = "d/dt O_Ca in component L_type_Ca_channel (dimensionless)"
+    legend_rates[20] = "d/dt y in component L_type_Ca_channel_y_gate (dimensionless)"
+    legend_rates[21] = "d/dt X in component time_dependent_potassium_current_X_gate (dimensionless)"
+    legend_rates[25] = "d/dt P_C1 in component calcium_subsystem (dimensionless)"
+    legend_rates[23] = "d/dt P_O1 in component calcium_subsystem (dimensionless)"
+    legend_rates[24] = "d/dt P_O2 in component calcium_subsystem (dimensionless)"
+    legend_rates[26] = "d/dt P_C2 in component calcium_subsystem (dimensionless)"
+    legend_rates[29] = "d/dt HTRPNCa in component calcium_subsystem (mM)"
+    legend_rates[30] = "d/dt LTRPNCa in component calcium_subsystem (mM)"
+    legend_rates[22] = "d/dt Cai in component calcium_subsystem (mM)"
+    legend_rates[17] = "d/dt Ca_SS in component calcium_subsystem (mM)"
+    legend_rates[27] = "d/dt Ca_JSR in component calcium_subsystem (mM)"
+    legend_rates[28] = "d/dt Ca_NSR in component calcium_subsystem (mM)"
+    legend_rates[1] = "d/dt Nai in component ionic_concentrations (mM)"
+    legend_rates[19] = "d/dt Ki in component ionic_concentrations (mM)"
+    legend_rates[18] = "d/dt Ko in component ionic_concentrations (mM)"
+    legend_rates[35] = "d/dt Cab in component Myofilaments (mM)"
+    legend_rates[34] = "d/dt z in component Myofilaments (dimensionless)"
+    legend_rates[31] = "d/dt Q1 in component Myofilaments (dimensionless)"
+    legend_rates[32] = "d/dt Q2 in component Myofilaments (dimensionless)"
+    legend_rates[33] = "d/dt Q3 in component Myofilaments (dimensionless)"
+    return (legend_states, legend_algebraic, legend_voi, legend_constants)
+
+def initConsts():
+    constants = [0.0] * sizeConstants; states = [0.0] * sizeStates;
+    constants[0] = 1
+    constants[1] = 0
+    states[0] = -84.1638
+    constants[2] = 8.3145e3
+    constants[3] = 310
+    constants[4] = 9.6845e4
+    constants[5] = 0.01
+    constants[6] = 100
+    constants[7] = 9000
+    constants[8] = 750
+    constants[9] = 1
+    constants[10] = -100
+    constants[11] = 0.128
+    states[1] = 10.2042
+    constants[12] = 140
+    states[2] = 0.0328302
+    states[3] = 0.988354
+    states[4] = 0.99254
+    constants[13] = 33.75e-6
+    constants[14] = 1e-9
+    constants[15] = -4.58e-3
+    states[5] = 9.84546e-21
+    states[6] = 0
+    constants[16] = 2
+    constants[17] = 2
+    constants[18] = 2
+    constants[19] = 0.3
+    constants[20] = 0
+    constants[21] = 0
+    constants[22] = 0.01
+    states[7] = 0.997208
+    states[8] = 6.38897e-5
+    states[9] = 1.535e-9
+    states[10] = 1.63909e-14
+    states[11] = 6.56337e-20
+    states[12] = 2.72826e-3
+    states[13] = 6.99215e-7
+    states[14] = 6.71989e-11
+    states[15] = 2.87031e-15
+    states[16] = 4.59752e-20
+    states[17] = 1.36058e-4
+    constants[23] = 1.8
+    states[18] = 5.4
+    states[19] = 143.727
+    states[20] = 0.998983
+    constants[24] = 0.001128
+    constants[25] = 0.01833
+    states[21] = 0.000928836
+    constants[26] = 7.5e-3
+    constants[27] = 8.28e-5
+    constants[28] = 50
+    constants[29] = 87.5
+    constants[30] = 1.38
+    constants[31] = 0.1
+    constants[32] = 0.35
+    states[22] = 9.94893e-11
+    constants[33] = 0.5e-3
+    constants[34] = 1.15e-2
+    constants[35] = 1.41e-5
+    constants[36] = 6.032e-5
+    constants[37] = 0.013
+    constants[38] = 10
+    constants[39] = 1.5
+    constants[40] = 1.2e-3
+    constants[41] = 1.75e-9
+    constants[42] = 546.69
+    constants[43] = 0.92
+    states[23] = 1.19168e-3
+    states[24] = 6.30613e-9
+    states[25] = 0.762527
+    states[26] = 0.236283
+    constants[44] = 1.8
+    constants[45] = 0.58e-4
+    constants[46] = 1.8e-3
+    constants[47] = 4
+    constants[48] = 3
+    constants[49] = 1.215e10
+    constants[50] = 0.1425
+    constants[51] = 4.05e7
+    constants[52] = 1.93
+    constants[53] = 0.018
+    constants[54] = 0.0008
+    constants[55] = 20
+    constants[56] = 0.066e-3
+    constants[57] = 40
+    constants[58] = 0.04
+    constants[59] = 34.48
+    states[27] = 1.17504
+    states[28] = 1.243891
+    constants[60] = 0.5e-3
+    constants[61] = 2.38e-3
+    constants[62] = 0.8
+    constants[63] = 3.125
+    constants[64] = 0.14
+    constants[65] = 0.07
+    states[29] = 0.13598
+    states[30] = 0.00635
+    constants[66] = 15
+    constants[67] = 0.05
+    constants[68] = 56.2
+    constants[69] = 4.9
+    constants[70] = 0.35
+    states[31] = 0
+    states[32] = 0
+    states[33] = 0
+    constants[71] = -29
+    constants[72] = 138
+    constants[73] = 129
+    constants[74] = 0.03
+    constants[75] = 0.13
+    constants[76] = 0.625
+    constants[77] = 1.05e-3
+    constants[78] = 0.85
+    constants[79] = -4
+    constants[80] = 8e-3
+    constants[81] = 2e-3
+    constants[82] = 1.75e-3
+    constants[83] = 3
+    constants[84] = 0.15
+    constants[85] = 3
+    constants[86] = 100
+    constants[87] = 0.2
+    constants[88] = 2
+    constants[89] = 0.07
+    states[34] = 0
+    states[35] = 0
+    constants[90] = (1.00000/7.00000)*(exp(constants[12]/67.3000)-1.00000)
+    constants[91] = 5.82800e-05*constants[43]
+    constants[92] = constants[68]*(1.00000+constants[69]*(constants[0]-1.00000))
+    constants[93] = 1.00000*(((constants[82]*(power(constants[78], constants[83])))/(power(constants[78], constants[83])+power(constants[84], constants[83])))*(1.00000-(constants[83]*(power(constants[84], constants[83])))/(power(constants[78], constants[83])+power(constants[84], constants[83]))))
+    constants[94] = 0.0810000*constants[43]
+    constants[95] = 1.00000*((constants[82]*(power(constants[78], constants[83]-1.00000))*constants[83]*(power(constants[84], constants[83])))/(power(power(constants[78], constants[83])+power(constants[84], constants[83]), 2.00000)))
+    constants[96] = 0.00464000*constants[43]
+    constants[97] = constants[77]*(1.00000+constants[79]*(constants[0]-1.00000))
+    constants[98] = (constants[97]*constants[89])/(constants[97]+(constants[87]/constants[86])*(1.00000-((1.00000+constants[69]*(constants[0]-1.00000))*0.500000)/constants[88]))
+    constants[99] = (constants[80]*1.00000)/(power(constants[98]/constants[89], constants[85]))-(constants[93]*1.00000)/(constants[81]+constants[95]*1.00000+constants[80]/(power(constants[98]/constants[89], constants[85])))
+    return (states, constants)
+
+def computeRates(voi, states, constants):
+    rates = [0.0] * sizeStates; algebraic = [0.0] * sizeAlgebraic
+    rates[5] = constants[19]*states[11]-constants[18]*states[5]
+    rates[6] = constants[21]*states[16]-constants[20]*states[6]
+    rates[25] = -constants[49]*(power(states[17], constants[47]))*states[25]+constants[50]*states[23]
+    rates[23] = (constants[49]*(power(states[17], constants[47]))*states[25]-(constants[50]*states[23]+constants[51]*(power(states[17], constants[48]))*states[23]+constants[53]*states[23]))+constants[52]*states[24]+constants[54]*states[26]
+    rates[24] = constants[51]*(power(states[17], constants[48]))*states[23]-constants[52]*states[24]
+    rates[26] = constants[53]*states[23]-constants[54]*states[26]
+    rates[34] = constants[80]*(power(states[35]/constants[98], constants[85]))*(1.00000-states[34])+-states[34]*constants[81]+(-constants[82]*(power(states[34], constants[83])))/(power(states[34], constants[83])+power(constants[84], constants[83]))
+    rates[31] = constants[71]*constants[1]-1.00000*(constants[74]*states[31])
+    rates[32] = constants[72]*constants[1]-1.00000*(constants[75]*states[32])
+    rates[33] = constants[73]*constants[1]-1.00000*(constants[76]*states[33])
+    algebraic[0] = (0.320000*(states[0]+47.1300))/(1.00000-exp(-0.100000*(states[0]+47.1300)))
+    algebraic[8] = 0.0800000*exp(-states[0]/11.0000)
+    rates[2] = algebraic[0]*(1.00000-states[2])-algebraic[8]*states[2]
+    algebraic[1] = custom_piecewise([less(states[0] , -40.0000), 0.135000*exp((80.0000+states[0])/-6.80000) , True, 0.00000])
+    algebraic[9] = custom_piecewise([less(states[0] , -40.0000), 3.56000*exp(0.0790000*states[0])+310000.*exp(0.350000*states[0]) , True, 1.00000/(0.130000*(1.00000+exp((states[0]+10.6600)/-11.1000)))])
+    rates[3] = algebraic[1]*(1.00000-states[3])-algebraic[9]*states[3]
+    algebraic[2] = custom_piecewise([less(states[0] , -40.0000), ((-127140.*exp(0.244400*states[0])-3.47400e-05*exp(-0.0439100*states[0]))*(states[0]+37.7800))/(1.00000+exp(0.311000*(states[0]+79.2300))) , True, 0.00000])
+    algebraic[10] = custom_piecewise([less(states[0] , -40.0000), (0.121200*exp(-0.0105200*states[0]))/(1.00000+exp(-0.137800*(states[0]+40.1400))) , True, (0.300000*exp(-2.53500e-07*states[0]))/(1.00000+exp(-0.100000*(states[0]+32.0000)))])
+    rates[4] = algebraic[2]*(1.00000-states[4])-algebraic[10]*states[4]
+    algebraic[4] = 1.00000/(1.00000+exp((states[0]+55.0000)/7.50000))+0.100000/(1.00000+exp((-states[0]+21.0000)/6.00000))
+    algebraic[12] = 20.0000+600.000/(1.00000+exp((states[0]+30.0000)/9.50000))
+    rates[20] = (algebraic[4]-states[20])/algebraic[12]
+    algebraic[5] = (7.19000e-05*(states[0]+30.0000))/(1.00000-exp(-0.148000*(states[0]+30.0000)))
+    algebraic[13] = (0.000131000*(states[0]+30.0000))/(-1.00000+exp(0.0687000*(states[0]+30.0000)))
+    rates[21] = algebraic[5]*(1.00000-states[21])-algebraic[13]*states[21]
+    algebraic[7] = (constants[92]*states[34])/constants[99]
+    algebraic[15] = states[31]+states[32]+states[33]
+    algebraic[18] = custom_piecewise([less(algebraic[15] , 0.00000), (algebraic[7]*(constants[70]*algebraic[15]+1.00000))/(1.00000-algebraic[15]) , True, (algebraic[7]*(1.00000-(constants[70]+2.00000)*algebraic[15]))/(1.00000+algebraic[15])])
+    rates[35] = constants[86]*states[22]*(constants[89]-states[35])-constants[87]*(1.00000-algebraic[18]/(constants[88]*constants[68]))*states[35]
+    algebraic[3] = 0.400000*exp((states[0]+12.0000)/10.0000)
+    algebraic[11] = 0.0500000*exp((states[0]+12.0000)/-13.0000)
+    algebraic[21] = (0.187500*states[17])/1.00000
+    rates[7] = (algebraic[11]*states[8]+constants[22]*states[12])-(4.00000*algebraic[3]+algebraic[21])*states[7]
+    rates[8] = (4.00000*algebraic[3]*states[7]+2.00000*algebraic[11]*states[9]+(constants[22]/constants[17])*states[13])-(algebraic[11]+3.00000*algebraic[3]+algebraic[21]*constants[16])*states[8]
+    rates[9] = (3.00000*algebraic[3]*states[8]+3.00000*algebraic[11]*states[10]+(constants[22]/(power(constants[17], 2.00000)))*states[14])-(algebraic[11]*2.00000+2.00000*algebraic[3]+algebraic[21]*(power(constants[16], 2.00000)))*states[9]
+    rates[10] = (2.00000*algebraic[3]*states[9]+4.00000*algebraic[11]*states[11]+(constants[22]/(power(constants[17], 3.00000)))*states[15])-(algebraic[11]*3.00000+algebraic[3]+algebraic[21]*(power(constants[16], 3.00000)))*states[10]
+    rates[11] = (algebraic[3]*states[10]+constants[18]*states[5]+(constants[22]/(power(constants[17], 4.00000)))*states[16])-(algebraic[11]*4.00000+constants[19]+algebraic[21]*(power(constants[16], 4.00000)))*states[11]
+    algebraic[16] = algebraic[3]*constants[16]
+    algebraic[19] = algebraic[11]/constants[17]
+    rates[12] = (algebraic[19]*states[13]+algebraic[21]*states[12])-(4.00000*algebraic[16]+constants[22])*states[12]
+    rates[13] = (4.00000*algebraic[16]*states[12]+2.00000*algebraic[19]*states[14]+algebraic[21]*constants[16]*states[8])-(algebraic[19]+3.00000*algebraic[16]+constants[22]/constants[17])*states[13]
+    rates[14] = (3.00000*algebraic[16]*states[13]+3.00000*algebraic[19]*states[15]+algebraic[21]*(power(constants[16], 2.00000))*states[9])-(algebraic[19]*2.00000+2.00000*algebraic[16]+constants[22]/(power(constants[17], 2.00000)))*states[14]
+    rates[15] = (2.00000*algebraic[16]*states[14]+4.00000*algebraic[19]*states[16]+algebraic[21]*(power(constants[16], 3.00000))*states[10])-(algebraic[19]*3.00000+algebraic[16]+constants[22]/(power(constants[17], 3.00000)))*states[15]
+    rates[16] = (algebraic[16]*states[15]+constants[20]*states[6]+algebraic[21]*(power(constants[16], 4.00000))*states[11])-(algebraic[19]*4.00000+constants[21]+constants[22]/(power(constants[17], 4.00000)))*states[16]
+    algebraic[49] = constants[45]*(states[28]-states[22])
+    algebraic[51] = (constants[46]*(power(states[22], 2.00000)))/(power(constants[60], 2.00000)+power(states[22], 2.00000))
+    algebraic[53] = (states[28]-states[27])/constants[59]
+    rates[28] = ((algebraic[51]-algebraic[49])*constants[43])/constants[94]-(algebraic[53]*constants[96])/constants[94]
+    algebraic[58] = constants[55]*states[22]*(constants[64]-states[29])-constants[56]*states[29]
+    rates[29] = algebraic[58]
+    algebraic[20] = 1.00000*((((constants[13]*4.00000*states[0]*(power(constants[4], 2.00000)))/(constants[2]*constants[3]))*(0.00100000*exp((2.00000*states[0]*constants[4])/(constants[2]*constants[3]))-0.341000*constants[23]))/(exp((2.00000*states[0]*constants[4])/(constants[2]*constants[3]))-1.00000))
+    algebraic[22] = algebraic[20]*states[20]*(states[5]+states[6])
+    algebraic[56] = 1.00000/(1.00000+(constants[67]*constants[61])/(power(constants[61]+states[17], 2.00000)))
+    algebraic[45] = states[23]+states[24]
+    algebraic[47] = constants[44]*algebraic[45]*(states[27]-states[17])
+    algebraic[54] = (states[17]-states[22])/constants[63]
+    rates[17] = algebraic[56]*(((algebraic[47]*constants[96])/constants[91]-(algebraic[54]*constants[43])/constants[91])-(algebraic[22]*constants[42])/(2.00000*constants[91]*constants[4]))
+    algebraic[57] = 1.00000/(1.00000+(constants[66]*constants[62])/(power(constants[62]+states[27], 2.00000)))
+    rates[27] = algebraic[57]*(algebraic[53]-algebraic[47])
+    algebraic[14] = ((constants[2]*constants[3])/constants[4])*log(constants[12]/states[1])
+    algebraic[17] = constants[11]*(power(states[2], 3.00000))*states[3]*states[4]*(states[0]-algebraic[14])
+    algebraic[38] = ((((((constants[28]*1.00000)/(power(constants[29], 3.00000)+power(constants[12], 3.00000)))*1.00000)/(constants[30]+constants[23]))*1.00000)/(1.00000+constants[31]*exp(((constants[32]-1.00000)*states[0]*constants[4])/(constants[2]*constants[3]))))*(exp((constants[32]*states[0]*constants[4])/(constants[2]*constants[3]))*(power(states[1], 3.00000))*constants[23]-exp(((constants[32]-1.00000)*states[0]*constants[4])/(constants[2]*constants[3]))*(power(constants[12], 3.00000))*states[22])
+    algebraic[40] = algebraic[14]
+    algebraic[41] = constants[35]*(states[0]-algebraic[40])
+    algebraic[44] = 1.00000/(1.00000+0.124500*exp((-0.100000*states[0]*constants[4])/(constants[2]*constants[3]))+0.0365000*constants[90]*exp((-states[0]*constants[4])/(constants[2]*constants[3])))
+    algebraic[46] = (((constants[37]*algebraic[44]*1.00000)/(1.00000+power(constants[38]/states[1], 1.50000)))*states[18])/(states[18]+constants[39])
+    algebraic[48] = ((constants[2]*constants[3])/constants[4])*log((states[18]+constants[12])/(states[19]+states[1]))
+    algebraic[50] = states[0]-algebraic[48]
+    algebraic[52] = (((1.00000*constants[41]*(power(1.00000, 2.00000))*algebraic[50]*(power(constants[4], 2.00000)))/(constants[2]*constants[3]))*(0.750000*states[1]*exp((algebraic[50]*constants[4])/(constants[2]*constants[3]))-0.750000*constants[12]))/(exp((algebraic[50]*constants[4])/(constants[2]*constants[3]))-1.00000)
+    algebraic[55] = (algebraic[52]*1.00000)/(1.00000+power(constants[40]/states[22], 3.00000))
+    rates[1] = (-(algebraic[17]+algebraic[41]+algebraic[55]+algebraic[38]*3.00000+algebraic[46]*3.00000)*constants[42])/(constants[43]*constants[4])
+    algebraic[60] = constants[57]*states[22]*(constants[65]-states[30])-constants[58]*states[30]
+    rates[30] = algebraic[60]
+    algebraic[23] = constants[14]/(1.00000+algebraic[20]/constants[15])
+    algebraic[24] = (((1.00000*algebraic[23]*states[20]*(states[5]+states[6])*states[0]*(power(constants[4], 2.00000)))/(constants[2]*constants[3]))*(states[19]*exp((states[0]*constants[4])/(constants[2]*constants[3]))-states[18]))/(exp((states[0]*constants[4])/(constants[2]*constants[3]))-1.00000)
+    algebraic[25] = constants[24]*(power(states[18]/5.40000, 1.0/2))
+    algebraic[26] = ((constants[2]*constants[3])/constants[4])*log((states[18]+constants[25]*constants[12])/(states[19]+constants[25]*states[1]))
+    algebraic[27] = 1.00000/(1.00000+exp((states[0]-56.2600)/32.1000))
+    algebraic[28] = algebraic[25]*algebraic[27]*(power(states[21], 2.00000))*(states[0]-algebraic[26])
+    algebraic[30] = ((constants[2]*constants[3])/constants[4])*log(states[18]/states[19])
+    algebraic[29] = constants[26]*(power(states[18]/5.40000, 1.0/2))
+    algebraic[31] = 1.02000/(1.00000+exp(0.238500*((states[0]-algebraic[30])-59.2150)))
+    algebraic[32] = (0.491240*(exp(0.0803200*((states[0]+5.47600)-algebraic[30]))+exp(0.0617500*(states[0]-(algebraic[30]+594.310)))))/(1.00000+exp(-0.514300*((states[0]-algebraic[30])+4.75300)))
+    algebraic[33] = algebraic[31]/(algebraic[31]+algebraic[32])
+    algebraic[34] = algebraic[29]*algebraic[33]*(states[0]-algebraic[30])
+    algebraic[35] = algebraic[30]
+    algebraic[36] = 1.00000/(1.00000+exp((7.48800-states[0])/5.98000))
+    algebraic[37] = constants[27]*algebraic[36]*(states[0]-algebraic[35])
+    algebraic[59] = (((1.00000*constants[41]*(power(1.00000, 2.00000))*algebraic[50]*(power(constants[4], 2.00000)))/(constants[2]*constants[3]))*(0.750000*states[19]*exp((algebraic[50]*constants[4])/(constants[2]*constants[3]))-0.750000*states[18]))/(exp((algebraic[50]*constants[4])/(constants[2]*constants[3]))-1.00000)
+    algebraic[61] = (algebraic[59]*1.00000)/(1.00000+power(constants[40]/states[22], 3.00000))
+    rates[19] = (-(algebraic[24]+algebraic[28]+algebraic[34]+algebraic[37]+algebraic[61]+-algebraic[46]*2.00000)*constants[42])/(constants[43]*constants[4])
+    rates[18] = ((algebraic[24]+algebraic[28]+algebraic[34]+algebraic[37]+algebraic[61]+-algebraic[46]*2.00000)*constants[42])/(constants[43]*constants[4])
+    algebraic[39] = (constants[34]*states[22])/(constants[33]+states[22])
+    algebraic[42] = ((constants[2]*constants[3])/(2.00000*constants[4]))*log(constants[23]/states[22])
+    algebraic[43] = constants[36]*(states[0]-algebraic[42])
+    algebraic[63] = algebraic[55]+algebraic[61]
+    algebraic[6] = custom_piecewise([greater_equal(voi , constants[6]) & less_equal(voi , constants[7]) & less_equal((voi-constants[6])-floor((voi-constants[6])/constants[8])*constants[8] , constants[9]), constants[10] , True, 0.00000])
+    rates[0] = (algebraic[17]+algebraic[22]+algebraic[24]+algebraic[28]+algebraic[38]+algebraic[34]+algebraic[37]+algebraic[39]+algebraic[41]+algebraic[43]+algebraic[46]+algebraic[63]+algebraic[6])/constants[5]
+    algebraic[64] = 1.00000/(1.00000+(constants[67]*constants[61])/(power(constants[61]+states[22], 2.00000)))
+    algebraic[62] = algebraic[58]+algebraic[60]
+    rates[22] = algebraic[64]*((algebraic[49]+algebraic[54])-(algebraic[51]+algebraic[62]+(((algebraic[43]-2.00000*algebraic[38])+algebraic[39])*constants[42])/(2.00000*constants[43]*constants[4])))
+    return(rates)
+
+def computeAlgebraic(constants, states, voi):
+    algebraic = array([[0.0] * len(voi)] * sizeAlgebraic)
+    states = array(states)
+    voi = array(voi)
+    algebraic[0] = (0.320000*(states[0]+47.1300))/(1.00000-exp(-0.100000*(states[0]+47.1300)))
+    algebraic[8] = 0.0800000*exp(-states[0]/11.0000)
+    algebraic[1] = custom_piecewise([less(states[0] , -40.0000), 0.135000*exp((80.0000+states[0])/-6.80000) , True, 0.00000])
+    algebraic[9] = custom_piecewise([less(states[0] , -40.0000), 3.56000*exp(0.0790000*states[0])+310000.*exp(0.350000*states[0]) , True, 1.00000/(0.130000*(1.00000+exp((states[0]+10.6600)/-11.1000)))])
+    algebraic[2] = custom_piecewise([less(states[0] , -40.0000), ((-127140.*exp(0.244400*states[0])-3.47400e-05*exp(-0.0439100*states[0]))*(states[0]+37.7800))/(1.00000+exp(0.311000*(states[0]+79.2300))) , True, 0.00000])
+    algebraic[10] = custom_piecewise([less(states[0] , -40.0000), (0.121200*exp(-0.0105200*states[0]))/(1.00000+exp(-0.137800*(states[0]+40.1400))) , True, (0.300000*exp(-2.53500e-07*states[0]))/(1.00000+exp(-0.100000*(states[0]+32.0000)))])
+    algebraic[4] = 1.00000/(1.00000+exp((states[0]+55.0000)/7.50000))+0.100000/(1.00000+exp((-states[0]+21.0000)/6.00000))
+    algebraic[12] = 20.0000+600.000/(1.00000+exp((states[0]+30.0000)/9.50000))
+    algebraic[5] = (7.19000e-05*(states[0]+30.0000))/(1.00000-exp(-0.148000*(states[0]+30.0000)))
+    algebraic[13] = (0.000131000*(states[0]+30.0000))/(-1.00000+exp(0.0687000*(states[0]+30.0000)))
+    algebraic[7] = (constants[92]*states[34])/constants[99]
+    algebraic[15] = states[31]+states[32]+states[33]
+    algebraic[18] = custom_piecewise([less(algebraic[15] , 0.00000), (algebraic[7]*(constants[70]*algebraic[15]+1.00000))/(1.00000-algebraic[15]) , True, (algebraic[7]*(1.00000-(constants[70]+2.00000)*algebraic[15]))/(1.00000+algebraic[15])])
+    algebraic[3] = 0.400000*exp((states[0]+12.0000)/10.0000)
+    algebraic[11] = 0.0500000*exp((states[0]+12.0000)/-13.0000)
+    algebraic[21] = (0.187500*states[17])/1.00000
+    algebraic[16] = algebraic[3]*constants[16]
+    algebraic[19] = algebraic[11]/constants[17]
+    algebraic[49] = constants[45]*(states[28]-states[22])
+    algebraic[51] = (constants[46]*(power(states[22], 2.00000)))/(power(constants[60], 2.00000)+power(states[22], 2.00000))
+    algebraic[53] = (states[28]-states[27])/constants[59]
+    algebraic[58] = constants[55]*states[22]*(constants[64]-states[29])-constants[56]*states[29]
+    algebraic[20] = 1.00000*((((constants[13]*4.00000*states[0]*(power(constants[4], 2.00000)))/(constants[2]*constants[3]))*(0.00100000*exp((2.00000*states[0]*constants[4])/(constants[2]*constants[3]))-0.341000*constants[23]))/(exp((2.00000*states[0]*constants[4])/(constants[2]*constants[3]))-1.00000))
+    algebraic[22] = algebraic[20]*states[20]*(states[5]+states[6])
+    algebraic[56] = 1.00000/(1.00000+(constants[67]*constants[61])/(power(constants[61]+states[17], 2.00000)))
+    algebraic[45] = states[23]+states[24]
+    algebraic[47] = constants[44]*algebraic[45]*(states[27]-states[17])
+    algebraic[54] = (states[17]-states[22])/constants[63]
+    algebraic[57] = 1.00000/(1.00000+(constants[66]*constants[62])/(power(constants[62]+states[27], 2.00000)))
+    algebraic[14] = ((constants[2]*constants[3])/constants[4])*log(constants[12]/states[1])
+    algebraic[17] = constants[11]*(power(states[2], 3.00000))*states[3]*states[4]*(states[0]-algebraic[14])
+    algebraic[38] = ((((((constants[28]*1.00000)/(power(constants[29], 3.00000)+power(constants[12], 3.00000)))*1.00000)/(constants[30]+constants[23]))*1.00000)/(1.00000+constants[31]*exp(((constants[32]-1.00000)*states[0]*constants[4])/(constants[2]*constants[3]))))*(exp((constants[32]*states[0]*constants[4])/(constants[2]*constants[3]))*(power(states[1], 3.00000))*constants[23]-exp(((constants[32]-1.00000)*states[0]*constants[4])/(constants[2]*constants[3]))*(power(constants[12], 3.00000))*states[22])
+    algebraic[40] = algebraic[14]
+    algebraic[41] = constants[35]*(states[0]-algebraic[40])
+    algebraic[44] = 1.00000/(1.00000+0.124500*exp((-0.100000*states[0]*constants[4])/(constants[2]*constants[3]))+0.0365000*constants[90]*exp((-states[0]*constants[4])/(constants[2]*constants[3])))
+    algebraic[46] = (((constants[37]*algebraic[44]*1.00000)/(1.00000+power(constants[38]/states[1], 1.50000)))*states[18])/(states[18]+constants[39])
+    algebraic[48] = ((constants[2]*constants[3])/constants[4])*log((states[18]+constants[12])/(states[19]+states[1]))
+    algebraic[50] = states[0]-algebraic[48]
+    algebraic[52] = (((1.00000*constants[41]*(power(1.00000, 2.00000))*algebraic[50]*(power(constants[4], 2.00000)))/(constants[2]*constants[3]))*(0.750000*states[1]*exp((algebraic[50]*constants[4])/(constants[2]*constants[3]))-0.750000*constants[12]))/(exp((algebraic[50]*constants[4])/(constants[2]*constants[3]))-1.00000)
+    algebraic[55] = (algebraic[52]*1.00000)/(1.00000+power(constants[40]/states[22], 3.00000))
+    algebraic[60] = constants[57]*states[22]*(constants[65]-states[30])-constants[58]*states[30]
+    algebraic[23] = constants[14]/(1.00000+algebraic[20]/constants[15])
+    algebraic[24] = (((1.00000*algebraic[23]*states[20]*(states[5]+states[6])*states[0]*(power(constants[4], 2.00000)))/(constants[2]*constants[3]))*(states[19]*exp((states[0]*constants[4])/(constants[2]*constants[3]))-states[18]))/(exp((states[0]*constants[4])/(constants[2]*constants[3]))-1.00000)
+    algebraic[25] = constants[24]*(power(states[18]/5.40000, 1.0/2))
+    algebraic[26] = ((constants[2]*constants[3])/constants[4])*log((states[18]+constants[25]*constants[12])/(states[19]+constants[25]*states[1]))
+    algebraic[27] = 1.00000/(1.00000+exp((states[0]-56.2600)/32.1000))
+    algebraic[28] = algebraic[25]*algebraic[27]*(power(states[21], 2.00000))*(states[0]-algebraic[26])
+    algebraic[30] = ((constants[2]*constants[3])/constants[4])*log(states[18]/states[19])
+    algebraic[29] = constants[26]*(power(states[18]/5.40000, 1.0/2))
+    algebraic[31] = 1.02000/(1.00000+exp(0.238500*((states[0]-algebraic[30])-59.2150)))
+    algebraic[32] = (0.491240*(exp(0.0803200*((states[0]+5.47600)-algebraic[30]))+exp(0.0617500*(states[0]-(algebraic[30]+594.310)))))/(1.00000+exp(-0.514300*((states[0]-algebraic[30])+4.75300)))
+    algebraic[33] = algebraic[31]/(algebraic[31]+algebraic[32])
+    algebraic[34] = algebraic[29]*algebraic[33]*(states[0]-algebraic[30])
+    algebraic[35] = algebraic[30]
+    algebraic[36] = 1.00000/(1.00000+exp((7.48800-states[0])/5.98000))
+    algebraic[37] = constants[27]*algebraic[36]*(states[0]-algebraic[35])
+    algebraic[59] = (((1.00000*constants[41]*(power(1.00000, 2.00000))*algebraic[50]*(power(constants[4], 2.00000)))/(constants[2]*constants[3]))*(0.750000*states[19]*exp((algebraic[50]*constants[4])/(constants[2]*constants[3]))-0.750000*states[18]))/(exp((algebraic[50]*constants[4])/(constants[2]*constants[3]))-1.00000)
+    algebraic[61] = (algebraic[59]*1.00000)/(1.00000+power(constants[40]/states[22], 3.00000))
+    algebraic[39] = (constants[34]*states[22])/(constants[33]+states[22])
+    algebraic[42] = ((constants[2]*constants[3])/(2.00000*constants[4]))*log(constants[23]/states[22])
+    algebraic[43] = constants[36]*(states[0]-algebraic[42])
+    algebraic[63] = algebraic[55]+algebraic[61]
+    algebraic[6] = custom_piecewise([greater_equal(voi , constants[6]) & less_equal(voi , constants[7]) & less_equal((voi-constants[6])-floor((voi-constants[6])/constants[8])*constants[8] , constants[9]), constants[10] , True, 0.00000])
+    algebraic[64] = 1.00000/(1.00000+(constants[67]*constants[61])/(power(constants[61]+states[22], 2.00000)))
+    algebraic[62] = algebraic[58]+algebraic[60]
+    return algebraic
+
+def custom_piecewise(cases):
+    """Compute result of a piecewise function"""
+    return select(cases[0::2],cases[1::2])
+
+def solve_model():
+    """Solve model with ODE solver"""
+    from scipy.integrate import ode
+    # Initialise constants and state variables
+    (init_states, constants) = initConsts()
+
+    # Set timespan to solve over
+    voi = linspace(0, 10, 500)
+
+    # Construct ODE object to solve
+    r = ode(computeRates)
+    r.set_integrator('vode', method='bdf', atol=1e-06, rtol=1e-06, max_step=1)
+    r.set_initial_value(init_states, voi[0])
+    r.set_f_params(constants)
+
+    # Solve model
+    states = array([[0.0] * len(voi)] * sizeStates)
+    states[:,0] = init_states
+    for (i,t) in enumerate(voi[1:]):
+        if r.successful():
+            r.integrate(t)
+            states[:,i+1] = r.y
+        else:
+            break
+
+    # Compute algebraic variables
+    algebraic = computeAlgebraic(constants, states, voi)
+    return (voi, states, algebraic)
+
+def plot_model(voi, states, algebraic):
+    """Plot variables against variable of integration"""
+    import pylab
+    (legend_states, legend_algebraic, legend_voi, legend_constants) = createLegends()
+    pylab.figure(1)
+    pylab.plot(voi,vstack((states,algebraic)).T)
+    pylab.xlabel(legend_voi)
+    pylab.legend(legend_states + legend_algebraic, loc='best')
+    pylab.show()
+
+if __name__ == "__main__":
+    (voi, states, algebraic) = solve_model()
+    plot_model(voi, states, algebraic)
+
+
+# =========================
+# Auto-generated wrapper
+# =========================
+import numpy as np
+from scipy.integrate import odeint
+
+
+class Parameters:
+    def __init__(self):
+        self.lambda = 1
+        self.dlambdadt = 0
+        self.R = 8.3145e3
+        self.T = 310
+        self.F = 9.6845e4
+        self.Cm = 0.01
+        self.stim_start = 100
+        self.stim_end = 9000
+        self.stim_period = 750
+        self.stim_duration = 1
+        self.stim_amplitude = -100
+        self.g_Na = 0.128
+        self.Nao = 140
+        self.P_Ca = 33.75e-6
+        self.P_K = 1e-9
+        self.i_Ca_L_Ca_half = -4.58e-3
+        self.a = 2
+        self.b = 2
+        self.g = 2
+        self.f = 0.3
+        self.g_ = 0
+        self.f_ = 0
+        self.omega = 0.01
+        self.Cao = 1.8
+        self.g_K_max = 0.001128
+        self.P_NaK = 0.01833
+        self.g_K1_max = 7.5e-3
+        self.g_Kp = 8.28e-5
+        self.k_NaCa = 50
+        self.K_mNa = 87.5
+        self.K_mCa = 1.38
+        self.k_sat = 0.1
+        self.eta = 0.35
+        self.K_mpCa = 0.5e-3
+        self.I_pCa = 1.15e-2
+        self.g_Nab = 1.41e-5
+        self.g_Cab = 6.032e-5
+        self.I_NaK = 0.013
+        self.K_mNai = 10
+        self.K_mKo = 1.5
+        self.K_m_ns_Ca = 1.2e-3
+        self.P_ns_Ca = 1.75e-9
+        self.Am = 546.69
+        self.V_myo = 0.92
+        self.v1 = 1.8
+        self.v2 = 0.58e-4
+        self.v3 = 1.8e-3
+        self.nCa = 4
+        self.mCa = 3
+        self.k_a_plus = 1.215e10
+        self.k_a_minus = 0.1425
+        self.k_b_plus = 4.05e7
+        self.k_b_minus = 1.93
+        self.k_c_plus = 0.018
+        self.k_c_minus = 0.0008
+        self.k_htrpn_plus = 20
+        self.k_htrpn_minus = 0.066e-3
+        self.k_ltrpn_plus = 40
+        self.k_ltrpn_minus = 0.04
+        self.tau_tr = 34.48
+        self.K_mup = 0.5e-3
+        self.K_mCMDN = 2.38e-3
+        self.K_mCSQN = 0.8
+        self.tau_xfer = 3.125
+        self.HTRPN_tot = 0.14
+        self.LTRPN_tot = 0.07
+        self.CSQN_tot = 15
+        self.CMDN_tot = 0.05
+        self.Tref = 56.2
+        self.beta0 = 4.9
+        self.a_1 = 0.35
+        self.A1 = -29
+        self.A2 = 138
+        self.A3 = 129
+        self.alpha1 = 0.03
+        self.alpha2 = 0.13
+        self.alpha3 = 0.625
+        self.Ca50ref = 1.05e-3
+        self.zp = 0.85
+        self.beta1 = -4
+        self.alpha0 = 8e-3
+        self.alphar1 = 2e-3
+        self.alphar2 = 1.75e-3
+        self.nRel = 3
+        self.Kz = 0.15
+        self.nHill = 3
+        self.kon = 100
+        self.koff = 0.2
+        self.gamma_trpn = 2
+        self.TRPN_tot = 0.07
+
+    def to_dict(self):
+        return {
+            "lambda": self.lambda,
+            "dlambdadt": self.dlambdadt,
+            "R": self.R,
+            "T": self.T,
+            "F": self.F,
+            "Cm": self.Cm,
+            "stim_start": self.stim_start,
+            "stim_end": self.stim_end,
+            "stim_period": self.stim_period,
+            "stim_duration": self.stim_duration,
+            "stim_amplitude": self.stim_amplitude,
+            "g_Na": self.g_Na,
+            "Nao": self.Nao,
+            "P_Ca": self.P_Ca,
+            "P_K": self.P_K,
+            "i_Ca_L_Ca_half": self.i_Ca_L_Ca_half,
+            "a": self.a,
+            "b": self.b,
+            "g": self.g,
+            "f": self.f,
+            "g_": self.g_,
+            "f_": self.f_,
+            "omega": self.omega,
+            "Cao": self.Cao,
+            "g_K_max": self.g_K_max,
+            "P_NaK": self.P_NaK,
+            "g_K1_max": self.g_K1_max,
+            "g_Kp": self.g_Kp,
+            "k_NaCa": self.k_NaCa,
+            "K_mNa": self.K_mNa,
+            "K_mCa": self.K_mCa,
+            "k_sat": self.k_sat,
+            "eta": self.eta,
+            "K_mpCa": self.K_mpCa,
+            "I_pCa": self.I_pCa,
+            "g_Nab": self.g_Nab,
+            "g_Cab": self.g_Cab,
+            "I_NaK": self.I_NaK,
+            "K_mNai": self.K_mNai,
+            "K_mKo": self.K_mKo,
+            "K_m_ns_Ca": self.K_m_ns_Ca,
+            "P_ns_Ca": self.P_ns_Ca,
+            "Am": self.Am,
+            "V_myo": self.V_myo,
+            "v1": self.v1,
+            "v2": self.v2,
+            "v3": self.v3,
+            "nCa": self.nCa,
+            "mCa": self.mCa,
+            "k_a_plus": self.k_a_plus,
+            "k_a_minus": self.k_a_minus,
+            "k_b_plus": self.k_b_plus,
+            "k_b_minus": self.k_b_minus,
+            "k_c_plus": self.k_c_plus,
+            "k_c_minus": self.k_c_minus,
+            "k_htrpn_plus": self.k_htrpn_plus,
+            "k_htrpn_minus": self.k_htrpn_minus,
+            "k_ltrpn_plus": self.k_ltrpn_plus,
+            "k_ltrpn_minus": self.k_ltrpn_minus,
+            "tau_tr": self.tau_tr,
+            "K_mup": self.K_mup,
+            "K_mCMDN": self.K_mCMDN,
+            "K_mCSQN": self.K_mCSQN,
+            "tau_xfer": self.tau_xfer,
+            "HTRPN_tot": self.HTRPN_tot,
+            "LTRPN_tot": self.LTRPN_tot,
+            "CSQN_tot": self.CSQN_tot,
+            "CMDN_tot": self.CMDN_tot,
+            "Tref": self.Tref,
+            "beta0": self.beta0,
+            "a_1": self.a_1,
+            "A1": self.A1,
+            "A2": self.A2,
+            "A3": self.A3,
+            "alpha1": self.alpha1,
+            "alpha2": self.alpha2,
+            "alpha3": self.alpha3,
+            "Ca50ref": self.Ca50ref,
+            "zp": self.zp,
+            "beta1": self.beta1,
+            "alpha0": self.alpha0,
+            "alphar1": self.alphar1,
+            "alphar2": self.alphar2,
+            "nRel": self.nRel,
+            "Kz": self.Kz,
+            "nHill": self.nHill,
+            "kon": self.kon,
+            "koff": self.koff,
+            "gamma_trpn": self.gamma_trpn,
+            "TRPN_tot": self.TRPN_tot,
+        }
+
+    @classmethod
+    def from_dict(cls, data):
+        p = cls()
+        for key, value in data.items():
+            if hasattr(p, key):
+                setattr(p, key, value)
+        return p
+
+
+class Config:
+    def __init__(
+        self,
+        param: Parameters = None,
+        calculate: bool = False,
+        T: int = 100,
+        T_unit: float = 0.01,
+        y0=[-84.1638, 10.2042, 0.0328302, 0.988354, 0.99254, 9.84546e-21, 0, 0.997208, 6.38897e-5, 1.535e-9, 1.63909e-14, 6.56337e-20, 2.72826e-3, 6.99215e-7, 6.71989e-11, 2.87031e-15, 4.59752e-20, 1.36058e-4, 5.4, 143.727, 0.998983, 0.000928836, 9.94893e-11, 1.19168e-3, 6.30613e-9, 0.762527, 0.236283, 1.17504, 1.243891, 0.13598, 0.00635, 0, 0, 0, 0, 0],
+    ):
+        if param is None:
+            raise ValueError("Config requires param=Parameters()")
+
+        self.model_name = "jafri_rice_winslow_1998_b"
+        self.curve_names = [
+            "V",
+            "Nai",
+            "m",
+            "h",
+            "j",
+            "O",
+            "O_Ca",
+            "C0",
+            "C1",
+            "C2",
+            "C3",
+            "C4",
+            "C_Ca0",
+            "C_Ca1",
+            "C_Ca2",
+            "C_Ca3",
+            "C_Ca4",
+            "Ca_SS",
+            "Ko",
+            "Ki",
+            "y",
+            "X",
+            "Cai",
+            "P_O1",
+            "P_O2",
+            "P_C1",
+            "P_C2",
+            "Ca_JSR",
+            "Ca_NSR",
+            "HTRPNCa",
+            "LTRPNCa",
+            "Q1",
+            "Q2",
+            "Q3",
+            "z",
+            "Cab",
+        ]
+        self.state_names = ['V', 'Nai', 'm', 'h', 'j', 'O', 'O_Ca', 'C0', 'C1', 'C2', 'C3', 'C4', 'C_Ca0', 'C_Ca1', 'C_Ca2', 'C_Ca3', 'C_Ca4', 'Ca_SS', 'Ko', 'Ki', 'y', 'X', 'Cai', 'P_O1', 'P_O2', 'P_C1', 'P_C2', 'Ca_JSR', 'Ca_NSR', 'HTRPNCa', 'LTRPNCa', 'Q1', 'Q2', 'Q3', 'z', 'Cab']
+        self.algebraic_names = ['alpha_m', 'alpha_h', 'alpha_j', 'alpha', 'y_infinity', 'alpha_X', 'I_stim', 'T0', 'beta_m', 'beta_h', 'beta_j', 'beta', 'tau_y', 'beta_X', 'E_Na', 'Q', 'alpha_a', 'i_Na', 'Tension', 'beta_b', 'i_Ca_L_Ca_max', 'gamma', 'i_Ca_L_Ca', 'p_k', 'i_Ca_L_K', 'g_K', 'E_K', 'Xi', 'i_K', 'g_K1', 'E_K1', 'alpha_K1', 'beta_K1', 'K1_infinity', 'i_K1', 'E_Kp', 'Kp', 'i_Kp', 'i_NaCa', 'i_p_Ca', 'E_NaN', 'i_Na_b', 'E_CaN', 'i_Ca_b', 'f_NaK', 'RyR_open', 'i_NaK', 'J_rel', 'EnsCa', 'J_leak', 'VnsCa', 'J_up', 'I_ns_Na', 'J_tr', 'J_xfer', 'i_ns_Na', 'B_SS', 'B_JSR', 'J_htrpn', 'I_ns_K', 'J_ltrpn', 'i_ns_K', 'J_trpn', 'i_ns_Ca', 'Bi']
+        self.params = param
+        self.T = T
+        self.T_unit = T_unit
+        self.T_N = int(self.T / self.T_unit)
+        self.prob_dim = len(y0)
+        self.y0 = np.asarray(y0)
+        self.t = np.asarray([i * self.T_unit for i in range(self.T_N)])
+        self.truth = odeint(self.pend, self.y0, self.t) if calculate else None
+
+    def _build_constants(self):
+        c = [0.0] * 100
+        p = self.params
+
+        # direct mapping
+        c[0] = p.lambda
+        c[1] = p.dlambdadt
+        c[2] = p.R
+        c[3] = p.T
+        c[4] = p.F
+        c[5] = p.Cm
+        c[6] = p.stim_start
+        c[7] = p.stim_end
+        c[8] = p.stim_period
+        c[9] = p.stim_duration
+        c[10] = p.stim_amplitude
+        c[11] = p.g_Na
+        c[12] = p.Nao
+        c[13] = p.P_Ca
+        c[14] = p.P_K
+        c[15] = p.i_Ca_L_Ca_half
+        c[16] = p.a
+        c[17] = p.b
+        c[18] = p.g
+        c[19] = p.f
+        c[20] = p.g_
+        c[21] = p.f_
+        c[22] = p.omega
+        c[23] = p.Cao
+        c[24] = p.g_K_max
+        c[25] = p.P_NaK
+        c[26] = p.g_K1_max
+        c[27] = p.g_Kp
+        c[28] = p.k_NaCa
+        c[29] = p.K_mNa
+        c[30] = p.K_mCa
+        c[31] = p.k_sat
+        c[32] = p.eta
+        c[33] = p.K_mpCa
+        c[34] = p.I_pCa
+        c[35] = p.g_Nab
+        c[36] = p.g_Cab
+        c[37] = p.I_NaK
+        c[38] = p.K_mNai
+        c[39] = p.K_mKo
+        c[40] = p.K_m_ns_Ca
+        c[41] = p.P_ns_Ca
+        c[42] = p.Am
+        c[43] = p.V_myo
+        c[44] = p.v1
+        c[45] = p.v2
+        c[46] = p.v3
+        c[47] = p.nCa
+        c[48] = p.mCa
+        c[49] = p.k_a_plus
+        c[50] = p.k_a_minus
+        c[51] = p.k_b_plus
+        c[52] = p.k_b_minus
+        c[53] = p.k_c_plus
+        c[54] = p.k_c_minus
+        c[55] = p.k_htrpn_plus
+        c[56] = p.k_htrpn_minus
+        c[57] = p.k_ltrpn_plus
+        c[58] = p.k_ltrpn_minus
+        c[59] = p.tau_tr
+        c[60] = p.K_mup
+        c[61] = p.K_mCMDN
+        c[62] = p.K_mCSQN
+        c[63] = p.tau_xfer
+        c[64] = p.HTRPN_tot
+        c[65] = p.LTRPN_tot
+        c[66] = p.CSQN_tot
+        c[67] = p.CMDN_tot
+        c[68] = p.Tref
+        c[69] = p.beta0
+        c[70] = p.a_1
+        c[71] = p.A1
+        c[72] = p.A2
+        c[73] = p.A3
+        c[74] = p.alpha1
+        c[75] = p.alpha2
+        c[76] = p.alpha3
+        c[77] = p.Ca50ref
+        c[78] = p.zp
+        c[79] = p.beta1
+        c[80] = p.alpha0
+        c[81] = p.alphar1
+        c[82] = p.alphar2
+        c[83] = p.nRel
+        c[84] = p.Kz
+        c[85] = p.nHill
+        c[86] = p.kon
+        c[87] = p.koff
+        c[88] = p.gamma_trpn
+        c[89] = p.TRPN_tot
+
+        # derived constants
+        c[90] = (1.00000/7.00000)*(exp(c[12]/67.3000)-1.00000)
+        c[91] = 5.82800e-05*c[43]
+        c[92] = c[68]*(1.00000+c[69]*(c[0]-1.00000))
+        c[93] = 1.00000*(((c[82]*(power(c[78], c[83])))/(power(c[78], c[83])+power(c[84], c[83])))*(1.00000-(c[83]*(power(c[84], c[83])))/(power(c[78], c[83])+power(c[84], c[83]))))
+        c[94] = 0.0810000*c[43]
+        c[95] = 1.00000*((c[82]*(power(c[78], c[83]-1.00000))*c[83]*(power(c[84], c[83])))/(power(power(c[78], c[83])+power(c[84], c[83]), 2.00000)))
+        c[96] = 0.00464000*c[43]
+        c[97] = c[77]*(1.00000+c[79]*(c[0]-1.00000))
+        c[98] = (c[97]*c[89])/(c[97]+(c[87]/c[86])*(1.00000-((1.00000+c[69]*(c[0]-1.00000))*0.500000)/c[88]))
+        c[99] = (c[80]*1.00000)/(power(c[98]/c[89], c[85]))-(c[93]*1.00000)/(c[81]+c[95]*1.00000+c[80]/(power(c[98]/c[89], c[85])))
+
+        return np.asarray(c, dtype=float)
+
+    def pend(self, y, t):
+        constants = self._build_constants()
+        return np.asarray(
+            computeRates(t, list(np.asarray(y, dtype=float)), constants),
+            dtype=float,
+        )
+
+    def algebraic(self, y, t=0.0):
+        if "computeAlgebraic" not in globals():
+            raise AttributeError("computeAlgebraic is not defined in this module")
+
+        alg = computeAlgebraic(
+            self._build_constants(),
+            np.asarray(y, dtype=float).reshape(-1, 1),
+            np.asarray([t], dtype=float),
+        )
+        return np.asarray(alg, dtype=float)[:, 0]

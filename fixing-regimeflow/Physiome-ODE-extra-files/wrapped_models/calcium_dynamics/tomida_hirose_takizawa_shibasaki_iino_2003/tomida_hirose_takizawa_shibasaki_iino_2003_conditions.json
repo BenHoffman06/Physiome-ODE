@@ -1,0 +1,10 @@
+{
+  "k1_stim": 0.359,
+  "k1_unstim": 0,
+  "k2": 0.147,
+  "k3": 0.06,
+  "k4": 0.035,
+  "stim_duration": 0.5,
+  "stim_wavelength": 3,
+  "time_before_stim": 1
+}

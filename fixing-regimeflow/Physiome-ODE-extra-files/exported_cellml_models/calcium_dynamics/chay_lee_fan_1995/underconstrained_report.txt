@@ -1,0 +1,13 @@
+Model is underconstrained.
+The following variables couldn't be defined:
+ * G_alpha_GTP in component G_alpha_GTP
+ * kp in component G_alpha_GTP
+ * PLC in component PLC
+ * kd in component DAG
+ * IP3 in component Ca_i
+ * hp in component PLC_active
+ * d/dt G_alpha_GTP in component G_alpha_GTP
+ * d/dt DAG in component DAG
+ * d/dt Ca_i in component Ca_i
+ * d/dt PLC_active in component PLC_active
+ * d/dt G_alpha_GDP in component G_alpha_GDP

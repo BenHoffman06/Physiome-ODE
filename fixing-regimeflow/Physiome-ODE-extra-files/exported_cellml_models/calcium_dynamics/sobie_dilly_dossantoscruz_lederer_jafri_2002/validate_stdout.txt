@@ -1,0 +1,32 @@
+[Warning] [165:10] MathML equals element has inconsistent units between the sides.
+[Error] [204:12] This version of CellML can only be used with real numbers.
+[Warning] [223:10] MathML equals element has inconsistent units between the sides.
+[Warning] [255:10] MathML equals element has inconsistent units between the sides.
+[Warning] [264:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [275:16] Expected all arguments to operator "minus" to have the same units.
+[Warning] [284:10] MathML equals element has inconsistent units between the sides.
+[Warning] [293:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [313:10] MathML equals element has inconsistent units between the sides.
+[Warning] [322:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [342:10] MathML equals element has inconsistent units between the sides.
+[Warning] [351:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [371:10] MathML equals element has inconsistent units between the sides.
+[Warning] [374:12] Expected all arguments to operator "plus" to have the same units.
+[Warning] [376:14] Expected all arguments to operator "minus" to have the same units.
+[Warning] [394:14] Expected all arguments to operator "minus" to have the same units.
+[Warning] [412:14] Expected all arguments to operator "minus" to have the same units.
+[Warning] [423:18] Expected all arguments to operator "minus" to have the same units.
+[Warning] [430:14] Expected all arguments to operator "minus" to have the same units.
+[Warning] [456:14] Expected all arguments to operator "plus" to have the same units.
+[Warning] [484:10] MathML equals element has inconsistent units between the sides.
+[Warning] [515:10] MathML equals element has inconsistent units between the sides.
+[Warning] [600:16] Expected all arguments to operator "plus" to have the same units.
+[Warning] [620:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [706:10] MathML equals element has inconsistent units between the sides.
+[Warning] [715:12] Expected all arguments to operator "plus" to have the same units.
+[Warning] [730:10] MathML equals element has inconsistent units between the sides.
+[Warning] [739:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [750:10] MathML equals element has inconsistent units between the sides.
+[Warning] [762:16] Expected all arguments to operator "minus" to have the same units.
+[Warning] [786:16] Units validation results may be incorrect because the exponent is not a constant.
+[Warning] [814:18] Units validation results may be incorrect because the exponent is not a constant.

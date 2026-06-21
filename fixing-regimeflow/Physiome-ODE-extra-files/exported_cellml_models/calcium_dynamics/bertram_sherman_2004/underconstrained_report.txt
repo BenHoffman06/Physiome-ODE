@@ -1,0 +1,23 @@
+Model is underconstrained.
+The following variables couldn't be defined:
+ * V in component membrane
+ * i_Ca in component calcium_current
+ * i_K in component delayed_rectifier_potassium_current
+ * i_K_Ca in component calcium_dependent_potassium_current
+ * i_K_ATP in component nucleotide_sensitive_potassium_current
+ * m_infinity in component calcium_current_m_gate
+ * n_infinity in component delayed_rectifier_potassium_current_n_gate
+ * omega in component calcium_dependent_potassium_current_omega_gate
+ * a_infinity in component nucleotide_sensitive_potassium_current_a_gate
+ * Jmem in component calcium_flux_through_the_membrane
+ * Jer in component net_calcium_efflux_out_of_the_ER
+ * J_SERCA in component calcium_influx_into_the_ER
+ * Jleak in component calcium_leak_out_of_the_ER
+ * JIP3 in component calcium_efflux_through_the_IP3R
+ * O_infinity in component calcium_efflux_through_the_IP3R
+ * IP3 in component calcium_efflux_through_the_IP3R
+ * d/dt V in component membrane
+ * d/dt n in component delayed_rectifier_potassium_current_n_gate
+ * d/dt a in component nucleotide_sensitive_potassium_current_a_gate
+ * d/dt c in component cytosolic_free_calcium_concentration
+ * d/dt c_er in component ER_calcium_concentration

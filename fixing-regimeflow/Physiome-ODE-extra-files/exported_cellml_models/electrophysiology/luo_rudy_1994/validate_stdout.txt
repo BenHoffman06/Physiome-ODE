@@ -1,0 +1,7 @@
+[Warning] [456:20] Expected arguments to operator "exp" to be dimensionless.
+[Warning] [1556:16] Expected arguments to operator "exp" to be dimensionless.
+[Warning] [1591:16] Expected arguments to operator "exp" to be dimensionless.
+[Warning] [1800:14] Expected all arguments to operator "plus" to have the same units.
+[Warning] [1805:18] Expected arguments to operator "exp" to be dimensionless.
+[Warning] [1822:16] Expected arguments to operator "exp" to be dimensionless.
+[Warning] [2168:16] Expected arguments to operator "exp" to be dimensionless.

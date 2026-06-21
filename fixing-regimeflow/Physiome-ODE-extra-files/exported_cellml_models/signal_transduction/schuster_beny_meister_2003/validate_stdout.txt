@@ -1,0 +1,19 @@
+[Warning] [123:10] MathML equals element has inconsistent units between the sides.
+[Warning] [163:10] MathML equals element has inconsistent units between the sides.
+[Warning] [172:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [184:22] Expected all arguments to operator "minus" to have the same units.
+[Warning] [218:10] MathML equals element has inconsistent units between the sides.
+[Warning] [239:18] Expected arguments to operator "tanh" to be dimensionless.
+[Warning] [243:22] Expected all arguments to operator "minus" to have the same units.
+[Warning] [269:24] Expected arguments to operator "log" to be dimensionless.
+[Warning] [323:24] Expected arguments to operator "log" to be dimensionless.
+[Warning] [356:10] MathML equals element has inconsistent units between the sides.
+[Warning] [392:16] Expected arguments to operator "tanh" to be dimensionless.
+[Warning] [396:20] Expected all arguments to operator "minus" to have the same units.
+[Warning] [402:26] Expected arguments to operator "log" to be dimensionless.
+[Warning] [408:24] Expected all arguments to operator "minus" to have the same units.
+[Warning] [416:20] Expected all arguments to operator "plus" to have the same units.
+[Warning] [423:26] Expected all arguments to operator "minus" to have the same units.
+[Warning] [425:28] Expected all arguments to operator "plus" to have the same units.
+[Warning] [433:34] Expected arguments to operator "log" to be dimensionless.
+[Warning] [465:10] MathML equals element has inconsistent units between the sides.

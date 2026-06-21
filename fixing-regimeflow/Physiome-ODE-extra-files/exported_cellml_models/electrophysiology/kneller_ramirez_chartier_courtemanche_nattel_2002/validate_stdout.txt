@@ -1,0 +1,49 @@
+[Warning] [244:10] MathML equals element has inconsistent units between the sides.
+[Warning] [352:10] MathML equals element has inconsistent units between the sides.
+[Warning] [361:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [366:16] Expected all arguments to operator "minus" to have the same units.
+[Warning] [435:20] Expected arguments to operator "exp" to be dimensionless.
+[Warning] [727:10] MathML equals element has inconsistent units between the sides.
+[Warning] [744:16] Expected arguments to operator "exp" to be dimensionless.
+[Warning] [800:10] MathML equals element has inconsistent units between the sides.
+[Warning] [1008:14] Expected all arguments to operator "plus" to have the same units.
+[Warning] [1033:14] Expected all arguments to operator "plus" to have the same units.
+[Warning] [1107:10] MathML equals element has inconsistent units between the sides.
+[Warning] [1355:14] Expected all arguments to operator "plus" to have the same units.
+[Warning] [1375:10] MathML equals element has inconsistent units between the sides.
+[Warning] [1445:10] MathML equals element has inconsistent units between the sides.
+[Warning] [1637:10] MathML equals element has inconsistent units between the sides.
+[Warning] [1811:10] MathML equals element has inconsistent units between the sides.
+[Warning] [1890:14] Expected all arguments to operator "minus" to have the same units.
+[Warning] [2005:20] Expected arguments to operator "exp" to be dimensionless.
+[Warning] [2114:10] MathML equals element has inconsistent units between the sides.
+[Warning] [2207:10] MathML equals element has inconsistent units between the sides.
+[Warning] [2216:16] Expected all arguments to operator "plus" to have the same units.
+[Warning] [2532:10] MathML equals element has inconsistent units between the sides.
+[Warning] [2546:10] MathML equals element has inconsistent units between the sides.
+[Warning] [2560:10] MathML equals element has inconsistent units between the sides.
+[Warning] [2574:10] MathML equals element has inconsistent units between the sides.
+[Warning] [2668:10] MathML equals element has inconsistent units between the sides.
+[Warning] [2689:10] MathML equals element has inconsistent units between the sides.
+[Warning] [2692:12] Expected all arguments to operator "minus" to have the same units.
+[Error] [2695:14] MathML cn element contains an invalid constant representation.
+[Error] [2701:14] MathML cn element contains an invalid constant representation.
+[Error] [2789:20] MathML cn element contains an invalid constant representation.
+[Error] [2791:18] MathML cn element contains an invalid constant representation.
+[Error] [2853:24] MathML cn element contains an invalid constant representation.
+[Error] [2855:22] MathML cn element contains an invalid constant representation.
+[Error] [2883:22] MathML cn element contains an invalid constant representation.
+[Error] [2885:20] MathML cn element contains an invalid constant representation.
+[Warning] [2927:10] MathML equals element has inconsistent units between the sides.
+[Warning] [2932:14] Expected all arguments to operator "minus" to have the same units.
+[Warning] [3024:10] MathML equals element has inconsistent units between the sides.
+[Warning] [3116:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [3159:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [3202:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [3386:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [3388:14] Expected all arguments to operator "plus" to have the same units.
+[Warning] [3451:10] MathML equals element has inconsistent units between the sides.
+[Warning] [3479:10] MathML equals element has inconsistent units between the sides.
+[Warning] [3491:14] Expected all arguments to operator "plus" to have the same units.
+[Error] [3654:6] Connection of two variables which have dimensionally inconsistent units.
+[Error] [3664:6] Connection of two variables which have dimensionally inconsistent units.

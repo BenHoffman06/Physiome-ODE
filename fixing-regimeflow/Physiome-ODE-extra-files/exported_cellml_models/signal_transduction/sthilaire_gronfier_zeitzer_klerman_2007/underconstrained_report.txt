@@ -1,0 +1,15 @@
+Model is underconstrained.
+The following variables couldn't be defined:
+ * A in component A
+ * B_ in component Process_L
+ * alph in component Process_L
+ * B in component Process_P
+ * d/dt H1 in component H1
+ * d/dt H2 in component H2
+ * d/dt H3 in component H3
+ * d/dt A in component A
+ * d/dt A_ in component A
+ * d/dt n in component Process_L
+ * d/dt I in component Process_L
+ * d/dt x in component Process_P
+ * d/dt xc in component Process_P

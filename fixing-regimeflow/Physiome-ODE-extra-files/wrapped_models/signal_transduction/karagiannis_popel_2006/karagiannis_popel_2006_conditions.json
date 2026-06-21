@@ -1,0 +1,23 @@
+{
+  "kM2C1_cat": 0.0045,
+  "kM2C1_off": 0.0021,
+  "kM2C1_on": 2600,
+  "kM2T2_iso": 33,
+  "kM2T2_negativeiso": 2e-08,
+  "kM2T2_off": 6.3,
+  "kM2T2_on": 5900000,
+  "kM2_act": 0.02,
+  "kMT1C1_cat": 0.00197,
+  "kMT1C1_off": 1,
+  "kMT1C1_on": 1000,
+  "kMT1T2M2proMT1_off": 0.0009,
+  "kMT1T2M2proMT1_on": 3000,
+  "kMT1T2M2pro_off": 0.0047,
+  "kMT1T2M2pro_on": 140000,
+  "kMT1T2_off": 0.202,
+  "kMT1T2_on": 2980000,
+  "kMT1_shedeff": 2800,
+  "qMT1": 0,
+  "qT2": 0,
+  "qpro": 0
+}

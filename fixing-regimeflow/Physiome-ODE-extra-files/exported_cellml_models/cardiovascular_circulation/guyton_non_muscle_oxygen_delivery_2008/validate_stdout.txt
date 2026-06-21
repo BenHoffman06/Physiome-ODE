@@ -1,0 +1,2 @@
+[Warning] [384:6] MathML equals element has inconsistent units between the sides.
+[Warning] [595:6] MathML equals element has inconsistent units between the sides.

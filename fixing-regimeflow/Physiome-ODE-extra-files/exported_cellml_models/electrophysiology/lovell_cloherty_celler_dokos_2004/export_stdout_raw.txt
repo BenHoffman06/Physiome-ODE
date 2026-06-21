@@ -1,0 +1,116 @@
+Model is underconstrained.
+The following variables couldn't be defined:
+ * i_f in component hyperpolarisation_activated_current
+ * i_Kr in component rapid_delayed_rectifying_potassium_current
+ * i_Ks in component slow_delayed_rectifying_potassium_current
+ * i_bNa in component background_currents
+ * i_Na in component TTX_sensitive_sodium_current
+ * i_NaK in component sodium_potassium_pump_current
+ * i_NaCa in component sodium_calcium_exchange_current
+ * i_to in component transient_outward_current
+ * i_CaL in component L_type_calcium_current
+ * i_CaT in component T_type_calcium_current
+ * i_bK in component background_currents
+ * i_bCl in component background_currents
+ * E_Na in component reversal_potentials
+ * E_Cl in component reversal_potentials
+ * E_K in component reversal_potentials
+ * I3 in component L_type_calcium_current
+ * alpha1 in component L_type_calcium_current
+ * alpha2 in component L_type_calcium_current
+ * beta1 in component L_type_calcium_current
+ * beta2 in component L_type_calcium_current
+ * alpha1 in component T_type_calcium_current
+ * alpha2 in component T_type_calcium_current
+ * alpha3 in component T_type_calcium_current
+ * beta1 in component T_type_calcium_current
+ * beta3 in component T_type_calcium_current
+ * i_Kr_Na in component rapid_delayed_rectifying_potassium_current
+ * i_Kr_K in component rapid_delayed_rectifying_potassium_current
+ * alpha1 in component rapid_delayed_rectifying_potassium_current
+ * alpha2 in component rapid_delayed_rectifying_potassium_current
+ * alpha3 in component rapid_delayed_rectifying_potassium_current
+ * alpha4 in component rapid_delayed_rectifying_potassium_current
+ * beta1 in component rapid_delayed_rectifying_potassium_current
+ * beta4 in component rapid_delayed_rectifying_potassium_current
+ * i_Ks_Na in component slow_delayed_rectifying_potassium_current
+ * i_Ks_K in component slow_delayed_rectifying_potassium_current
+ * alpha1 in component slow_delayed_rectifying_potassium_current
+ * alpha2 in component slow_delayed_rectifying_potassium_current
+ * alpha3 in component slow_delayed_rectifying_potassium_current
+ * beta1 in component slow_delayed_rectifying_potassium_current
+ * beta3 in component slow_delayed_rectifying_potassium_current
+ * alpha1 in component TTX_sensitive_sodium_current
+ * alpha2 in component TTX_sensitive_sodium_current
+ * alpha3 in component TTX_sensitive_sodium_current
+ * alpha4 in component TTX_sensitive_sodium_current
+ * beta1 in component TTX_sensitive_sodium_current
+ * beta4 in component TTX_sensitive_sodium_current
+ * x1 in component sodium_calcium_exchange_current
+ * x2 in component sodium_calcium_exchange_current
+ * x3 in component sodium_calcium_exchange_current
+ * x4 in component sodium_calcium_exchange_current
+ * k41 in component sodium_calcium_exchange_current
+ * k34 in component sodium_calcium_exchange_current
+ * k23 in component sodium_calcium_exchange_current
+ * k21 in component sodium_calcium_exchange_current
+ * k32 in component sodium_calcium_exchange_current
+ * k43 in component sodium_calcium_exchange_current
+ * k12 in component sodium_calcium_exchange_current
+ * k14 in component sodium_calcium_exchange_current
+ * D1 in component sodium_calcium_exchange_current
+ * D2 in component sodium_calcium_exchange_current
+ * i_fNa in component hyperpolarisation_activated_current
+ * i_fK in component hyperpolarisation_activated_current
+ * g_f_K in component hyperpolarisation_activated_current
+ * alpha1 in component hyperpolarisation_activated_current
+ * alpha2 in component hyperpolarisation_activated_current
+ * alpha3 in component hyperpolarisation_activated_current
+ * beta1 in component hyperpolarisation_activated_current
+ * beta3 in component hyperpolarisation_activated_current
+ * alpha1 in component transient_outward_current
+ * alpha2 in component transient_outward_current
+ * alpha3 in component transient_outward_current
+ * alpha4 in component transient_outward_current
+ * beta1 in component transient_outward_current
+ * beta4 in component transient_outward_current
+ * Kb_K in component background_currents
+ * i_Ca_up in component calcium_dynamics
+ * i_Ca_rel in component calcium_dynamics
+ * i_Ca_tr in component calcium_dynamics
+ * d/dt Em in component membrane
+ * d/dt A_CaL in component L_type_calcium_current
+ * d/dt I1 in component L_type_calcium_current
+ * d/dt I2 in component L_type_calcium_current
+ * d/dt I3 in component L_type_calcium_current
+ * d/dt A_CaT in component T_type_calcium_current
+ * d/dt I1 in component T_type_calcium_current
+ * d/dt I2 in component T_type_calcium_current
+ * d/dt A_Kr in component rapid_delayed_rectifying_potassium_current
+ * d/dt I1 in component rapid_delayed_rectifying_potassium_current
+ * d/dt I2 in component rapid_delayed_rectifying_potassium_current
+ * d/dt I3 in component rapid_delayed_rectifying_potassium_current
+ * d/dt A_Ks in component slow_delayed_rectifying_potassium_current
+ * d/dt I1 in component slow_delayed_rectifying_potassium_current
+ * d/dt I2 in component slow_delayed_rectifying_potassium_current
+ * d/dt A_Na in component TTX_sensitive_sodium_current
+ * d/dt I1 in component TTX_sensitive_sodium_current
+ * d/dt I2 in component TTX_sensitive_sodium_current
+ * d/dt I3 in component TTX_sensitive_sodium_current
+ * d/dt A_f in component hyperpolarisation_activated_current
+ * d/dt I1 in component hyperpolarisation_activated_current
+ * d/dt I2 in component hyperpolarisation_activated_current
+ * d/dt A_to in component transient_outward_current
+ * d/dt I1 in component transient_outward_current
+ * d/dt I2 in component transient_outward_current
+ * d/dt I3 in component transient_outward_current
+ * d/dt Cai in component ion_concentrations
+ * d/dt Caup in component ion_concentrations
+ * d/dt Carel in component ion_concentrations
+ * d/dt Cao in component ion_concentrations
+ * d/dt Nai in component ion_concentrations
+ * d/dt Nao in component ion_concentrations
+ * d/dt Ki in component ion_concentrations
+ * d/dt Ko in component ion_concentrations
+ * d/dt Cli in component ion_concentrations
+ * d/dt Clo in component ion_concentrations

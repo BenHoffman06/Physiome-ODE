@@ -1,0 +1,18 @@
+{
+  "Alpha_1": 50,
+  "Alpha_2": 500,
+  "Alpha_3": 0.01,
+  "Alpha_4": 50,
+  "BetaA_1": 50,
+  "BetaR_1": 5,
+  "Delta_1": 1,
+  "Delta_2": 1,
+  "Delta_3": 0.2,
+  "Delta_4": 10,
+  "Delta_5": 0.5,
+  "Gamma_1": 2,
+  "Gamma_2": 1,
+  "Gamma_3": 1,
+  "Theta_2": 100,
+  "Thetha_1": 50
+}

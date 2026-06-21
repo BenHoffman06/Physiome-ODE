@@ -1,0 +1,8 @@
+[Warning] [117:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [121:16] Expected all arguments to operator "minus" to have the same units.
+[Warning] [186:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [216:10] MathML equals element has inconsistent units between the sides.
+[Warning] [227:14] Expected all arguments to operator "plus" to have the same units.
+[Warning] [229:16] Expected all arguments to operator "minus" to have the same units.
+[Warning] [270:10] MathML equals element has inconsistent units between the sides.
+[Warning] [279:12] Expected all arguments to operator "minus" to have the same units.

@@ -1,0 +1,233 @@
+# Size of variable arrays:
+sizeAlgebraic = 0
+sizeStates = 6
+sizeConstants = 11
+from math import *
+from numpy import *
+
+def createLegends():
+    legend_states = [""] * sizeStates
+    legend_rates = [""] * sizeStates
+    legend_algebraic = [""] * sizeAlgebraic
+    legend_voi = ""
+    legend_constants = [""] * sizeConstants
+    legend_voi = "time in component environment (second)"
+    legend_states[0] = "C1 in component C1 (dimensionless)"
+    legend_constants[0] = "C1C2 in component reaction_constants (second_order_rate_constant)"
+    legend_constants[1] = "C2C1 in component reaction_constants (first_order_rate_constant)"
+    legend_states[1] = "C2 in component C2 (dimensionless)"
+    legend_constants[2] = "Ca in component reaction_constants (micromolar)"
+    legend_constants[3] = "C2C3 in component reaction_constants (second_order_rate_constant)"
+    legend_constants[4] = "C3C2 in component reaction_constants (first_order_rate_constant)"
+    legend_constants[5] = "C2O1 in component reaction_constants (second_order_rate_constant)"
+    legend_constants[6] = "O1C2 in component reaction_constants (first_order_rate_constant)"
+    legend_states[2] = "C3 in component C3 (dimensionless)"
+    legend_states[3] = "O1 in component O1 (dimensionless)"
+    legend_constants[7] = "O2C3 in component reaction_constants (first_order_rate_constant)"
+    legend_constants[8] = "C3O2 in component reaction_constants (second_order_rate_constant)"
+    legend_states[4] = "O2 in component O2 (dimensionless)"
+    legend_states[5] = "C4 in component C4 (dimensionless)"
+    legend_constants[9] = "O2C4 in component reaction_constants (first_order_rate_constant)"
+    legend_constants[10] = "C4O2 in component reaction_constants (first_order_rate_constant)"
+    legend_rates[0] = "d/dt C1 in component C1 (dimensionless)"
+    legend_rates[1] = "d/dt C2 in component C2 (dimensionless)"
+    legend_rates[2] = "d/dt C3 in component C3 (dimensionless)"
+    legend_rates[5] = "d/dt C4 in component C4 (dimensionless)"
+    legend_rates[3] = "d/dt O1 in component O1 (dimensionless)"
+    legend_rates[4] = "d/dt O2 in component O2 (dimensionless)"
+    return (legend_states, legend_algebraic, legend_voi, legend_constants)
+
+def initConsts():
+    constants = [0.0] * sizeConstants; states = [0.0] * sizeStates;
+    states[0] = 0.1667
+    constants[0] = 3.26
+    constants[1] = 116.0
+    states[1] = 0.1667
+    constants[2] = 50.0
+    constants[3] = 0.66
+    constants[4] = 163.0
+    constants[5] = 7.86
+    constants[6] = 1480.0
+    states[2] = 0.1667
+    states[3] = 0.1667
+    constants[7] = 330.0
+    constants[8] = 7.77
+    states[4] = 0.1667
+    states[5] = 0.1667
+    constants[9] = 298.0
+    constants[10] = 2390.0
+    return (states, constants)
+
+def computeRates(voi, states, constants):
+    rates = [0.0] * sizeStates; algebraic = [0.0] * sizeAlgebraic
+    rates[0] = constants[1]*states[1]-constants[0]*constants[2]*states[1]
+    rates[1] = (constants[0]*states[0]*constants[2]+constants[4]*states[2]+constants[6]*states[3])-(constants[1]*states[1]+constants[3]*constants[2]*states[1]+constants[5]*constants[2]*states[3])
+    rates[2] = (constants[7]*states[4]+constants[3]*constants[2]*states[1])-(constants[8]*constants[2]*states[2]+constants[4]*states[2])
+    rates[5] = constants[9]*states[4]-constants[10]*states[5]
+    rates[3] = constants[5]*states[1]*constants[2]-constants[6]*states[3]
+    rates[4] = (constants[8]*constants[2]*states[2]+constants[10]*states[5])-(constants[7]*states[4]+constants[9]*states[4])
+    return(rates)
+
+def computeAlgebraic(constants, states, voi):
+    algebraic = array([[0.0] * len(voi)] * sizeAlgebraic)
+    states = array(states)
+    voi = array(voi)
+    return algebraic
+
+def solve_model():
+    """Solve model with ODE solver"""
+    from scipy.integrate import ode
+    # Initialise constants and state variables
+    (init_states, constants) = initConsts()
+
+    # Set timespan to solve over
+    voi = linspace(0, 10, 500)
+
+    # Construct ODE object to solve
+    r = ode(computeRates)
+    r.set_integrator('vode', method='bdf', atol=1e-06, rtol=1e-06, max_step=1)
+    r.set_initial_value(init_states, voi[0])
+    r.set_f_params(constants)
+
+    # Solve model
+    states = array([[0.0] * len(voi)] * sizeStates)
+    states[:,0] = init_states
+    for (i,t) in enumerate(voi[1:]):
+        if r.successful():
+            r.integrate(t)
+            states[:,i+1] = r.y
+        else:
+            break
+
+    # Compute algebraic variables
+    algebraic = computeAlgebraic(constants, states, voi)
+    return (voi, states, algebraic)
+
+def plot_model(voi, states, algebraic):
+    """Plot variables against variable of integration"""
+    import pylab
+    (legend_states, legend_algebraic, legend_voi, legend_constants) = createLegends()
+    pylab.figure(1)
+    pylab.plot(voi,vstack((states,algebraic)).T)
+    pylab.xlabel(legend_voi)
+    pylab.legend(legend_states + legend_algebraic, loc='best')
+    pylab.show()
+
+if __name__ == "__main__":
+    (voi, states, algebraic) = solve_model()
+    plot_model(voi, states, algebraic)
+
+
+# =========================
+# Auto-generated wrapper
+# =========================
+import numpy as np
+from scipy.integrate import odeint
+
+
+class Parameters:
+    def __init__(self):
+        self.C1C2 = 3.26
+        self.C2C1 = 116.0
+        self.Ca = 50.0
+        self.C2C3 = 0.66
+        self.C3C2 = 163.0
+        self.C2O1 = 7.86
+        self.O1C2 = 1480.0
+        self.O2C3 = 330.0
+        self.C3O2 = 7.77
+        self.O2C4 = 298.0
+        self.C4O2 = 2390.0
+
+    def to_dict(self):
+        return {
+            "C1C2": self.C1C2,
+            "C2C1": self.C2C1,
+            "Ca": self.Ca,
+            "C2C3": self.C2C3,
+            "C3C2": self.C3C2,
+            "C2O1": self.C2O1,
+            "O1C2": self.O1C2,
+            "O2C3": self.O2C3,
+            "C3O2": self.C3O2,
+            "O2C4": self.O2C4,
+            "C4O2": self.C4O2,
+        }
+
+    @classmethod
+    def from_dict(cls, data):
+        p = cls()
+        for key, value in data.items():
+            if hasattr(p, key):
+                setattr(p, key, value)
+        return p
+
+
+class Config:
+    def __init__(
+        self,
+        param: Parameters = None,
+        calculate: bool = False,
+        T: int = 100,
+        T_unit: float = 0.01,
+        y0=[0.1667, 0.1667, 0.1667, 0.1667, 0.1667, 0.1667],
+    ):
+        if param is None:
+            raise ValueError("Config requires param=Parameters()")
+
+        self.model_name = "saftenku_williams_sitsapesan_2001_H1_model"
+        self.curve_names = [
+            "C1",
+            "C2",
+            "C3",
+            "O1",
+            "O2",
+            "C4",
+        ]
+        self.state_names = ['C1', 'C2', 'C3', 'O1', 'O2', 'C4']
+        self.algebraic_names = []
+        self.params = param
+        self.T = T
+        self.T_unit = T_unit
+        self.T_N = int(self.T / self.T_unit)
+        self.prob_dim = len(y0)
+        self.y0 = np.asarray(y0)
+        self.t = np.asarray([i * self.T_unit for i in range(self.T_N)])
+        self.truth = odeint(self.pend, self.y0, self.t) if calculate else None
+
+    def _build_constants(self):
+        c = [0.0] * 11
+        p = self.params
+
+        # direct mapping
+        c[0] = p.C1C2
+        c[1] = p.C2C1
+        c[2] = p.Ca
+        c[3] = p.C2C3
+        c[4] = p.C3C2
+        c[5] = p.C2O1
+        c[6] = p.O1C2
+        c[7] = p.O2C3
+        c[8] = p.C3O2
+        c[9] = p.O2C4
+        c[10] = p.C4O2
+
+        return np.asarray(c, dtype=float)
+
+    def pend(self, y, t):
+        constants = self._build_constants()
+        return np.asarray(
+            computeRates(t, list(np.asarray(y, dtype=float)), constants),
+            dtype=float,
+        )
+
+    def algebraic(self, y, t=0.0):
+        if "computeAlgebraic" not in globals():
+            raise AttributeError("computeAlgebraic is not defined in this module")
+
+        alg = computeAlgebraic(
+            self._build_constants(),
+            np.asarray(y, dtype=float).reshape(-1, 1),
+            np.asarray([t], dtype=float),
+        )
+        return np.asarray(alg, dtype=float)[:, 0]

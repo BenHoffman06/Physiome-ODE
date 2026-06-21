@@ -1,0 +1,21 @@
+{
+  "C_GAP": 0.064,
+  "K_NADP_1": 0.116,
+  "K_NADP_2": 1.848,
+  "K_PKDA": 0.0032,
+  "K_RPPK": 0.0034,
+  "Ki_MgATP_1": 0.33,
+  "Ki_MgATP_2": 0.109,
+  "Ki_NADPH_1": 1.702,
+  "Ki_NADPH_2": 0.055,
+  "mu": 1.0,
+  "rmax_6PGDH": 0.654,
+  "rmax_G6PDH": 44.19,
+  "rmax_PKDA": 0.004,
+  "rmax_R5PI": 0.57,
+  "rmax_RPPK": 0.003,
+  "rmax_Ru5PE": 0.85,
+  "rmax_TAL": 3.0,
+  "rmax_TKL1": 3.24,
+  "rmax_TKL2": 10.5
+}

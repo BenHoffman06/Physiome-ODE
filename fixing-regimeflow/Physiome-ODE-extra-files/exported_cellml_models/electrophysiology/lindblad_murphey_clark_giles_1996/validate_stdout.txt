@@ -1,0 +1,2 @@
+[Error] [561:17] MathML cn element contains an invalid constant representation.
+[Error] [1419:17] MathML cn element contains an invalid constant representation.

@@ -1,0 +1,4 @@
+[Warning] [120:11] Units validation results may be incorrect because the exponent is not a constant.
+[Warning] [179:11] Units validation results may be incorrect because the exponent is not a constant.
+[Error] [841:11] MathML cn elements must have CellML units attribute.
+[Error] [841:73] It is not valid to mix the CellML 1.0 and 1.1 namespaces in the same model document.

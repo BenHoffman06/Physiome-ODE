@@ -1,0 +1,38 @@
+Model is unsuitably constrained (i.e. there were still some variables left to be computed, and some unusable equations left over).
+At the time of the error, the following variables were found:
+ * Defined: time in component environment
+ * Defined: C in component C
+ * Undefined: a in component C
+ * Undefined: v1 in component C
+ * Defined: v2 in component C
+ * Defined: v3 in component C
+ * Undefined: v4 in component C
+ * Undefined: d_ip3 in component C
+ * Undefined: d_act in component C
+ * Undefined: d_inh in component C
+ * Undefined: k_er in component C
+ * Undefined: k_pl in component C
+ * Defined: c0 in component C
+ * Undefined: IP3 in component C
+ * Defined: j_in in component C
+ * Undefined: factor1 in component C
+ * Undefined: factor2 in component C
+ * Undefined: v3_summand in component C
+ * Undefined: v4_summand in component C
+ * Undefined: epsilon in component C
+ * Undefined: c1 in component C
+ * Defined: h in component C
+ * Defined: d/dt v2 in component C
+ * Defined: d/dt v3 in component C
+ * Defined: d/dt j_in in component C
+ * Undefined: d/dt c0 in component C
+ * Undefined: d/dt h in component C
+ * Undefined: d/dt C in component C
+The following equations couldn't be used:
+ * Equation in apply element with id c0_diff_eq.
+ * Equation in apply element with id h_diff_eq.
+ * Equation in apply element with id factor1_calc.
+ * Equation in apply element with id factor2_calc.
+ * Equation in apply element with id v3_summand_calc.
+ * Equation in apply element with id v4_summand_calc.
+ * Equation in apply element with id C_diff_eq.

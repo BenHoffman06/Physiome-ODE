@@ -1,0 +1,54 @@
+[Warning] [207:10] MathML equals element has inconsistent units between the sides.
+[Warning] [268:10] MathML equals element has inconsistent units between the sides.
+[Warning] [463:20] Expected arguments to operator "exp" to be dimensionless.
+[Warning] [815:10] MathML equals element has inconsistent units between the sides.
+[Warning] [845:16] Expected all arguments to operator "minus" to have the same units.
+[Warning] [900:10] MathML equals element has inconsistent units between the sides.
+[Warning] [985:10] MathML equals element has inconsistent units between the sides.
+[Warning] [1414:10] MathML equals element has inconsistent units between the sides.
+[Warning] [1452:14] Expected arguments to operator "ln" to be dimensionless.
+[Warning] [1523:10] MathML equals element has inconsistent units between the sides.
+[Warning] [1620:12] Inconsistent units between pieces and otherwise of the piecewise equation.
+[Warning] [1622:16] Expected all arguments to operator "plus" to have the same units.
+[Warning] [1697:10] MathML equals element has inconsistent units between the sides.
+[Warning] [1773:10] MathML equals element has inconsistent units between the sides.
+[Warning] [1795:20] Expected arguments to operator "exp" to be dimensionless.
+[Warning] [1822:20] Expected arguments to operator "exp" to be dimensionless.
+[Warning] [1976:16] Expected arguments to operator "log" to be dimensionless.
+[Warning] [1985:10] MathML equals element has inconsistent units between the sides.
+[Warning] [2016:10] MathML equals element has inconsistent units between the sides.
+[Warning] [2027:14] Expected all arguments to operator "minus" to have the same units.
+[Warning] [2036:10] MathML equals element has inconsistent units between the sides.
+[Warning] [2064:10] MathML equals element has inconsistent units between the sides.
+[Warning] [2086:20] Expected arguments to operator "exp" to be dimensionless.
+[Warning] [2113:20] Expected arguments to operator "exp" to be dimensionless.
+[Warning] [2193:10] MathML equals element has inconsistent units between the sides.
+[Warning] [2254:14] Expected all arguments to operator "plus" to have the same units.
+[Warning] [2375:10] MathML equals element has inconsistent units between the sides.
+[Warning] [2439:10] MathML equals element has inconsistent units between the sides.
+[Warning] [2488:14] Expected arguments to operator "ln" to be dimensionless.
+[Warning] [2499:10] MathML equals element has inconsistent units between the sides.
+[Warning] [2610:16] Expected arguments to operator "exp" to be dimensionless.
+[Warning] [2750:10] MathML equals element has inconsistent units between the sides.
+[Warning] [2835:10] MathML equals element has inconsistent units between the sides.
+[Warning] [3007:14] Expected all arguments to operator "minus" to have the same units.
+[Warning] [3081:10] MathML equals element has inconsistent units between the sides.
+[Warning] [3160:10] MathML equals element has inconsistent units between the sides.
+[Warning] [3202:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [3209:10] MathML equals element has inconsistent units between the sides.
+[Warning] [3215:14] Expected all arguments to operator "plus" to have the same units.
+[Warning] [3225:10] MathML equals element has inconsistent units between the sides.
+[Warning] [3231:14] Expected all arguments to operator "plus" to have the same units.
+[Warning] [3240:10] MathML equals element has inconsistent units between the sides.
+[Warning] [3341:10] MathML equals element has inconsistent units between the sides.
+[Warning] [3357:10] MathML equals element has inconsistent units between the sides.
+[Warning] [3392:10] MathML equals element has inconsistent units between the sides.
+[Warning] [3412:12] Expected all arguments to operator "plus" to have the same units.
+[Warning] [3460:14] Expected all arguments to operator "minus" to have the same units.
+[Warning] [3706:10] MathML equals element has inconsistent units between the sides.
+[Warning] [3749:10] MathML equals element has inconsistent units between the sides.
+[Warning] [3792:10] MathML equals element has inconsistent units between the sides.
+[Warning] [3855:10] MathML equals element has inconsistent units between the sides.
+[Error] [4361:6] Connection of two variables which have dimensionally inconsistent units.
+[Error] [4362:6] Connection of two variables which have dimensionally inconsistent units.
+[Error] [4363:6] Connection of two variables which have dimensionally inconsistent units.

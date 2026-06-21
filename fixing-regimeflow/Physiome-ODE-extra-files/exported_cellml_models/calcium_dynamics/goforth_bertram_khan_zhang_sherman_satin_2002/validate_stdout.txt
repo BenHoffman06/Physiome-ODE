@@ -1,0 +1,4 @@
+[Warning] [297:10] MathML equals element has inconsistent units between the sides.
+[Warning] [391:14] Units validation results may be incorrect because the exponent is not a constant.
+[Warning] [518:10] MathML equals element has inconsistent units between the sides.
+[Error] [838:6] Connection of two variables which have dimensionally inconsistent units.

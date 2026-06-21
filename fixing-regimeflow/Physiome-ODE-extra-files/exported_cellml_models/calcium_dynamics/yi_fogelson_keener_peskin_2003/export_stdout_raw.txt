@@ -1,0 +1,149 @@
+Model is unsuitably constrained (i.e. there were still some variables left to be computed, and some unusable equations left over).
+At the time of the error, the following variables were found:
+ * Defined: time in component environment
+ * Defined: delta in component intracellular_space
+ * Undefined: delta_eq in component intracellular_space
+ * Defined: V_i in component intracellular_space
+ * Undefined: R in component intracellular_space
+ * Undefined: T in component intracellular_space
+ * Undefined: F in component intracellular_space
+ * Undefined: C_m in component intracellular_space
+ * Undefined: Lie_p in component intracellular_space
+ * Undefined: pi_i in component intracellular_space
+ * Undefined: pi_e in component intracellular_space
+ * Undefined: P_h in component intracellular_space
+ * Undefined: delta_eh in component intracellular_space
+ * Undefined: delta_init in component intracellular_space
+ * Undefined: delta_i in component intracellular_space
+ * Undefined: X_i in component intracellular_space
+ * Undefined: z_i in component intracellular_space
+ * Undefined: A_s in component intracellular_space
+ * Undefined: X_e in component extracellular_space
+ * Defined: Na_e in component extracellular_sodium
+ * Defined: Na_i in component intracellular_sodium
+ * Defined: K_e in component extracellular_potassium
+ * Defined: K_i in component intracellular_potassium
+ * Defined: Cl_e in component extracellular_chloride
+ * Defined: Cl_i in component intracellular_chloride
+ * Defined: V_e in component extracellular_space
+ * Undefined: delta_e in component extracellular_space
+ * Undefined: g_Na in component intracellular_sodium
+ * Undefined: delta_Na in component intracellular_sodium
+ * Undefined: g_b_Na in component intracellular_sodium
+ * Undefined: g_Na_max in component intracellular_sodium
+ * Undefined: P in component pump_rate
+ * Undefined: m_infinity in component intracellular_sodium_m_gate
+ * Undefined: h_infinity in component intracellular_sodium_h_gate
+ * Undefined: A_m in component intracellular_sodium_m_gate
+ * Undefined: B_m in component intracellular_sodium_m_gate
+ * Undefined: A_h in component intracellular_sodium_h_gate
+ * Undefined: B_h in component intracellular_sodium_h_gate
+ * Undefined: g_K in component intracellular_potassium
+ * Undefined: delta_K in component intracellular_potassium
+ * Undefined: g_b_K in component intracellular_potassium
+ * Undefined: g_K_max in component intracellular_potassium
+ * Undefined: n_infinity in component intracellular_potassium_n_gate
+ * Undefined: A_n in component intracellular_potassium_n_gate
+ * Undefined: B_n in component intracellular_potassium_n_gate
+ * Undefined: g_Cl in component intracellular_chloride
+ * Undefined: delta_Cl in component intracellular_chloride
+ * Undefined: Jv_Na in component capillary_compartment_sodium
+ * Undefined: Jh_Na in component sodium_flux
+ * Undefined: Jv_K in component capillary_compartment_potassium
+ * Undefined: Jh_K in component potassium_flux
+ * Undefined: Jv_Cl in component capillary_compartment_chloride
+ * Undefined: Jh_Cl in component chloride_flux
+ * Undefined: z_e in component extracellular_space
+ * Undefined: Jv_H2O in component capillary_space
+ * Undefined: Jh_H2O in component water_flux
+ * Undefined: V_infinity_e in component water_flux
+ * Undefined: V_infinity_T in component water_flux
+ * Undefined: tau_1 in component water_flux
+ * Undefined: tau_2 in component water_flux
+ * Undefined: Na_infinity_e in component sodium_flux
+ * Undefined: alpha_Na in component sodium_flux
+ * Undefined: K_infinity_e in component potassium_flux
+ * Undefined: alpha_K in component potassium_flux
+ * Undefined: Cl_infinity_e in component chloride_flux
+ * Undefined: alpha_Cl in component chloride_flux
+ * Undefined: Na_v in component capillary_compartment_sodium
+ * Undefined: delta_ev_Na in component capillary_compartment_sodium
+ * Undefined: Na_a in component arterial_space
+ * Undefined: Qv in component capillary_space
+ * Undefined: Qa in component arterial_space
+ * Undefined: K_v in component capillary_compartment_potassium
+ * Undefined: delta_ev_K in component capillary_compartment_potassium
+ * Undefined: K_a in component arterial_space
+ * Undefined: Cl_v in component capillary_compartment_chloride
+ * Undefined: delta_ev_Cl in component capillary_compartment_chloride
+ * Undefined: Cl_a in component arterial_space
+ * Undefined: pi_v in component capillary_space
+ * Undefined: Pr_v in component capillary_space
+ * Undefined: z_v in component capillary_space
+ * Undefined: Pr_a in component arterial_space
+ * Undefined: P_max in component pump_rate
+ * Undefined: Km_Na_i in component pump_rate
+ * Undefined: Km_K_e in component pump_rate
+ * Undefined: f_NaK in component pump_rate
+ * Defined: a_t in component pump_rate
+ * Undefined: d/dt V_i in component intracellular_space
+ * Undefined: d/dt delta in component intracellular_space
+ * Undefined: d/dt Na_i in component intracellular_sodium
+ * Undefined: d/dt K_i in component intracellular_potassium
+ * Undefined: d/dt Cl_i in component intracellular_chloride
+ * Undefined: d/dt Na_e in component extracellular_sodium
+ * Undefined: d/dt K_e in component extracellular_potassium
+ * Undefined: d/dt Cl_e in component extracellular_chloride
+ * Undefined: d/dt V_e in component extracellular_space
+The following equations couldn't be used:
+ * Equation in apply element with id V_i_diff_eq.
+ * Equation in apply element with id pi_i_calculation.
+ * Equation in apply element with id pi_e_calculation.
+ * Equation in apply element with id delta_init_calculation.
+ * Equation in apply element with id membrane_voltage_diff_eq.
+ * Equation in apply element with id X_i_calculation.
+ * Equation in apply element with id Na_i_diff_eq.
+ * Equation in apply element with id g_Na_calculation.
+ * Equation in apply element with id delta_Na_calculation.
+ * Equation in apply element with id A_m_calculation.
+ * Equation in apply element with id B_m_calculation.
+ * Equation in apply element with id m_infinity_calculation.
+ * Equation in apply element with id A_h_calculation.
+ * Equation in apply element with id B_h_calculation.
+ * Equation in apply element with id h_infinity_calculation.
+ * Equation in apply element with id K_i_diff_eq.
+ * Equation in apply element with id g_K_calculation.
+ * Equation in apply element with id delta_K_calculation.
+ * Equation in apply element with id A_n_calculation.
+ * Equation in apply element with id B_n_calculation.
+ * Equation in apply element with id n_infinity_calculation.
+ * Equation in apply element with id Cl_i_diff_eq.
+ * Equation in apply element with id delta_Cl_calculation.
+ * Equation in apply element with id Na_e_diff_eq.
+ * Equation in apply element with id K_e_diff_eq.
+ * Equation in apply element with id Cl_e_diff_eq.
+ * Equation in apply element with id V_e_diff_eq.
+ * Equation in apply element with id X_e_calculation.
+ * Equation in apply element with id Jh_H2O_calculation.
+ * Equation in apply element with id Jh_Na_calculation.
+ * Equation in apply element with id alpha_Na_calculation.
+ * Equation in apply element with id Jh_K_calculation.
+ * Equation in apply element with id alpha_K_calculation.
+ * Equation in apply element with id Jh_Cl_calculation.
+ * Equation in apply element with id alpha_Cl_calculation.
+ * Equation in apply element with id Na_v_calculation.
+ * Equation in apply element with id delta_ev_Na_calculation.
+ * Equation in apply element with id Jv_Na_calculation.
+ * Equation in apply element with id K_v_calculation.
+ * Equation in apply element with id delta_ev_K_calculation.
+ * Equation in apply element with id Jv_K_calculation.
+ * Equation in apply element with id Cl_v_calculation.
+ * Equation in apply element with id delta_ev_Cl_calculation.
+ * Equation in apply element with id Jv_Cl_calculation.
+ * Equation in apply element with id Qv_calculation.
+ * Equation in apply element with id Jv_H2O_calculation.
+ * Equation in apply element with id pi_v_calculation.
+ * Equation in apply element with id Pr_v_calculation.
+ * Equation in apply element with id Qa_calculation.
+ * Equation in apply element with id P_calculation.
+ * Equation in apply element with id f_NaK_calculation.

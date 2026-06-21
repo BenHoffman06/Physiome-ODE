@@ -1,0 +1,5 @@
+[Warning] [114:10] MathML equals element has inconsistent units between the sides.
+[Warning] [185:10] MathML equals element has inconsistent units between the sides.
+[Warning] [374:10] MathML equals element has inconsistent units between the sides.
+[Warning] [382:16] Expected all arguments to operator "minus" to have the same units.
+[Warning] [463:10] MathML equals element has inconsistent units between the sides.

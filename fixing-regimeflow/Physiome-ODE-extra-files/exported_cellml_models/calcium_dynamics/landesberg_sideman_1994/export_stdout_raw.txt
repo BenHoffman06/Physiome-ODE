@@ -1,0 +1,102 @@
+Model is unsuitably constrained (i.e. there were still some variables left to be computed, and some unusable equations left over).
+At the time of the error, the following variables were found:
+ * Defined: time in component environment
+ * Defined: L_a in component parameters
+ * Defined: L_prime_m in component parameters
+ * Defined: L_b in component parameters
+ * Defined: L_z in component parameters
+ * Defined: L_m in component parameters
+ * Defined: Troponin in component parameters
+ * Defined: k_h in component parameters
+ * Defined: k_minus_h in component parameters
+ * Defined: k_1 in component parameters
+ * Defined: k_m in component parameters
+ * Defined: K_1 in component parameters
+ * Defined: K_m in component parameters
+ * Defined: K_max in component parameters
+ * Defined: f in component parameters
+ * Defined: g_0 in component parameters
+ * Defined: g_prime_0 in component parameters
+ * Defined: g_1 in component parameters
+ * Defined: g_prime_1 in component parameters
+ * Defined: k_minus_1 in component parameters
+ * Defined: k_minus_m in component parameters
+ * Defined: Ca in component calcium_flux
+ * Defined: R_n in component non_overlap
+ * Defined: Rbar_n in component non_overlap
+ * Defined: A_n in component non_overlap
+ * Defined: Abar_n in component non_overlap
+ * Defined: alpha in component input
+ * Defined: R_s in component single_overlap
+ * Defined: Rbar_s in component single_overlap
+ * Defined: dRbar_s_dt in component single_overlap
+ * Defined: A_s in component single_overlap
+ * Defined: Abar_s in component single_overlap
+ * Defined: dAbar_s_dt in component single_overlap
+ * Defined: T_s in component single_overlap
+ * Defined: Tbar_s in component single_overlap
+ * Defined: dTbar_s_dt in component single_overlap
+ * Defined: U_s in component single_overlap
+ * Defined: Ubar_s in component single_overlap
+ * Defined: dUbar_s_dt in component single_overlap
+ * Defined: Rbar_d in component double_overlap
+ * Defined: Abar_d in component double_overlap
+ * Defined: Tbar_d in component double_overlap
+ * Defined: Ubar_d in component double_overlap
+ * Defined: V in component input
+ * Defined: R_d in component double_overlap
+ * Defined: A_d in component double_overlap
+ * Defined: T_d in component double_overlap
+ * Defined: U_d in component double_overlap
+ * Defined: Ca_0 in component calcium_flux
+ * Defined: I_o in component calcium_flux
+ * Defined: I_s in component calcium_flux
+ * Defined: I_i in component calcium_flux
+ * Defined: I_u in component calcium_flux
+ * Defined: Q_o in component calcium_flux
+ * Defined: Q_s in component calcium_flux
+ * Defined: tau_SR in component calcium_flux
+ * Defined: tau_SF in component calcium_flux
+ * Defined: Q_i in component calcium_flux
+ * Defined: tau_iR in component calcium_flux
+ * Defined: tau_iF in component calcium_flux
+ * Defined: Q_u in component calcium_flux
+ * Defined: K_mu in component calcium_flux
+ * Defined: I_l in component calcium_flux
+ * Defined: Ca_r in component calcium_flux
+ * Defined: BCa_L in component bound_calcium
+ * Defined: BCa_h in component bound_calcium
+ * Undefined: F in component force_equations
+ * Undefined: F_CB in component force_equations
+ * Undefined: F_CE in component force_equations
+ * Undefined: F_PE in component force_equations
+ * Undefined: F_bar in component force_equations
+ * Undefined: eta in component force_equations
+ * Undefined: eta_PE in component force_equations
+ * Undefined: T_s in component force_equations
+ * Undefined: U_s in component force_equations
+ * Undefined: E in component force_equations
+ * Undefined: D in component force_equations
+ * Undefined: B in component force_equations
+ * Undefined: SL in component force_equations
+ * Undefined: Sp_0 in component force_equations
+ * Defined: d_alpha_dt in component input
+ * Defined: d/dt Rbar_s in component single_overlap
+ * Defined: d/dt R_s in component single_overlap
+ * Defined: d/dt Abar_s in component single_overlap
+ * Defined: d/dt A_s in component single_overlap
+ * Defined: d/dt Tbar_s in component single_overlap
+ * Defined: d/dt T_s in component single_overlap
+ * Defined: d/dt Ubar_s in component single_overlap
+ * Defined: d/dt U_s in component single_overlap
+ * Defined: d/dt Rbar_d in component double_overlap
+ * Defined: d/dt Abar_d in component double_overlap
+ * Defined: d/dt Tbar_d in component double_overlap
+ * Defined: d/dt Ubar_d in component double_overlap
+ * Defined: d/dt Ca in component calcium_flux
+ * Defined: d/dt BCa_h in component bound_calcium
+The following equations couldn't be used:
+ * Equation with no id on the apply or math element.
+ * Equation with no id on the apply or math element.
+ * Equation with no id on the apply or math element.
+ * Equation with no id on the apply or math element.

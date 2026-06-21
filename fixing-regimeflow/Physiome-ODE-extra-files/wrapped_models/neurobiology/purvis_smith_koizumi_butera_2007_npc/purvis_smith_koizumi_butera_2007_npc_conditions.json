@@ -1,0 +1,23 @@
+{
+  "C": 0.021,
+  "E_K": -85,
+  "E_Na": 50,
+  "E_leak": -57.5,
+  "E_syn_e": 0,
+  "g_K": 11.2,
+  "g_Na": 28,
+  "g_NaP": 1.5,
+  "g_leak": 2.2,
+  "g_tonic_e": 0.2,
+  "i_app": 0,
+  "omega_h": 6,
+  "omega_m": -5,
+  "omega_m_1": -6,
+  "omega_n": -4,
+  "tau_h_max": 10000,
+  "tau_n_max": 10,
+  "theta_h": -53,
+  "theta_m": -34,
+  "theta_m_1": -45.1,
+  "theta_n": -29
+}

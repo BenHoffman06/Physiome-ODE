@@ -1,0 +1,13 @@
+[Warning] [262:16] Expected arguments to operator "exp" to be dimensionless.
+[Warning] [303:10] MathML equals element has inconsistent units between the sides.
+[Warning] [312:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [317:16] Expected all arguments to operator "minus" to have the same units.
+[Warning] [390:20] Expected arguments to operator "exp" to be dimensionless.
+[Error] [400:18] MathML cn element contains an invalid constant representation.
+[Warning] [536:10] MathML equals element has inconsistent units between the sides.
+[Warning] [545:12] Expected all arguments to operator "plus" to have the same units.
+[Warning] [555:16] Expected all arguments to operator "minus" to have the same units.
+[Warning] [844:10] MathML equals element has inconsistent units between the sides.
+[Error] [849:12] MathML cn element contains an invalid constant representation.
+[Warning] [1023:10] MathML equals element has inconsistent units between the sides.
+[Warning] [1029:14] Expected all arguments to operator "plus" to have the same units.

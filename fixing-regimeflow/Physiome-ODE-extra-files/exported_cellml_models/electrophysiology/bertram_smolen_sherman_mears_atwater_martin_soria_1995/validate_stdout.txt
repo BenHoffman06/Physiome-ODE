@@ -1,0 +1,8 @@
+[Warning] [455:14] MathML equals element has inconsistent units between the sides.
+[Warning] [491:14] MathML equals element has inconsistent units between the sides.
+[Warning] [597:14] MathML equals element has inconsistent units between the sides.
+[Warning] [620:14] MathML equals element has inconsistent units between the sides.
+[Warning] [677:14] MathML equals element has inconsistent units between the sides.
+[Warning] [862:14] MathML equals element has inconsistent units between the sides.
+[Warning] [910:14] MathML equals element has inconsistent units between the sides.
+[Warning] [964:14] MathML equals element has inconsistent units between the sides.

@@ -1,0 +1,37 @@
+Model is underconstrained.
+The following variables couldn't be defined:
+ * V in component membrane
+ * proton_motive_force in component membrane
+ * pH_i in component membrane
+ * pH_m in component membrane
+ * JH_res in component proton_pump
+ * JH_leak in component proton_leak
+ * JH_F1 in component F0_F1_ATPase
+ * J_ant in component ATP_ADP_exchange
+ * J_uni in component Ca_uniporter
+ * J_Na_Ca in component Na_Ca_exchanger
+ * Jo in component proton_pump
+ * A_res in component proton_pump
+ * NAD_m in component differential_equations
+ * Jp_F1 in component F0_F1_ATPase
+ * A_F1 in component F0_F1_ATPase
+ * ADP_m_free in component F0_F1_ATPase
+ * ATP_m in component differential_equations
+ * ATP_i in component differential_equations
+ * J_red in component NAD_reduction
+ * f_PDHa in component NAD_reduction
+ * J_gly_tot in component glycolytic_phosphorylation_of_ADP
+ * J_ptca in component TCA_cycle_ADP_phosphorylation
+ * J_hyd in component hydrolysis_of_ATP
+ * k_hyd in component hydrolysis_of_ATP
+ * J_erout in component Ca_release_from_the_ER
+ * IP3 in component Ca_release_from_the_ER
+ * J_serca in component pumping_Ca_into_the_ER
+ * d/dt V in component membrane
+ * d/dt NADH_m in component differential_equations
+ * d/dt ADP_m in component differential_equations
+ * d/dt ADP_i in component differential_equations
+ * d/dt Ca_m in component differential_equations
+ * d/dt Ca_ER in component differential_equations
+ * d/dt Ca_i in component differential_equations
+ * d/dt h in component differential_equations

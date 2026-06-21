@@ -1,0 +1,17 @@
+Model is underconstrained.
+The following variables couldn't be defined:
+ * CaPr in component free_protein_calcium_binding_sites
+ * Pr in component free_protein_calcium_binding_sites
+ * J_ch in component flux_through_the_channels
+ * J_leak in component leak_flux
+ * J_pump in component calcium_pump
+ * Ca_ER in component ER_calcium
+ * delta_psi in component potential_difference
+ * a in component potential_difference
+ * b in component potential_difference
+ * c in component potential_difference
+ * E_Ca in component calcium_reversal_potential
+ * g_Ca in component flux_through_the_channels
+ * k_ch in component flux_through_the_channels
+ * d/dt Pr in component free_protein_calcium_binding_sites
+ * d/dt Ca_cyt in component cytosolic_calcium

@@ -1,0 +1,4 @@
+[Error] [3015:17] MathML cn element contains an invalid constant representation.
+[Warning] [3080:23] Units validation results may be incorrect because the exponent is not a constant.
+[Warning] [3110:26] Units validation results may be incorrect because the exponent is not a constant.
+[Warning] [3167:23] Units validation results may be incorrect because the exponent is not a constant.

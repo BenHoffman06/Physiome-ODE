@@ -1,0 +1,33 @@
+Model is underconstrained.
+The following variables couldn't be defined:
+ * ERG in component ERG
+ * V_6 in component V_6
+ * V_8 in component V_8
+ * E2FA in component E2FA
+ * V_2 in component V_2
+ * CycE_T in component CycE
+ * CycD_T in component CycD
+ * V_4 in component V_4
+ * Rb_hypo in component Rb_hypo
+ * H in component GM
+ * PP1_A in component PP1_A
+ * E2F_Rb in component E2F_Rb
+ * L in component L
+ * d/dt ERG in component ERG
+ * d/dt DRG in component DRG
+ * d/dt Kip1 in component Kip1
+ * d/dt CycA_Kip1 in component CycA_Kip1
+ * d/dt CycD_Kip1 in component CycD_Kip1
+ * d/dt CycE_Kip1 in component CycE_Kip1
+ * d/dt CycA in component CycA
+ * d/dt CycB in component CycB
+ * d/dt CycE in component CycE
+ * d/dt CycD in component CycD
+ * d/dt Cdc20 in component Cdc20
+ * d/dt Cdc20_T in component Cdc20_T
+ * d/dt IEP in component IEP
+ * d/dt PPX in component PPX
+ * d/dt E2F in component E2F
+ * d/dt Cdh1 in component Cdh1
+ * d/dt GM in component GM
+ * d/dt mass in component mass

@@ -1,0 +1,15 @@
+[Error] [738:26] MathML cn element contains an invalid constant representation.
+[Error] [862:38] MathML cn element contains an invalid constant representation.
+[Error] [875:35] MathML cn element contains an invalid constant representation.
+[Error] [991:35] MathML cn element contains an invalid constant representation.
+[Error] [2037:26] MathML cn element contains an invalid constant representation.
+[Error] [2068:26] MathML cn element contains an invalid constant representation.
+[Error] [2337:20] MathML cn element contains an invalid constant representation.
+[Warning] [3631:26] Units validation results may be incorrect because the exponent is not a constant.
+[Warning] [3726:26] Units validation results may be incorrect because the exponent is not a constant.
+[Warning] [3872:26] Units validation results may be incorrect because the exponent is not a constant.
+[Warning] [3957:26] Units validation results may be incorrect because the exponent is not a constant.
+[Error] [4635:14] MathML cn element contains an invalid constant representation.
+[Error] [4640:14] MathML cn element contains an invalid constant representation.
+[Error] [4645:14] MathML cn element contains an invalid constant representation.
+[Error] [4650:14] MathML cn element contains an invalid constant representation.

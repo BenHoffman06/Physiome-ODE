@@ -1,0 +1,17 @@
+Model is underconstrained.
+The following variables couldn't be defined:
+ * J_pm in component Ca_extrusion_across_the_plasma_membrane
+ * J_leak in component Ca_extrusion_across_the_plasma_membrane
+ * J_extru in component Ca_extrusion_across_the_plasma_membrane
+ * Ca_i in component intracellular_calcium
+ * J_uni in component mitochondrial_Ca_uptake
+ * J_NaCa in component mitochondrial_Ca_release
+ * Ca_inhibited_J_NaCa in component mitochondrial_Ca_release
+ * J_mito in component mitochondrial_Ca_release
+ * delta_Ca_i in component mitochondrial_Ca_release
+ * v_m in component mitochondrial_calcium
+ * k_m in component mitochondrial_calcium
+ * v_i in component mitochondrial_calcium
+ * k_i in component mitochondrial_calcium
+ * d/dt Ca_i in component intracellular_calcium
+ * d/dt Ca_m in component mitochondrial_calcium

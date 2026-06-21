@@ -1,0 +1,11 @@
+[Warning] [301:8] Expected all arguments to operator "minus" to have the same units.
+[Warning] [444:9] Units validation results may be incorrect because the exponent is not a constant.
+[Warning] [668:6] MathML equals element has inconsistent units between the sides.
+[Warning] [704:6] MathML equals element has inconsistent units between the sides.
+[Warning] [768:6] MathML equals element has inconsistent units between the sides.
+[Warning] [810:6] MathML equals element has inconsistent units between the sides.
+[Warning] [848:6] MathML equals element has inconsistent units between the sides.
+[Warning] [928:6] MathML equals element has inconsistent units between the sides.
+[Warning] [970:6] MathML equals element has inconsistent units between the sides.
+[Warning] [1116:6] MathML equals element has inconsistent units between the sides.
+[Warning] [2068:9] Units validation results may be incorrect because the exponent is not a constant.

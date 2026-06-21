@@ -1,0 +1,12 @@
+{
+  "IstimAmplitude": 0.2,
+  "IstimEnd": 50000,
+  "IstimPeriod": 500,
+  "IstimPulseDuration": 1,
+  "IstimStart": 0,
+  "V_gate": 0.13,
+  "tau_close": 150.0,
+  "tau_in": 0.3,
+  "tau_open": 120.0,
+  "tau_out": 6.0
+}

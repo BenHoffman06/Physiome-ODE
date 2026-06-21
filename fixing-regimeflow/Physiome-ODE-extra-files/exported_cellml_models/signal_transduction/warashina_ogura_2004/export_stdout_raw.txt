@@ -1,0 +1,121 @@
+Model is unsuitably constrained (i.e. there were still some variables left to be computed, and some unusable equations left over).
+At the time of the error, the following variables were found:
+ * Defined: time in component environment
+ * Defined: V in component membrane
+ * Defined: Cm in component membrane
+ * Defined: i_Na in component sodium_channel
+ * Defined: i_sp in component excitatory_synapse
+ * Defined: i_K in component potassium_channel
+ * Defined: i_l in component leak_channel
+ * Defined: i_Ca in component calcium_channel
+ * Defined: i_SK in component calcium_dependent_potassium_channel
+ * Defined: i_ex in component calcium_extrusion
+ * Defined: G in component excitatory_synapse
+ * Defined: L in component excitatory_synapse
+ * Defined: D in component excitatory_synapse
+ * Defined: E_rev in component excitatory_synapse
+ * Defined: tau1 in component excitatory_synapse
+ * Defined: tau2 in component excitatory_synapse
+ * Defined: g_Na in component sodium_channel
+ * Defined: E_Na in component sodium_channel
+ * Defined: m in component sodium_channel_m_gate
+ * Defined: h in component sodium_channel_h_gate
+ * Defined: alpha_m in component sodium_channel_m_gate
+ * Defined: beta_m in component sodium_channel_m_gate
+ * Defined: alpha_h in component sodium_channel_h_gate
+ * Defined: beta_h in component sodium_channel_h_gate
+ * Defined: g_K in component potassium_channel
+ * Defined: E_K in component model_parameters
+ * Defined: n in component potassium_channel_n_gate
+ * Defined: alpha_n in component potassium_channel_n_gate
+ * Defined: beta_n in component potassium_channel_n_gate
+ * Defined: g_l in component leak_channel
+ * Defined: E_l in component leak_channel
+ * Defined: PCa in component calcium_channel
+ * Defined: ghk in component calcium_channel
+ * Defined: Cao in component calcium_channel
+ * Defined: Ca0 in component calcium_concentration
+ * Defined: R in component model_parameters
+ * Defined: T in component model_parameters
+ * Defined: F in component model_parameters
+ * Defined: m in component calcium_channel_m_gate
+ * Defined: h in component calcium_channel_h_gate
+ * Defined: alpha_m in component calcium_channel_m_gate
+ * Defined: beta_m in component calcium_channel_m_gate
+ * Defined: Fr in component calcium_channel_h_gate
+ * Defined: Ff in component calcium_channel_h_gate
+ * Defined: Fm in component calcium_channel_h_gate
+ * Defined: Fs in component calcium_channel_h_gate
+ * Defined: tau_f in component calcium_channel_h_gate
+ * Defined: tau_m in component calcium_channel_h_gate
+ * Defined: tau_s in component calcium_channel_h_gate
+ * Defined: g_SK in component calcium_dependent_potassium_channel
+ * Defined: m in component calcium_dependent_potassium_channel_m_gate
+ * Defined: m_infinity in component calcium_dependent_potassium_channel_m_gate
+ * Defined: beta_k in component calcium_dependent_potassium_channel_m_gate
+ * Defined: n_SK in component calcium_dependent_potassium_channel_m_gate
+ * Defined: tau_m in component calcium_dependent_potassium_channel_m_gate
+ * Defined: Car in component calcium_dependent_potassium_channel_m_gate
+ * Defined: Cac in component calcium_dependent_potassium_channel_m_gate
+ * Defined: Bu in component buffered_calcium_diffusion
+ * Defined: CaBu in component buffered_calcium_diffusion
+ * Defined: k1b in component buffered_calcium_diffusion
+ * Defined: k2b in component buffered_calcium_diffusion
+ * Undefined: kfc in component buffered_calcium_diffusion
+ * Undefined: kbc in component buffered_calcium_diffusion
+ * Defined: Cai in component buffered_calcium_diffusion
+ * Defined: DCa in component buffered_calcium_diffusion
+ * Defined: TBu in component buffered_calcium_diffusion
+ * Defined: delta_r in component model_parameters
+ * Undefined: Ai2 in component model_parameters
+ * Defined: vol_i in component model_parameters
+ * Defined: Vmax in component calcium_extrusion
+ * Defined: Kex in component calcium_extrusion
+ * Defined: Ca_rest in component calcium_extrusion
+ * Defined: SR in component calcium_triggered_exocytosis
+ * Defined: k1f in component calcium_triggered_exocytosis
+ * Defined: k1b in component calcium_triggered_exocytosis
+ * Defined: k2 in component calcium_triggered_exocytosis
+ * Defined: a1 in component calcium_triggered_exocytosis
+ * Defined: a2 in component calcium_triggered_exocytosis
+ * Defined: a3 in component calcium_triggered_exocytosis
+ * Defined: b1 in component calcium_triggered_exocytosis
+ * Defined: B in component calcium_triggered_exocytosis
+ * Defined: A in component calcium_triggered_exocytosis
+ * Defined: C in component calcium_triggered_exocytosis
+ * Undefined: CaDy in component calcium_indicator
+ * Undefined: Dy in component calcium_indicator
+ * Defined: k1d in component calcium_indicator
+ * Defined: k2d in component calcium_indicator
+ * Undefined: FDy in component calcium_indicator
+ * Undefined: Dyi2 in component calcium_indicator
+ * Undefined: Cai in component calcium_indicator
+ * Undefined: FCaDy in component calcium_indicator
+ * Defined: TDy in component calcium_indicator
+ * Defined: Ddy in component calcium_indicator
+ * Defined: Dkd in component calcium_indicator
+ * Defined: F0 in component calcium_indicator
+ * Undefined: kfd in component calcium_indicator
+ * Undefined: kbd in component calcium_indicator
+ * Defined: A0 in component calcium_concentration
+ * Undefined: vol0 in component calcium_concentration
+ * Undefined: Ca1 in component calcium_concentration
+ * Defined: diameter in component model_parameters
+ * Defined: Nc in component model_parameters
+ * Defined: d/dt V in component membrane
+ * Defined: d/dt G in component excitatory_synapse
+ * Defined: d/dt m in component sodium_channel_m_gate
+ * Defined: d/dt h in component sodium_channel_h_gate
+ * Defined: d/dt n in component potassium_channel_n_gate
+ * Defined: d/dt m in component calcium_channel_m_gate
+ * Defined: d/dt m in component calcium_dependent_potassium_channel_m_gate
+ * Undefined: d/dt Ca0 in component calcium_concentration
+The following equations couldn't be used:
+ * Equation in apply element with id kfc_calculation.
+ * Equation in apply element with id kbc_calculation.
+ * Equation in apply element with id Dy_calculation.
+ * Equation in apply element with id kfd_calculation.
+ * Equation in apply element with id kbd_calculation.
+ * Equation in apply element with id CaDy_calculation.
+ * Equation in apply element with id FDy_calculation.
+ * Equation in apply element with id Ca0_diff_eq.

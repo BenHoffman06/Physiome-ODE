@@ -1,0 +1,2 @@
+[Error] [139:20] MathML cn element contains an invalid constant representation.
+[Warning] [299:14] MathML equals element has inconsistent units between the sides.

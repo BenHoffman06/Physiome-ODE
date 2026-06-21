@@ -1,0 +1,10 @@
+[Error] [104:3] Mapping variable_2 which has public interface of none.
+[Warning] [128:10] MathML equals element has inconsistent units between the sides.
+[Warning] [174:10] MathML equals element has inconsistent units between the sides.
+[Warning] [333:10] MathML equals element has inconsistent units between the sides.
+[Warning] [452:10] MathML equals element has inconsistent units between the sides.
+[Warning] [600:10] MathML equals element has inconsistent units between the sides.
+[Warning] [625:10] MathML equals element has inconsistent units between the sides.
+[Warning] [656:10] MathML equals element has inconsistent units between the sides.
+[Warning] [695:10] MathML equals element has inconsistent units between the sides.
+[Error] [805:6] Mapping variable_2 which has public interface of none.

@@ -1,0 +1,152 @@
+Model is unsuitably constrained (i.e. there were still some variables left to be computed, and some unusable equations left over).
+At the time of the error, the following variables were found:
+ * Defined: time in component environment
+ * Defined: V in component membrane
+ * Defined: R in component membrane
+ * Defined: T in component membrane
+ * Defined: F in component membrane
+ * Undefined: dV_dt in component membrane
+ * Undefined: IStimC in component membrane
+ * Defined: Cm in component membrane
+ * Undefined: I_st in component membrane
+ * Defined: i_Na in component fast_sodium_current
+ * Defined: i_Ca_L in component L_type_Ca_channel
+ * Defined: i_K in component time_dependent_potassium_current
+ * Defined: i_NaCa in component Na_Ca_exchanger
+ * Defined: i_K1 in component time_independent_potassium_current
+ * Defined: i_Kp in component plateau_potassium_current
+ * Defined: i_p_Ca in component sarcolemmal_calcium_pump
+ * Defined: i_Na_b in component sodium_background_current
+ * Defined: i_Ca_b in component calcium_background_current
+ * Defined: i_NaK in component sodium_potassium_pump
+ * Defined: i_ns_Ca in component non_specific_calcium_activated_current
+ * Defined: E_Na in component fast_sodium_current
+ * Defined: g_Na in component fast_sodium_current
+ * Defined: Nai in component ionic_concentrations
+ * Defined: Nao in component ionic_concentrations
+ * Defined: m in component fast_sodium_current_m_gate
+ * Defined: h in component fast_sodium_current_h_gate
+ * Defined: j in component fast_sodium_current_j_gate
+ * Defined: alpha_m in component fast_sodium_current_m_gate
+ * Defined: beta_m in component fast_sodium_current_m_gate
+ * Defined: alpha_h in component fast_sodium_current_h_gate
+ * Defined: beta_h in component fast_sodium_current_h_gate
+ * Defined: alpha_j in component fast_sodium_current_j_gate
+ * Defined: beta_j in component fast_sodium_current_j_gate
+ * Defined: i_CaCa in component L_type_Ca_channel
+ * Defined: i_CaK in component L_type_Ca_channel
+ * Defined: i_CaNa in component L_type_Ca_channel
+ * Defined: gamma_Nai in component L_type_Ca_channel
+ * Defined: gamma_Nao in component L_type_Ca_channel
+ * Defined: gamma_Ki in component L_type_Ca_channel
+ * Defined: gamma_Ko in component L_type_Ca_channel
+ * Defined: I_CaCa in component L_type_Ca_channel
+ * Defined: I_CaK in component L_type_Ca_channel
+ * Defined: I_CaNa in component L_type_Ca_channel
+ * Defined: P_Ca in component L_type_Ca_channel
+ * Defined: P_Na in component L_type_Ca_channel
+ * Defined: P_K in component L_type_Ca_channel
+ * Defined: gamma_Cai in component L_type_Ca_channel
+ * Defined: gamma_Cao in component L_type_Ca_channel
+ * Defined: Cai in component ionic_concentrations
+ * Defined: Cao in component ionic_concentrations
+ * Defined: Ko in component ionic_concentrations
+ * Defined: Ki in component ionic_concentrations
+ * Defined: d in component L_type_Ca_channel_d_gate
+ * Defined: f in component L_type_Ca_channel_f_gate
+ * Defined: f_Ca in component L_type_Ca_channel_f_Ca_gate
+ * Defined: alpha_d in component L_type_Ca_channel_d_gate
+ * Defined: beta_d in component L_type_Ca_channel_d_gate
+ * Defined: d_infinity in component L_type_Ca_channel_d_gate
+ * Defined: tau_d in component L_type_Ca_channel_d_gate
+ * Defined: alpha_f in component L_type_Ca_channel_f_gate
+ * Defined: beta_f in component L_type_Ca_channel_f_gate
+ * Defined: f_infinity in component L_type_Ca_channel_f_gate
+ * Defined: tau_f in component L_type_Ca_channel_f_gate
+ * Defined: Km_Ca in component L_type_Ca_channel_f_Ca_gate
+ * Defined: g_K_max in component time_dependent_potassium_current
+ * Defined: g_K in component time_dependent_potassium_current
+ * Defined: E_K in component time_dependent_potassium_current
+ * Defined: PR_NaK in component time_dependent_potassium_current
+ * Defined: X in component time_dependent_potassium_current_X_gate
+ * Defined: Xi in component time_dependent_potassium_current_Xi_gate
+ * Defined: alpha_X in component time_dependent_potassium_current_X_gate
+ * Defined: beta_X in component time_dependent_potassium_current_X_gate
+ * Defined: E_K1 in component time_independent_potassium_current
+ * Defined: g_K1_max in component time_independent_potassium_current
+ * Defined: g_K1 in component time_independent_potassium_current
+ * Defined: K1_infinity in component time_independent_potassium_current_K1_gate
+ * Defined: alpha_K1 in component time_independent_potassium_current_K1_gate
+ * Defined: beta_K1 in component time_independent_potassium_current_K1_gate
+ * Defined: E_Kp in component plateau_potassium_current
+ * Defined: g_Kp in component plateau_potassium_current
+ * Defined: Kp in component plateau_potassium_current
+ * Defined: K_mpCa in component sarcolemmal_calcium_pump
+ * Defined: I_pCa in component sarcolemmal_calcium_pump
+ * Defined: g_Nab in component sodium_background_current
+ * Defined: E_NaN in component sodium_background_current
+ * Defined: g_Cab in component calcium_background_current
+ * Defined: E_CaN in component calcium_background_current
+ * Defined: I_NaK in component sodium_potassium_pump
+ * Defined: f_NaK in component sodium_potassium_pump
+ * Defined: K_mNai in component sodium_potassium_pump
+ * Defined: K_mKo in component sodium_potassium_pump
+ * Defined: sigma in component sodium_potassium_pump
+ * Defined: i_ns_Na in component non_specific_calcium_activated_current
+ * Defined: i_ns_K in component non_specific_calcium_activated_current
+ * Defined: P_ns_Ca in component non_specific_calcium_activated_current
+ * Defined: I_ns_Na in component non_specific_calcium_activated_current
+ * Defined: I_ns_K in component non_specific_calcium_activated_current
+ * Defined: K_m_ns_Ca in component non_specific_calcium_activated_current
+ * Defined: Vns in component non_specific_calcium_activated_current
+ * Defined: EnsCa in component non_specific_calcium_activated_current
+ * Defined: K_NaCa in component Na_Ca_exchanger
+ * Defined: K_mNa in component Na_Ca_exchanger
+ * Defined: K_mCa in component Na_Ca_exchanger
+ * Defined: K_sat in component Na_Ca_exchanger
+ * Defined: eta in component Na_Ca_exchanger
+ * Undefined: i_rel in component calcium_fluxes_in_the_SR
+ * Defined: i_up in component calcium_fluxes_in_the_SR
+ * Defined: i_leak in component calcium_fluxes_in_the_SR
+ * Defined: i_tr in component calcium_fluxes_in_the_SR
+ * Undefined: G_rel in component calcium_fluxes_in_the_SR
+ * Undefined: G_rel_peak in component calcium_fluxes_in_the_SR
+ * Defined: G_rel_max in component calcium_fluxes_in_the_SR
+ * Defined: tau_on in component calcium_fluxes_in_the_SR
+ * Defined: tau_off in component calcium_fluxes_in_the_SR
+ * Undefined: t_CICR in component calcium_fluxes_in_the_SR
+ * Defined: tau_tr in component calcium_fluxes_in_the_SR
+ * Defined: K_mrel in component calcium_fluxes_in_the_SR
+ * Defined: K_mup in component calcium_fluxes_in_the_SR
+ * Defined: K_leak in component calcium_fluxes_in_the_SR
+ * Defined: I_up in component calcium_fluxes_in_the_SR
+ * Defined: Ca_NSR_max in component calcium_fluxes_in_the_SR
+ * Undefined: delta_Ca_i2 in component calcium_fluxes_in_the_SR
+ * Defined: delta_Ca_ith in component calcium_fluxes_in_the_SR
+ * Defined: Ca_JSR in component ionic_concentrations
+ * Defined: Ca_NSR in component ionic_concentrations
+ * Defined: Am in component ionic_concentrations
+ * Defined: V_myo in component ionic_concentrations
+ * Defined: V_JSR in component ionic_concentrations
+ * Defined: V_NSR in component ionic_concentrations
+ * Undefined: d/dt V in component membrane
+ * Defined: d/dt m in component fast_sodium_current_m_gate
+ * Defined: d/dt h in component fast_sodium_current_h_gate
+ * Defined: d/dt j in component fast_sodium_current_j_gate
+ * Defined: d/dt d in component L_type_Ca_channel_d_gate
+ * Defined: d/dt f in component L_type_Ca_channel_f_gate
+ * Defined: d/dt X in component time_dependent_potassium_current_X_gate
+ * Defined: d/dt Nai in component ionic_concentrations
+ * Undefined: d/dt Cai in component ionic_concentrations
+ * Defined: d/dt Ki in component ionic_concentrations
+ * Undefined: d/dt Ca_JSR in component ionic_concentrations
+ * Defined: d/dt Ca_NSR in component ionic_concentrations
+The following equations couldn't be used:
+ * Equation in apply element with id dV_dt_eq.
+ * Equation in apply element with id membrane_voltage_diff_eq.
+ * Equation in apply element with id IStim_for_cmiss.
+ * Equation in apply element with id i_rel_calculation.
+ * Equation in apply element with id G_rel_calculation.
+ * Equation in apply element with id G_rel_peak_calculation.
+ * Equation in apply element with id calcium_internal_diff_eq.
+ * Equation in apply element with id calcium_JSR_diff_eq.

@@ -1,0 +1,24 @@
+[Error] [193:18] Expected exponent to pow operator to be dimensionless.
+[Warning] [195:18] Units validation results may be incorrect because the exponent is not a constant.
+[Warning] [232:10] MathML equals element has inconsistent units between the sides.
+[Warning] [246:16] Expected all arguments to operator "lt" to have the same units.
+[Warning] [259:12] Inconsistent units between pieces and otherwise of the piecewise equation.
+[Warning] [282:10] MathML equals element has inconsistent units between the sides.
+[Warning] [291:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [340:10] MathML equals element has inconsistent units between the sides.
+[Warning] [349:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [379:10] MathML equals element has inconsistent units between the sides.
+[Warning] [396:10] MathML equals element has inconsistent units between the sides.
+[Error] [461:20] Expected exponent to pow operator to be dimensionless.
+[Warning] [463:20] Units validation results may be incorrect because the exponent is not a constant.
+[Warning] [540:10] MathML equals element has inconsistent units between the sides.
+[Warning] [690:10] MathML equals element has inconsistent units between the sides.
+[Warning] [699:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [706:16] Expected all arguments to operator "plus" to have the same units.
+[Warning] [711:16] Expected all arguments to operator "plus" to have the same units.
+[Warning] [725:10] MathML equals element has inconsistent units between the sides.
+[Warning] [734:12] Expected all arguments to operator "minus" to have the same units.
+[Warning] [741:16] Expected all arguments to operator "plus" to have the same units.
+[Warning] [746:16] Expected all arguments to operator "plus" to have the same units.
+[Warning] [996:10] MathML equals element has inconsistent units between the sides.
+[Warning] [1016:10] MathML equals element has inconsistent units between the sides.

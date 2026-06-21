@@ -1,0 +1,25 @@
+Model is underconstrained.
+The following variables couldn't be defined:
+ * V in component membrane
+ * i_CaT in component T_type_calcium_channel_current
+ * i_CaL in component L_type_calcium_channel_current
+ * i_K_DR in component voltage_sensitive_potassium_current
+ * i_K_Ca in component calcium_activated_potassium_current
+ * i_Leak in component leak_current
+ * E_Ca in component reversal_potentials
+ * E_K in component reversal_potentials
+ * Cai in component intracellular_calcium_concentration
+ * m_infinity in component L_type_calcium_channel_current_m_gate
+ * tau_m in component L_type_calcium_channel_current_m_gate
+ * m_infinity in component T_type_calcium_channel_current_m_gate
+ * tau_m in component T_type_calcium_channel_current_m_gate
+ * h_infinity in component T_type_calcium_channel_current_h_gate
+ * n_infinity in component voltage_sensitive_potassium_current_n_gate
+ * j_exch in component intracellular_calcium_dynamics
+ * j_in in component intracellular_calcium_dynamics
+ * j_eff in component intracellular_calcium_dynamics
+ * d/dt V in component membrane
+ * d/dt m in component L_type_calcium_channel_current_m_gate
+ * d/dt m in component T_type_calcium_channel_current_m_gate
+ * d/dt h in component T_type_calcium_channel_current_h_gate
+ * d/dt n in component voltage_sensitive_potassium_current_n_gate

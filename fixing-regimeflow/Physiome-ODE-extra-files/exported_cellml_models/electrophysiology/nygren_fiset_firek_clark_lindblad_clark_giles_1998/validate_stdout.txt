@@ -1,0 +1,2 @@
+[Error] [431:20] MathML cn element contains an invalid constant representation.
+[Error] [452:17] MathML cn element contains an invalid constant representation.

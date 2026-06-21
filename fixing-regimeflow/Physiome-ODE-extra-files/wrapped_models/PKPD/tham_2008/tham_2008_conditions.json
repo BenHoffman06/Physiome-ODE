@@ -1,0 +1,14 @@
+{
+  "Amt_50": 10600,
+  "Cycle_Int": 3,
+  "Dose": 5203.84,
+  "Dose_Int1": 0,
+  "Dose_Int2": 1,
+  "Dose_Length": 0.44359,
+  "E_max": 1,
+  "N_Cycle": 6,
+  "Size_0": 6.66,
+  "T_Turnover": 21.8,
+  "conversion_factor": 604800,
+  "t_half_eq": 7.67
+}

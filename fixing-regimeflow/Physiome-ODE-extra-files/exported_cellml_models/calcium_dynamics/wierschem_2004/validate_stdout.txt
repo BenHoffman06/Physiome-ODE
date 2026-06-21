@@ -1,0 +1,12 @@
+[Error] [111:9] MathML cn elements must have CellML units attribute.
+[Error] [111:71] It is not valid to mix the CellML 1.0 and 1.1 namespaces in the same model document.
+[Error] [140:8] MathML cn elements must have CellML units attribute.
+[Error] [140:70] It is not valid to mix the CellML 1.0 and 1.1 namespaces in the same model document.
+[Error] [167:8] MathML cn elements must have CellML units attribute.
+[Error] [167:70] It is not valid to mix the CellML 1.0 and 1.1 namespaces in the same model document.
+[Error] [239:7] MathML cn elements must have CellML units attribute.
+[Error] [239:69] It is not valid to mix the CellML 1.0 and 1.1 namespaces in the same model document.
+[Error] [300:7] MathML cn elements must have CellML units attribute.
+[Error] [300:69] It is not valid to mix the CellML 1.0 and 1.1 namespaces in the same model document.
+[Error] [371:7] MathML cn elements must have CellML units attribute.
+[Error] [371:69] It is not valid to mix the CellML 1.0 and 1.1 namespaces in the same model document.
